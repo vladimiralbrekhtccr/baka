@@ -122,9 +122,11 @@ import io
 import time
 from openai import OpenAI
 import torch
+from pathlib import Path
 import requests
 import soundfile as sf
 import numpy as np
+import torchaudio
 
 
 client = OpenAI(base_url="http://localhost:6655/v1", api_key="EMPTY")
@@ -147,8 +149,9 @@ def encode_audio_from_url(url: str) -> str:
         return base64.b64encode(buffer.getvalue()).decode("utf-8")
 
 ########################################################################
-################ if you want to use local file #########################
-########################################################################
+# ################ if you want to use local file #########################
+# ########################################################################
+# AUDIO_PATH = Path("assets/test_3.mp3")
 # def convert_to_wav_bytes(path: Path) -> bytes:
 #     ext = path.suffix.lower()
 #     if ext == ".wav":
@@ -177,7 +180,8 @@ def encode_audio_from_url(url: str) -> str:
 #     return base64.b64encode(wav_bytes).decode("utf-8")
 
 # base64_audio = encode_audio(AUDIO_PATH)
-########################################################################
+
+#######################################################################
 
 start_time = time.perf_counter()
 response = client.chat.completions.create(
@@ -192,12 +196,14 @@ response = client.chat.completions.create(
             "content": [
                 {
                     "type": "text",
-                    "text": "Who is talking in this audio?"
+                    "text": "Transcribe the audio"
                 },
                 {
                     "type": "audio_url",
                     "audio_url": {
-                        "url": f"data:audio/wav;base64,{encode_audio_from_url('https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/yes_my_lord.mp3')}"
+                        "url": f"data:audio/wav;base64,{base64_audio}"
+                        # or 
+                        # "url": f"data:audio/wav;base64,{encode_audio_from_url('https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/yes_my_lord.mp3')}"
                     }
                 }
             ]
@@ -218,5 +224,6 @@ for chunk in response:
             ttft = first_token_time - start_time
             print(f"\n\nTTFT: {ttft:.3f} seconds\n")
         print(chunk.choices[0].delta.content, end="", flush=True)
+
 
 ```
