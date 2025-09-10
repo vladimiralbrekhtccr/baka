@@ -45,6 +45,7 @@ nav:
     # - vLLM: vllm/index.md
     - Single Request: vllm/open_ai_vllm_example_a_v_t.md
     - Bash online serve: vllm/bash_vllm_serve.md
+    - Benchmarks: vllm/benchmarks/performance_eval.md
   - MD format helpers: md_format_helpers.md
   - Docker: docker.md
   - Linux: linux.md
@@ -66,7 +67,7 @@ plugins:
         - en
         - ru
         - ja
-        - kk
+        - kz
       separator: '[\s\-,:!=\[\]()"/'']+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - tags
 
