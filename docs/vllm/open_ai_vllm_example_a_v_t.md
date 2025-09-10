@@ -119,6 +119,7 @@ for chunk in response:
 # Audio request
 import base64
 import io
+import time
 from openai import OpenAI
 import torch
 import requests
@@ -196,7 +197,7 @@ response = client.chat.completions.create(
                 {
                     "type": "audio_url",
                     "audio_url": {
-                        "url": f"data:audio/wav;base64,{encode_audio_from_url("https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/yes_my_lord.mp3")}"
+                        "url": f"data:audio/wav;base64,{encode_audio_from_url('https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/yes_my_lord.mp3')}"
                     }
                 }
             ]
