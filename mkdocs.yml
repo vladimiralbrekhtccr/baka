@@ -44,6 +44,7 @@ nav:
   - vLLM:
     # - vLLM: vllm/index.md
     - Single Request: vllm/open_ai_vllm_example_a_v_t.md
+    - Bash online serve: vllm/bash_vllm_serve.md
   - MD format helpers: md_format_helpers.md
   - Docker: docker.md
   - Linux: linux.md

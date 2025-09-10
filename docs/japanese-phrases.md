@@ -1,5 +1,7 @@
 # Japanese Phrases Collection 🇯🇵
 
+https://chatgpt.com/c/68bc3198-c084-8321-a95b-144cb57a1700
+
 ## 🗣️ Daily Life
 
 ??? info "誰がバカよ？実験台になってから言いなさい。次はやさしくね。"
