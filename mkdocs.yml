@@ -50,7 +50,7 @@ nav:
   - Docker: docker.md
   - Linux: linux.md
   - Mixture of Experts: moe.md
-
+  - Slurm: slurm/index.md
   - Japanese Phrases:
     - Overview: japanese-phrases/index.md
     - Daily Life:
@@ -61,6 +61,7 @@ nav:
       - Casual: japanese-phrases/greetings/casual.md
     - Emotions: japanese-phrases/emotions/index.md
     - Anime/Manga: japanese-phrases/anime-manga/index.md
+    
 
 plugins:
   - search:
