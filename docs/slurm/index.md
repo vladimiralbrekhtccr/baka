@@ -22,7 +22,7 @@ scancel <JOB_ID>  # example `scancel 35512`
 ```
 
 
-## How to take recources from the node:
+## How to take recources on the node:
 
 You can name Name this file as salloc_res.sh 
 
