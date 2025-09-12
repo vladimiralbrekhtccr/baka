@@ -22,9 +22,9 @@ scancel <JOB_ID>  # example `scancel 35512`
 ```
 
 
-## How to take recources on the node:
+## How to take resources on the node:
 
-You can name Name this file as salloc_res.sh 
+You can name this file as salloc_res.sh 
 
 and run with `bash salloc_res.sh`
 
@@ -46,7 +46,7 @@ fi
 tmux attach-session -t $SESSION_NAME
 ```
 
-After you received the recources you can do:
+After you received the resources you can do:
 
 ```bash
 ssh node006
