@@ -46,7 +46,7 @@ nav:
     - Single Request: vllm/open_ai_vllm_example_a_v_t.md
     - Bash online serve: vllm/bash_vllm_serve.md
     - Benchmarks: vllm/benchmarks/performance_eval.md
-  - Hack: hackathon/inxed.md
+  - Hack: hackathon/index.md
   - MD format helpers: md_format_helpers.md
   - Docker: docker.md
   - Linux: linux.md
