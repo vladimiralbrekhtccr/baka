@@ -33,3 +33,7 @@ allowfullscreen></iframe>
 ![img](https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/cognitive_load_with_2_mental_models.jpg)
 
 
+### Notes
+
+> [!Note]
+> **Qwen3-Next-80B-A3B-Instruct** supports only instruct (non-thinking) mode and does not generate ``<think></think>`` blocks in its output.
