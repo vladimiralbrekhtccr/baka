@@ -22,7 +22,7 @@ scancel <JOB_ID>  # example `scancel 35512`
 ```
 
 
-## Salloc How to take resources on the node (interactvie mode):
+## **Salloc** How to take resources on the node (interactvie mode):
 
 You can name this file as salloc_res.sh 
 
@@ -55,7 +55,7 @@ ssh node006
 And work as you were working usually on H100.
 
 
-## Only send 1 request using
+## **Sbatch** Only send 1 request and wait until it finished or crashed
 
 From Head_node run `sbatch <your_bash_script.sh>` in terminal it will create a job for the node.
 
