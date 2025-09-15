@@ -42,7 +42,7 @@ if ! tmux has-session -t $SESSION_NAME 2>/dev/null; then
       --mem=1 \
       --job-name='2GPUs_int_yolo_trian'" C-m
 fi
-
+# --gres=gpu:2 \
 tmux attach-session -t $SESSION_NAME
 ```
 
