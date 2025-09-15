@@ -63,11 +63,11 @@ From Head_node run `sbatch <your_bash_script.sh>` in terminal it will create a j
 ```bash
 #!/bin/bash
 #SBATCH --job-name=qwen-train                           # job name
-#SBATCH --nodes=2                                       # amount of nodes to take
+#SBATCH --nodes=1                                       # amount of nodes to take
 #SBATCH --ntasks-per-node=1 
 #SBATCH --cpus-per-task=64                              # amount of cpus to take
-#SBATCH --nodelist=node00[1-2]                          # which nodes you want to take
-#SBATCH --gres=gpu:8                                    # amount of gpus to take
+#SBATCH --nodelist=node00[6]                          # which nodes you want to take
+#SBATCH --gres=gpu:1                                    # amount of gpus to take
 #SBATCH --time=168:00:00                                # max time until job
 #SBATCH --mem=1000000M                                  # amount of RAM to take
 #SBATCH --partition=defq
@@ -76,7 +76,7 @@ From Head_node run `sbatch <your_bash_script.sh>` in terminal it will create a j
 
 # Conda initialization
 eval "$(conda shell.bash hook)"
-conda activate axolotl-upd
+conda activate base
 
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 export OMP_NUM_THREADS=1
@@ -86,10 +86,7 @@ export OMP_NUM_THREADS=1
 # MASTER_PORT=$(( RANDOM % (50000 - 30000 + 1 ) + 30000 ))
 
 srun torchrun \
-    --nnodes 2 \
+    --nnodes 1 \
     --nproc_per_node 8 \
-    --rdzv_backend c10d \
-    --rdzv_endpoint $MASTER_ADDR:$MASTER_PORT \
-    --rdzv_id $SLURM_JOB_ID \
-    -m axolotl.cli.train --config ${CONFIG_PATH}
+    -m test_train.py
 ```

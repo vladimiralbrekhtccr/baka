@@ -752,9 +752,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#only-send-1-request-using" class="md-nav__link">
+  <a href="#sbatch-only-send-1-request-and-wait-until-it-finished-or-crashed" class="md-nav__link">
     <span class="md-ellipsis">
-      Only send 1 request using
+      Sbatch Only send 1 request and wait until it finished or crashed
     </span>
   </a>
   
@@ -1114,9 +1114,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#only-send-1-request-using" class="md-nav__link">
+  <a href="#sbatch-only-send-1-request-and-wait-until-it-finished-or-crashed" class="md-nav__link">
     <span class="md-ellipsis">
-      Only send 1 request using
+      Sbatch Only send 1 request and wait until it finished or crashed
     </span>
   </a>
   
@@ -1149,7 +1149,7 @@
 <p>sHow to stop the job</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>scancel<span class="w"> </span>&lt;JOB_ID&gt;<span class="w">  </span><span class="c1"># example `scancel 35512`</span>
 </span></code></pre></div>
-<h2 id="salloc-how-to-take-resources-on-the-node-interactvie-mode">Salloc How to take resources on the node (interactvie mode):</h2>
+<h2 id="salloc-how-to-take-resources-on-the-node-interactvie-mode"><strong>Salloc</strong> How to take resources on the node (interactvie mode):</h2>
 <p>You can name this file as salloc_res.sh </p>
 <p>and run with <code>bash salloc_res.sh</code></p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">SESSION_NAME</span><span class="o">=</span><span class="s2">&quot;2GPUs_int_yolo_trian&quot;</span>
@@ -1172,7 +1172,7 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh<span class="w"> </span>node006
 </span></code></pre></div>
 <p>And work as you were working usually on H100.</p>
-<h2 id="only-send-1-request-using">Only send 1 request using</h2>
+<h2 id="sbatch-only-send-1-request-and-wait-until-it-finished-or-crashed"><strong>Sbatch</strong> Only send 1 request and wait until it finished or crashed</h2>
 <p>From Head_node run <code>sbatch &lt;your_bash_script.sh&gt;</code> in terminal it will create a job for the node.</p>
 <p><code>your_bash_script.sh</code>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
