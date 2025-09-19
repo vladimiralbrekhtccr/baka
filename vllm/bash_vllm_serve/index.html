@@ -659,6 +659,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="With lora adapter Docker run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possible configs:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1259,6 +1274,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="With lora adapter Docker run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possible configs:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1356,7 +1386,7 @@
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">WHISPER_MODEL_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">VLLM_USE_V1</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">4</span>,5,6,7<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span>:<span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span>:<span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span>--name<span class="w"> </span><span class="nv">$MODEL_SERVED_NAME</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span>--ipc<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="nv">$IMAGE_NAME</span><span class="w"> </span><span class="se">\</span>
@@ -1380,67 +1410,79 @@
 </span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="c1"># -d if you want to run in the background</span>
 </span></code></pre></div>
 <h2 id="with-lora-adapter-docker-run">With lora adapter Docker run</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">### Model and environment settings</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">MODEL</span><span class="o">=</span><span class="s2">&quot;/home/vladimir_albrekht/projects/digital_bridge/models/Oylan2_5-MLP-sft-10k&quot;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">MODEL_SERVED_NAME</span><span class="o">=</span><span class="s2">&quot;oylan_a_v_t_2_5&quot;</span><span class="w"> </span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">PORT</span><span class="o">=</span><span class="m">6655</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">HOST</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">SEED</span><span class="o">=</span><span class="m">0</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># vLLM configuration parameters</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">GPU_MEMORY_UTILIZATION</span><span class="o">=</span><span class="m">0</span>.90<span class="w"> </span><span class="c1"># 80 is fine</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nv">TENSOR_PARALLEL_SIZE</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="c1"># changable</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nv">DTYPE</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nv">MAX_NUM_BATCHED_TOKENS</span><span class="o">=</span><span class="m">32768</span><span class="w"> </span><span class="c1"># 32768 vs 4096</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nv">MAX_MODEL_LEN</span><span class="o">=</span><span class="m">4096</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nv">KV_CACHE_DTYPE</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="m">32</span><span class="w"> </span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nv">SWAP_SPACE</span><span class="o">=</span><span class="m">0</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="nv">MAX_NUM_SEQS</span><span class="o">=</span><span class="m">5</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1"># LORA</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nv">ADAPTER_1</span><span class="o">=</span><span class="s2">&quot;/home/vladimir_albrekht/projects/digital_bridge/models/adapters/remaped/vision_lora_3k_Oylan2-5_MLP_SFT_10k_remap&quot;</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c1"># --enable-lora \</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="nv">LORA_DTYPE</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nv">MAX_LORA_RANK</span><span class="o">=</span><span class="m">256</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="nv">MAX_LORAS</span><span class="o">=</span><span class="m">2</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="nv">IMAGE_NAME</span><span class="o">=</span><span class="s2">&quot;vllm-oylan-2_5:0.9.2-cu124&quot;</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>docker<span class="w"> </span>run<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">  </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span>:ro<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">  </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ADAPTER_1</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="nv">$ADAPTER_1</span><span class="s2">&quot;</span>:ro<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">WHISPER_MODEL_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">VLLM_USE_V1</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">4</span>,5,6,7<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">    </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span>:<span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span>--name<span class="w"> </span><span class="nv">$MODEL_SERVED_NAME</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">  </span>--ipc<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">  </span><span class="nv">$IMAGE_NAME</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">  </span>--port<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PORT</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">  </span>--model<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">  </span>--tokenizer<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">  </span>--enable-lora<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">  </span>--lora-modules<span class="w"> </span><span class="nv">oylan_2_5_vision_lora</span><span class="o">=</span><span class="nv">$ADAPTER_1</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">  </span>--lora-dtype<span class="w"> </span><span class="nv">$LORA_DTYPE</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">  </span>--max_lora_rank<span class="w"> </span><span class="nv">$MAX_LORA_RANK</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">  </span>--max-loras<span class="w"> </span><span class="nv">$MAX_LORAS</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">  </span>--tensor-parallel-size<span class="w"> </span><span class="nv">$TENSOR_PARALLEL_SIZE</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">  </span>--swap-space<span class="w"> </span><span class="nv">$SWAP_SPACE</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">  </span>--gpu-memory-utilization<span class="w"> </span><span class="nv">$GPU_MEMORY_UTILIZATION</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">  </span>--max-num-batched-tokens<span class="w"> </span><span class="nv">$MAX_NUM_BATCHED_TOKENS</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">  </span>--max-model-len<span class="w"> </span><span class="nv">$MAX_MODEL_LEN</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">  </span>--block-size<span class="w"> </span><span class="nv">$BLOCK_SIZE</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">  </span>--seed<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="w">  </span>--dtype<span class="w"> </span><span class="nv">$DTYPE</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="w">  </span>--max-num-seqs<span class="w"> </span><span class="nv">$MAX_NUM_SEQS</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="w">  </span>--trust-remote-code<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">  </span>--enable-auto-tool-choice<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="w">  </span>--tool-call-parser<span class="w"> </span>llama3_json<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">  </span>--served-model-name<span class="w"> </span><span class="nv">$MODEL_SERVED_NAME</span>
-</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>
-</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a><span class="c1"># -d if you want to run in the background</span>
+<h3 id="possible-configs">Possible configs:</h3>
+<p>With 4 A100:</p>
+<p>works</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">GPU_MEMORY_UTILIZATION</span><span class="o">=</span><span class="m">0</span>.80<span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">MAX_NUM_BATCHED_TOKENS</span><span class="o">=</span><span class="m">4096</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">MAX_MODEL_LEN</span><span class="o">=</span><span class="m">4096</span>
+</span></code></pre></div>
+<p>works_2</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">GPU_MEMORY_UTILIZATION</span><span class="o">=</span><span class="m">0</span>.90
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">MAX_NUM_BATCHED_TOKENS</span><span class="o">=</span><span class="m">20000</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nv">MAX_MODEL_LEN</span><span class="o">=</span><span class="m">20000</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">### Model and environment settings</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">MODEL</span><span class="o">=</span><span class="s2">&quot;/home/vladimir_albrekht/projects/digital_bridge/models/Oylan2_5-MLP-sft-10k&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nv">MODEL_SERVED_NAME</span><span class="o">=</span><span class="s2">&quot;oylan_a_v_t_2_5&quot;</span><span class="w"> </span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">PORT</span><span class="o">=</span><span class="m">6655</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">HOST</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nv">SEED</span><span class="o">=</span><span class="m">0</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1"># vLLM configuration parameters</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nv">GPU_MEMORY_UTILIZATION</span><span class="o">=</span><span class="m">0</span>.80<span class="w"> </span><span class="c1"># 80 is fine</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nv">TENSOR_PARALLEL_SIZE</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="c1"># changable</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nv">DTYPE</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nv">MAX_NUM_BATCHED_TOKENS</span><span class="o">=</span><span class="m">4096</span><span class="w"> </span><span class="c1"># 32768 vs 4096</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nv">MAX_MODEL_LEN</span><span class="o">=</span><span class="m">4096</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nv">KV_CACHE_DTYPE</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="m">32</span><span class="w"> </span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nv">SWAP_SPACE</span><span class="o">=</span><span class="m">0</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nv">MAX_NUM_SEQS</span><span class="o">=</span><span class="m">5</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="c1"># LORA</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="nv">ADAPTER_1</span><span class="o">=</span><span class="s2">&quot;/home/vladimir_albrekht/projects/digital_bridge/models/adapters/remaped/vision_lora_3k_Oylan2-5_MLP_SFT_10k_remap&quot;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1"># --enable-lora \</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nv">LORA_DTYPE</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="nv">MAX_LORA_RANK</span><span class="o">=</span><span class="m">256</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="nv">MAX_LORAS</span><span class="o">=</span><span class="m">2</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="nv">IMAGE_NAME</span><span class="o">=</span><span class="s2">&quot;vllm-oylan-2_5:0.9.2-cu124&quot;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>docker<span class="w"> </span>run<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">  </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span>:ro<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">  </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ADAPTER_1</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="nv">$ADAPTER_1</span><span class="s2">&quot;</span>:ro<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">WHISPER_MODEL_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">VLLM_USE_V1</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">4</span>,5,6,7<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">  </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span>:<span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">  </span>--name<span class="w"> </span><span class="nv">$MODEL_SERVED_NAME</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">  </span>--ipc<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">  </span><span class="nv">$IMAGE_NAME</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">  </span>--port<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PORT</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">  </span>--model<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">  </span>--tokenizer<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">  </span>--enable-lora<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">  </span>--lora-modules<span class="w"> </span><span class="nv">oylan_2_5_vision_lora</span><span class="o">=</span><span class="nv">$ADAPTER_1</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">  </span>--lora-dtype<span class="w"> </span><span class="nv">$LORA_DTYPE</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">  </span>--max_lora_rank<span class="w"> </span><span class="nv">$MAX_LORA_RANK</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">  </span>--max-loras<span class="w"> </span><span class="nv">$MAX_LORAS</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">  </span>--tensor-parallel-size<span class="w"> </span><span class="nv">$TENSOR_PARALLEL_SIZE</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">  </span>--swap-space<span class="w"> </span><span class="nv">$SWAP_SPACE</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">  </span>--gpu-memory-utilization<span class="w"> </span><span class="nv">$GPU_MEMORY_UTILIZATION</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">  </span>--max-num-batched-tokens<span class="w"> </span><span class="nv">$MAX_NUM_BATCHED_TOKENS</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="w">  </span>--max-model-len<span class="w"> </span><span class="nv">$MAX_MODEL_LEN</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">  </span>--block-size<span class="w"> </span><span class="nv">$BLOCK_SIZE</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">  </span>--seed<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">  </span>--dtype<span class="w"> </span><span class="nv">$DTYPE</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="w">  </span>--max-num-seqs<span class="w"> </span><span class="nv">$MAX_NUM_SEQS</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="w">  </span>--trust-remote-code<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">  </span>--enable-auto-tool-choice<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="w">  </span>--tool-call-parser<span class="w"> </span>llama3_json<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="w">  </span>--served-model-name<span class="w"> </span><span class="nv">$MODEL_SERVED_NAME</span>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="c1"># -d if you want to run in the background</span>
 </span></code></pre></div>
 
 
