@@ -83,7 +83,7 @@ docker run --gpus all \
   --env WHISPER_MODEL_PATH="$MODEL" \
   -e VLLM_USE_V1=1 \
   -e CUDA_VISIBLE_DEVICES=4,5,6,7 \
-    -p ${PORT}:${PORT} \
+  -p ${PORT}:${PORT} \
   --name $MODEL_SERVED_NAME \
   --ipc=host \
   $IMAGE_NAME \
@@ -109,6 +109,27 @@ docker run --gpus all \
 
 ## With lora adapter Docker run
 
+### Possible configs:
+
+With 4 A100:
+
+works
+
+```bash
+GPU_MEMORY_UTILIZATION=0.80 
+MAX_NUM_BATCHED_TOKENS=4096
+MAX_MODEL_LEN=4096
+```
+
+works_2
+
+```bash
+GPU_MEMORY_UTILIZATION=0.90
+MAX_NUM_BATCHED_TOKENS=20000
+MAX_MODEL_LEN=20000
+```
+
+
 ```bash
 
 ### Model and environment settings
@@ -120,10 +141,10 @@ HOST="0.0.0.0"
 SEED=0
 
 # vLLM configuration parameters
-GPU_MEMORY_UTILIZATION=0.90 # 80 is fine
+GPU_MEMORY_UTILIZATION=0.80 # 80 is fine
 TENSOR_PARALLEL_SIZE=4 # changable
 DTYPE="bfloat16"
-MAX_NUM_BATCHED_TOKENS=32768 # 32768 vs 4096
+MAX_NUM_BATCHED_TOKENS=4096 # 32768 vs 4096
 MAX_MODEL_LEN=4096
 KV_CACHE_DTYPE="auto"
 BLOCK_SIZE=32 
@@ -145,7 +166,7 @@ docker run --gpus all \
   --env WHISPER_MODEL_PATH="$MODEL" \
   -e VLLM_USE_V1=1 \
   -e CUDA_VISIBLE_DEVICES=4,5,6,7 \
-    -p ${PORT}:${PORT} \
+  -p ${PORT}:${PORT} \
   --name $MODEL_SERVED_NAME \
   --ipc=host \
   $IMAGE_NAME \
