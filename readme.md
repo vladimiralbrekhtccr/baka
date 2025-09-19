@@ -30,5 +30,5 @@ git push -u origin main
 
 Change something on main branch inside /docs/*.md files and it use gh-deploy to deploy on git.
 ```bash
-mkdocs gh-deploy # it will create branch gh-deploy and you just need to go to settings -> pages and select branch
+`mkdocs gh-deploy `# it will create branch gh-deploy and you just need to go to settings -> pages and select branch
 ```

@@ -109,26 +109,7 @@ docker run --gpus all \
 
 ## With lora adapter Docker run
 
-### Possible configs:
-
-With 4 A100:
-
-works
-
-```bash
-GPU_MEMORY_UTILIZATION=0.80 
-MAX_NUM_BATCHED_TOKENS=4096
-MAX_MODEL_LEN=4096
-```
-
-works_2
-
-```bash
-GPU_MEMORY_UTILIZATION=0.90
-MAX_NUM_BATCHED_TOKENS=20000
-MAX_MODEL_LEN=20000
-```
-
+a
 
 ```bash
 
@@ -141,11 +122,11 @@ HOST="0.0.0.0"
 SEED=0
 
 # vLLM configuration parameters
-GPU_MEMORY_UTILIZATION=0.80 # 80 is fine
+GPU_MEMORY_UTILIZATION=0.90 # 80 is fine
 TENSOR_PARALLEL_SIZE=4 # changable
 DTYPE="bfloat16"
-MAX_NUM_BATCHED_TOKENS=4096 # 32768 vs 4096
-MAX_MODEL_LEN=4096
+MAX_NUM_BATCHED_TOKENS=20000
+MAX_MODEL_LEN=20000
 KV_CACHE_DTYPE="auto"
 BLOCK_SIZE=32 
 SWAP_SPACE=0
@@ -193,4 +174,24 @@ docker run --gpus all \
   --served-model-name $MODEL_SERVED_NAME
 
 # -d if you want to run in the background
+```
+
+### Possible configs:
+
+With 4 A100:
+
+works
+
+```bash
+GPU_MEMORY_UTILIZATION=0.80 
+MAX_NUM_BATCHED_TOKENS=4096
+MAX_MODEL_LEN=4096
+```
+
+works_2
+
+```bash
+GPU_MEMORY_UTILIZATION=0.90
+MAX_NUM_BATCHED_TOKENS=20000
+MAX_MODEL_LEN=20000
 ```
