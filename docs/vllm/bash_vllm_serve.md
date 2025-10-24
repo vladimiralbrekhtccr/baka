@@ -4,29 +4,27 @@
 
 > ![Note] newgrp docker
 ```bash
-
 export VLLM_USE_V1=1
+export WHISPER_MODEL_PATH="$MODEL"
 # Model and environment settings
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
-MODEL="huggingface-org/Oylan2_5-MLP-sft-10k"
+MODEL="/scratch/vladimir_albrekht/qwen3_vl_moe/large_files/models/Qwen3-VL-30B-A3B-Instruct"
 
-export WHISPER_MODEL_PATH="$MODEL"
+
 MODEL_SERVED_NAME="kita" 
 PORT=6655
 HOST="0.0.0.0"
 SEED=0
 
 # vLLM configuration parameters
-GPU_MEMORY_UTILIZATION=0.90 # 80 is fine
+GPU_MEMORY_UTILIZATION=0.90
 TENSOR_PARALLEL_SIZE=4 # changable
 DTYPE="bfloat16"
 MAX_NUM_BATCHED_TOKENS=32768 # 32768 vs 4096
 MAX_MODEL_LEN=4096
 KV_CACHE_DTYPE="auto"
-BLOCK_SIZE=32 
-SWAP_SPACE=0
-MAX_NUM_SEQS=5
+MAX_NUM_SEQS=50
 
 
 CMD="vllm serve $MODEL \
@@ -40,8 +38,6 @@ CMD="vllm serve $MODEL \
   --trust-remote-code \
   --dtype $DTYPE \
   --tensor-parallel-size $TENSOR_PARALLEL_SIZE \
-  --swap-space $SWAP_SPACE \
-  --block-size $BLOCK_SIZE \
   --kv-cache-dtype $KV_CACHE_DTYPE \
   --max-num-seqs $MAX_NUM_SEQS \
   --enable-prefix-caching \

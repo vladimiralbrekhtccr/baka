@@ -23,7 +23,15 @@ model.talker.code_predictor # takes as input from [talker.codec_head(1_acoustic_
 #    # last_hidden_state from talker.model [1, 1, 1024]
 #    # special_acoustic_token from codec_head [1, 1, 1024]
 #    combines them cat([1, 1, 1024], [1, 1, 1024]) -> [1, 2, 1024]
-#    produces are 15 acoustic tokens -->
+#    produces are 15 acoustic tokens 
+
+
+what is interesting is that 
+
+
+-->
+
+
 
 
 3. model.code2wav

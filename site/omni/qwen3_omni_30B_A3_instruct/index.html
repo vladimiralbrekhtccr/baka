@@ -16,7 +16,7 @@
     
     
       
-        <title>Index - Ohayou</title>
+        <title>qwen3 omni 30B A3 instruct - Ohayou</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#approved-research-directions" class="md-skip">
+        <a href="#ohayou" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              qwen3 omni 30B A3 instruct
             
           </span>
         </div>
@@ -271,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../speculative_decoding/" class="md-tabs__link">
+        <a href="../../llm/speculative_decoding/" class="md-tabs__link">
           
   
   
@@ -678,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../speculative_decoding/" class="md-nav__link">
+      <a href="../../llm/speculative_decoding/" class="md-nav__link">
         
   
   
@@ -1159,28 +1159,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#approved-research-directions" class="md-nav__link">
+  <a href="#ohayou" class="md-nav__link">
     <span class="md-ellipsis">
-      Approved Research Directions
+      Ohayou
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Approved Research Directions">
+    <nav class="md-nav" aria-label="Ohayou">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-cross-layer-vision-refinement-clvr" class="md-nav__link">
+  <a href="#draft" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Cross-Layer Vision Refinement (CLVR)
+      Draft
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Draft">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#2-expert-aligned-reinforcement-learning-earl" class="md-nav__link">
+  <a href="#some-new-interesting-pytorch-tricks" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Expert-Aligned Reinforcement Learning (EARL)
+      Some new interesting pytorch tricks:
     </span>
   </a>
   
@@ -1188,52 +1189,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompt-for-deep_think" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompt for deep_think
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#executing-deep_think-resulting-research-directions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Executing deep_think: Resulting Research Directions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Executing deep_think: Resulting Research Directions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#idea-1-cascaded-expert-routing-new-architectural-primitive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Idea 1: Cascaded Expert Routing (New Architectural Primitive)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#idea-2-active-vision-querying-fundamental-shift-in-data-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Idea 2: Active Vision Querying (Fundamental Shift in Data Flow)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#idea-3-causal-mimic-learning-new-learning-paradigm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Idea 3: Causal Mimic Learning (New Learning Paradigm)
-    </span>
-  </a>
   
 </li>
         
@@ -1258,89 +1213,130 @@
 
 
 
-  <h1>Index</h1>
+  <h1>qwen3 omni 30B A3 instruct</h1>
 
-<p><a href="">internvl3.5</a></p>
-<p>Excellent choices. Focusing on these two directions provides a very strong foundation for a novel research paper. Both ideas push the boundaries of either the MLLM architecture or its training methodology.</p>
-<p>Here is the updated list of approved ideas, followed by a detailed discussion on the feasibility of using GRPO for the EARL framework.</p>
-<h3 id="approved-research-directions"><strong>Approved Research Directions</strong></h3>
-<h4 id="1-cross-layer-vision-refinement-clvr"><strong>1. Cross-Layer Vision Refinement (CLVR)</strong></h4>
-<ul>
-<li><strong>The Core Idea:</strong> Create a feedback loop where the language model can iteratively "re-examine" the image to refine its understanding, moving beyond the standard one-way "fire-and-forget" vision projection.</li>
-<li><strong>The Problem It Solves:</strong> Standard MLLMs project the image into a fixed set of embeddings once. This limits their ability to perform complex, multi-step visual reasoning that might require a second look or a change of focus on the image.</li>
-<li><strong>How It Works:</strong> The LLM's hidden state from an intermediate layer is fed <em>back</em> to a small "Refinement Adapter." This adapter uses the LLM's current reasoning context as a query to re-attend to the original ViT features, producing a new, refined set of visual embeddings that are injected back into a later LLM layer.</li>
-<li><strong>Novelty:</strong> This is a significant architectural innovation enabling a form of "visual active memory," where the LLM actively seeks and refines the visual information it needs.</li>
-</ul>
-<h4 id="2-expert-aligned-reinforcement-learning-earl"><strong>2. Expert-Aligned Reinforcement Learning (EARL)</strong></h4>
-<blockquote>
-<p>[!Note] Maybe with GRPO</p>
-</blockquote>
-<ul>
-<li><strong>The Core Idea:</strong> Use reinforcement learning to not only train the model to produce the correct final answer but also to encourage it to use the "correct" internal reasoning pathways (i.e., activating the right experts for the right sub-tasks).</li>
-<li><strong>The Problem It Solves:</strong> Standard fine-tuning is a weak signal for teaching complex reasoning and does not explicitly encourage MoE experts to specialize in a coherent, interpretable way.</li>
-<li><strong>How It Works:</strong> After an initial fine-tuning phase where you identify which expert clusters are associated with certain skills (e.g., OCR, spatial reasoning), you use RL to continue training. You provide a bonus reward if the model uses the "correct" expert cluster to solve a corresponding sub-task, thereby reinforcing good internal reasoning habits.</li>
-<li><strong>Novelty:</strong> It's a new training framework that goes beyond aligning outputs and begins to align the model's internal processes, potentially leading to more robust and interpretable models.</li>
-</ul>
-<p>Of course. You are asking for a way to break out of incremental thinking and get to a more fundamental, first-principles level. That's the right approach for impactful research. The best way to do this is to formulate a powerful, open-ended prompt that forces a re-evaluation of core assumptions.</p>
-<p>Here is a prompt designed for a "deep_think" process to generate novel MLLM research directions. After the prompt, I will "run" it and provide the resulting ideas.</p>
-<hr />
-<h3 id="prompt-for-deep_think"><strong>Prompt for <code>deep_think</code></strong></h3>
-<p><strong>[PERSONA]</strong>
-You are a leading AI Research Scientist and Strategist at a top-tier industrial lab, with a publication record in <em>Nature</em>, <em>NeurIPS</em>, and <em>ICML</em>. Your role is to look beyond the current quarter's incremental improvements and define the research directions that will shape the field 2-3 years from now. You are known for challenging core assumptions and proposing elegant, high-impact solutions.</p>
-<p><strong>[CONTEXT]</strong>
-* <strong>Current Date:</strong> September 16, 2025.
-* <strong>Core Assets:</strong> We have access to a powerful, pre-trained SoTA Mixture-of-Experts (MoE) foundation model, Qwen3-Next, and a SoTA Vision Transformer, InternViT.
-* <strong>The Goal:</strong> We are building a Multimodal LLM (MLLM) by fusing these two models.
-* <strong>The Challenge:</strong> Simply fusing and fine-tuning them is an engineering task, not a scientific breakthrough. We need to propose a <em>truly novel research direction</em> that leverages the unique properties of our assets to create a new capability or a fundamental improvement in MLLM design.
-* <strong>Constraints:</strong> The proposed innovation must be achievable through fine-tuning or by adding a small, trainable module/technique. We cannot afford to train a new foundation model from scratch.
-* <strong>What to Avoid:</strong>
-    * Incremental efficiency tweaks that offer only minor speed-ups.
-    * Ideas that are purely analytical without creating a new method or architecture.
-    * Simple application to a new language or domain as the sole contribution.</p>
-<p><strong>[THE TASK]</strong>
-Engage in first-principles thinking to challenge the current MLLM paradigm. Propose 2-3 distinct, ambitious, yet feasible research directions. These directions should fall into one or more of the following categories:
-1.  <strong>New Learning Paradigms:</strong> Proposing novel training objectives or methods beyond standard instruction tuning or simple RLHF.
-2.  <strong>Novel Architectural Primitives:</strong> Proposing new, generalizable building blocks for MLLMs.
-3.  <strong>Fundamental Shifts in Data Representation/Flow:</strong> Proposing new ways for visual and textual information to be represented and interact within the model.</p>
-<p><strong>[GUIDING QUESTIONS TO CONSIDER]</strong>
-* <strong>On Sparsity (MoE):</strong> Is the current "fire-and-forget" token routing optimal? Should experts be able to communicate with each other? Can an expert's computation be conditional on the output of another expert within the same layer?
-* <strong>On Vision-Language Fusion:</strong> Is a static, one-way projection from vision to language the final answer? Is a flat sequence of image patches the best way to represent a 2D world for a 1D transformer? Should the LLM have the ability to "query" the vision encoder for more details on demand?
-* <strong>On Learning Objectives:</strong> Beyond predicting the next token, what intrinsic objectives can we design to teach multimodal models about causality, physics, or object permanence from video and static images?
-* <strong>On Agency &amp; Modularity:</strong> Should the LLM be a passive processor, or an active agent that decides <em>when</em> to invoke the vision module, and with what parameters?</p>
-<p><strong>[OUTPUT FORMAT]</strong>
-For each research direction, provide:
-1.  <strong>Title:</strong> A compelling, academic-style title.
-2.  <strong>Core Hypothesis:</strong> A single sentence stating the central claim.
-3.  <strong>Method Description:</strong> A concise paragraph explaining the proposed architecture or training technique.
-4.  <strong>Why It's a Significant Leap:</strong> A paragraph explaining why this idea is a fundamental shift from current approaches.</p>
-<hr />
-<h3 id="executing-deep_think-resulting-research-directions"><strong>Executing <code>deep_think</code>: Resulting Research Directions</strong></h3>
-<p>Based on the prompt above, here are three novel research directions that emerge.</p>
-<h4 id="idea-1-cascaded-expert-routing-new-architectural-primitive"><strong>Idea 1: Cascaded Expert Routing (New Architectural Primitive)</strong></h4>
-<ul>
-<li><strong>Title:</strong> Cascaded Routing: Enabling Conditional Expert Computation in Sparse Multimodal Models.</li>
-<li><strong>Core Hypothesis:</strong> Allowing experts to conditionally delegate computation to other experts within the same layer will enable more complex, multi-step reasoning than the standard parallel-expert paradigm.</li>
-<li><strong>Method Description:</strong> We modify the standard MoE block. Instead of routing a token to <code>top_k</code> experts whose outputs are simply averaged, we introduce a <strong>cascaded routing</strong> mechanism. The router first selects a primary expert. This expert, after processing the token, can optionally decide its computation is insufficient and "delegate" its output to a second, more specialized expert within the same block for further processing. This creates a dynamic, data-dependent computational depth <em>within</em> a single layer. For example, a "general vision" expert might first identify a region as "text," and then delegate to a specialized "OCR expert" for fine-grained analysis.</li>
-<li><strong>Why It's a Significant Leap:</strong> This breaks the rigid assumption of parallel, independent experts in MoE. It introduces a form of conditional, compositional reasoning <em>at the hardware level</em>, allowing the model to dynamically decide how much computation to spend on a token. It moves from simple token routing to building dynamic, internal "reasoning chains," which could be a key to solving much harder, multi-step problems.</li>
-</ul>
-<h4 id="idea-2-active-vision-querying-fundamental-shift-in-data-flow"><strong>Idea 2: Active Vision Querying (Fundamental Shift in Data Flow)</strong></h4>
-<ul>
-<li><strong>Title:</strong> Look Closer: An Active Vision Framework for Multimodal Language Models.</li>
-<li><strong>Core Hypothesis:</strong> MLLMs can achieve superior fine-grained understanding and reasoning if the language model can actively query a high-resolution visual feature store instead of passively processing a fixed, low-resolution sequence of image patches.</li>
-<li><strong>Method Description:</strong> The standard vision projector is replaced by an <strong>Active Vision Module (AVM)</strong>. The InternViT computes a multi-scale feature pyramid of the image, which is kept in memory. The LLM processes a low-resolution summary of the image as usual. However, we augment the LLM's vocabulary with a special <code>[QUERY_VISION]</code> token. When the LLM generates this token, its hidden state is used to formulate a query (e.g., predicting attention coordinates and a scale factor). The AVM uses this query to extract a high-resolution feature patch from the stored pyramid, which is then projected and fed back into the LLM for the next generation step. The entire process is differentiable and trained end-to-end.</li>
-<li><strong>Why It's a Significant Leap:</strong> This fundamentally changes the vision-language interface from a one-time, static data dump to an interactive, on-demand process. It mimics the human ability to saccade and focus attention on specific details when reasoning about a scene. It could solve a major failure mode of current MLLMs, which often "hallucinate" or miss fine-grained details because they are lost in the initial low-resolution projection.</li>
-</ul>
-<h4 id="idea-3-causal-mimic-learning-new-learning-paradigm"><strong>Idea 3: Causal Mimic Learning (New Learning Paradigm)</strong></h4>
-<ul>
-<li><strong>Title:</strong> Learning to Reason: Causal Mimic Learning for Aligning Internal Processes in Sparse MLLMs.</li>
-<li><strong>Core Hypothesis:</strong> We can train more robust and interpretable models by directly teaching the model to mimic the <em>causal reasoning steps</em> (i.e., the sequence of expert activations) of a larger, more capable model, rather than just matching its final output.</li>
-<li><strong>Method Description:</strong> This is a sophisticated form of knowledge distillation. First, we use a powerful, proprietary MLLM (like GPT-5 or a 241B InternVL) to generate not just an answer, but also a plausible "reasoning trace" for a given multimodal problem (e.g., "First, I must use my OCR experts to read the sign... Then, I must use my spatial experts to locate the car..."). We then fine-tune our smaller Qwen3-Next MLLM with a dual objective:<ol>
-<li>A standard loss on the final answer.</li>
-<li>A <strong>"mimic loss"</strong> that rewards our model for producing a similar sequence of expert activations to the teacher model's reasoning trace.</li>
+<h3 id="ohayou">Ohayou</h3>
+<ol>
+<li>model.thinker</li>
 </ol>
-</li>
-<li><strong>Why It's a Significant Leap:</strong> This moves beyond aligning outputs (RLHF) to aligning the <em>internal computational process</em>. It's a powerful way to instill structured, causal reasoning into a model. Instead of hoping the model learns the right reasoning paths by chance, we are explicitly teaching it how to "think" step-by-step. This could lead to a dramatic improvement in performance on complex, multi-hop reasoning tasks and would be a major step towards more interpretable and trustworthy AI.</li>
-</ul>
+<!-- 
+model.thinker.audio_tower # audio encoder
+
+model.thinker.visual # visual encoder
+
+model.thinker.model # decoder with self_attn + experts
+ -->
+
+<ol>
+<li>model.talker</li>
+</ol>
+<!-- # model.talker
+model.talker.text_projection # MLP for text data
+model.talker.hidden_projection # MLP for MM data
+# operation combine(hidden_projection, text_projection)  
+model.talker.model # main decoding block with self_attn and experts inside based on the combined (MM_MLP, text_MLP)
+model.talker.codec_head # receives the last_hidden_state from talker.model and produce only 1 logit (special acoustic token) out [1, 1, 1024] (batch_size, token_num, hidden_size)
+model.talker.code_predictor # takes as input from [talker.codec_head(1_acoustic_token) + talker.model.last_hidden_state] and generate 15 aco_tokens + first_head_token   -> that will be passed to code2wav model
+# code predtictor takes 2 inputs
+#    # last_hidden_state from talker.model [1, 1, 1024]
+#    # special_acoustic_token from codec_head [1, 1, 1024]
+#    combines them cat([1, 1, 1024], [1, 1, 1024]) -> [1, 2, 1024]
+#    produces are 15 acoustic tokens -->
+
+<ol>
+<li>model.code2wav</li>
+</ol>
+<!-- # from code_predictor it receives the [1, 16, 184] [batch, aco_tokens, talker.seq_len]
+# The Idea is: we take (discrete tokens representing sound) and convert into a continuous audio waveform -->
+
+<h4 id="draft">Draft</h4>
+<p>inference example</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CUDA_VISIBLE_DEVICES&quot;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;2,3&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">soundfile</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sf</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Qwen3OmniMoeForConditionalGeneration</span><span class="p">,</span> <span class="n">Qwen3OmniMoeProcessor</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qwen_omni_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">process_mm_info</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">MODEL_PATH</span> <span class="o">=</span> <span class="s2">&quot;/home/vladimir_albrekht/projects/2025_sep_22_qwen3omni/models/Qwen3-Omni-30B-A3B-Instruct&quot;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># MODEL_PATH = &quot;Qwen/Qwen3-Omni-30B-A3B-Thinking&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">model</span> <span class="o">=</span> <span class="n">Qwen3OmniMoeForConditionalGeneration</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">MODEL_PATH</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">device_map</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">attn_implementation</span><span class="o">=</span><span class="s2">&quot;flash_attention_2&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">processor</span> <span class="o">=</span> <span class="n">Qwen3OmniMoeProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">MODEL_PATH</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">conversation</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="p">{</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;audio&quot;</span><span class="p">,</span> <span class="s2">&quot;audio&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/vladimir_albrekht/projects/2025_sep_22_qwen3omni/models/Qwen3-Omni-30B-A3B-Instruct/unity_codes/audio_chunks/chunk_1.wav&quot;</span><span class="p">},</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Transcribe the English audio into text.&quot;</span><span class="p">}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="p">],</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="p">},</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">]</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1"># Set whether to use audio in video</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">USE_AUDIO_IN_VIDEO</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c1"># Preparation for inference</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">text</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">apply_chat_template</span><span class="p">(</span><span class="n">conversation</span><span class="p">,</span> <span class="n">add_generation_prompt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tokenize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">audios</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">videos</span> <span class="o">=</span> <span class="n">process_mm_info</span><span class="p">(</span><span class="n">conversation</span><span class="p">,</span> <span class="n">use_audio_in_video</span><span class="o">=</span><span class="n">USE_AUDIO_IN_VIDEO</span><span class="p">)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">processor</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> 
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                   <span class="n">audio</span><span class="o">=</span><span class="n">audios</span><span class="p">,</span> 
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                   <span class="n">images</span><span class="o">=</span><span class="n">images</span><span class="p">,</span> 
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>                   <span class="n">videos</span><span class="o">=</span><span class="n">videos</span><span class="p">,</span> 
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>                   <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">,</span> 
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>                   <span class="n">padding</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>                   <span class="n">use_audio_in_video</span><span class="o">=</span><span class="n">USE_AUDIO_IN_VIDEO</span><span class="p">)</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="c1"># Inference: Generation of the output text and audio</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="n">text_ids</span><span class="p">,</span> <span class="n">audio</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">,</span> 
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>                                 <span class="n">speaker</span><span class="o">=</span><span class="s2">&quot;Chelsie&quot;</span><span class="p">,</span> 
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>                                 <span class="n">thinker_return_dict_in_generate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>                                 <span class="n">use_audio_in_video</span><span class="o">=</span><span class="n">USE_AUDIO_IN_VIDEO</span><span class="p">)</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="n">text</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">batch_decode</span><span class="p">(</span><span class="n">text_ids</span><span class="o">.</span><span class="n">sequences</span><span class="p">[:,</span> <span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;input_ids&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:],</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>                              <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>                              <span class="n">clean_up_tokenization_spaces</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="k">if</span> <span class="n">audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="n">sf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>        <span class="s2">&quot;output.wav&quot;</span><span class="p">,</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>        <span class="n">audio</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        <span class="n">samplerate</span><span class="o">=</span><span class="mi">24000</span><span class="p">,</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<h5 id="some-new-interesting-pytorch-tricks">Some new interesting pytorch tricks:</h5>
+<ol>
+<li>Bolean mask tensor</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_get_talker_user_parts</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">im_start_index</span><span class="p">,</span> <span class="n">segment_end_index</span><span class="p">,</span> <span class="n">multimodal_mask</span><span class="p">,</span> <span class="n">thinker_hidden</span><span class="p">,</span> <span class="n">thinker_embed</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">):</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="n">user_talker_part</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">segment_end_index</span> <span class="o">-</span> <span class="n">im_start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">talker_config</span><span class="o">.</span><span class="n">text_config</span><span class="o">.</span><span class="n">hidden_size</span><span class="p">),</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">user_mm_mask</span> <span class="o">=</span> <span class="n">multimodal_mask</span><span class="p">[:,</span> <span class="n">im_start_index</span><span class="p">:</span><span class="n">segment_end_index</span><span class="p">]</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="c1"># Multimodal data exists</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="k">if</span> <span class="n">user_mm_mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="n">user_thinker_hidden_mm</span> <span class="o">=</span> <span class="n">thinker_hidden</span><span class="p">[:,</span> <span class="n">im_start_index</span><span class="p">:</span><span class="n">segment_end_index</span><span class="p">][</span><span class="n">user_mm_mask</span><span class="p">]</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="n">mm_hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">hidden_projection</span><span class="p">(</span><span class="n">user_thinker_hidden_mm</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">user_talker_part</span><span class="p">[</span><span class="n">user_mm_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">mm_hidden</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="n">user_thinker_embed</span> <span class="o">=</span> <span class="n">thinker_embed</span><span class="p">[:,</span> <span class="n">im_start_index</span><span class="p">:</span><span class="n">segment_end_index</span><span class="p">][</span><span class="o">~</span><span class="n">user_mm_mask</span><span class="p">]</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="n">user_text_hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">text_projection</span><span class="p">(</span><span class="n">user_thinker_embed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">talker</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">user_talker_part</span><span class="p">[</span><span class="o">~</span><span class="n">user_mm_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_text_hidden</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="k">return</span> <span class="n">user_talker_part</span>
+</span></code></pre></div>
 
 
 

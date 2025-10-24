@@ -27,7 +27,6 @@ allowfullscreen></iframe>
 
 
 ### Image
-
 #### From Huggignface
 
 ![img](https://huggingface.co/datasets/CCRss/kv_brain/resolve/main/cognitive_load_with_2_mental_models.jpg)
