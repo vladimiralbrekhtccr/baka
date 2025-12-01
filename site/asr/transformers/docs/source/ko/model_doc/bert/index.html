@@ -1,0 +1,1831 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Bert - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bertbert" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bert
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      개요[[Overview]]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      사용 팁[[Usage tips]]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="사용 팁[[Usage tips]]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scaled-dot-product-attentionsdpa-using-scaled-dot-product-attention-sdpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaled Dot Product Attention(SDPA) 사용하기 [[Using Scaled Dot Product Attention (SDPA)]]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scaled Dot Product Attention(SDPA) 사용하기 [[Using Scaled Dot Product Attention (SDPA)]]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      학습 [[Training]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      추론 [[Inference]]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      자료[[Resources]]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertConfig
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berttokenizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertTokenizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berttokenizerfast" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertTokenizerFast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bert-specific-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bert specific outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertforpretraining" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForPreTraining
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertlmheadmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertLMHeadModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertformaskedlm" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForMaskedLM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertfornextsentenceprediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForNextSentencePrediction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertforsequenceclassification" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForSequenceClassification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertformultiplechoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForMultipleChoice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertfortokenclassification" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForTokenClassification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bertforquestionanswering" class="md-nav__link">
+    <span class="md-ellipsis">
+      BertForQuestionAnswering
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!--Copyright 2020 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+⚠️ Note that this file is in Markdown but contain specific syntax for our doc-builder (similar to MDX) that may not be
+rendered properly in your Markdown viewer.
+
+-->
+
+<h1 id="bertbert">BERT[[BERT]]</h1>
+<div class="flex flex-wrap space-x-1">
+<a href="https://huggingface.co/models?filter=bert">
+<img alt="Models" src="https://img.shields.io/badge/All_model_pages-bert-blueviolet">
+</a>
+<a href="https://huggingface.co/spaces/docs-demos/bert-base-uncased">
+<img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
+</a>
+</div>
+
+<h2 id="overview">개요[[Overview]]</h2>
+<p>BERT 모델은 Jacob Devlin. Ming-Wei Chang, Kenton Lee, Kristina Touranova가 제안한 논문 <a href="https://huggingface.co/papers/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>에서 소개되었습니다. BERT는 사전 학습된 양방향 트랜스포머로,  Toronto Book Corpus와 Wikipedia로 구성된 대규모 코퍼스에서 마스킹된 언어 모델링과 다음 문장 예측(Next Sentence Prediction) 목표를 결합해 학습되었습니다.</p>
+<p>해당 논문의 초록입니다:</p>
+<p><em>우리는 BERT(Bidirectional Encoder Representations from Transformers)라는 새로운 언어 표현 모델을 소개합니다. 최근의 다른 언어 표현 모델들과 달리, BERT는 모든 계층에서 양방향으로 양쪽 문맥을 조건으로 사용하여 비지도 학습된 텍스트에서 깊이 있는 양방향 표현을 사전 학습하도록 설계되었습니다. 그 결과, 사전 학습된 BERT 모델은 추가적인 출력 계층 하나만으로 질문 응답, 언어 추론과 같은 다양한 작업에서 미세 조정될 수 있으므로, 특정 작업을 위해 아키텍처를 수정할 필요가 없습니다.</em></p>
+<p><em>BERT는 개념적으로 단순하면서도 실증적으로 강력한 모델입니다. BERT는 11개의 자연어 처리 과제에서 새로운 최고 성능을 달성했으며, GLUE 점수를 80.5% (7.7% 포인트 절대 개선)로, MultiNLI 정확도를 86.7% (4.6% 포인트 절대 개선), SQuAD v1.1 질문 응답 테스트에서 F1 점수를 93.2 (1.5% 포인트 절대 개선)로, SQuAD v2.0에서 F1 점수를 83.1 (5.1% 포인트 절대 개선)로 향상시켰습니다.</em></p>
+<p>이 모델은 <a href="https://huggingface.co/thomwolf">thomwolf</a>가 기여하였습니다. 원본 코드는 <a href="https://github.com/google-research/bert">여기</a>에서 확인할 수 있습니다.</p>
+<h2 id="usage-tips">사용 팁[[Usage tips]]</h2>
+<ul>
+<li>BERT는 절대 위치 임베딩을 사용하는 모델이므로 입력을 왼쪽이 아니라 오른쪽에서 패딩하는 것이 일반적으로 권장됩니다.</li>
+<li>BERT는 마스킹된 언어 모델(MLM)과 Next Sentence Prediction(NSP) 목표로 학습되었습니다. 이는 마스킹된 토큰 예측과 전반적인 자연어 이해(NLU)에 뛰어나지만, 텍스트 생성에는 최적화되어있지 않습니다.    </li>
+<li>
+<p>BERT의 사전 학습 과정에서는 입력 데이터를 무작위로 마스킹하여 일부 토큰을 마스킹합니다. 전체 토큰 중 약 15%가 다음과 같은 방식으로 마스킹됩니다:</p>
+<ul>
+<li>80% 확률로 마스크 토큰으로 대체</li>
+<li>10% 확률로 임의의 다른 토큰으로 대체</li>
+<li>10% 확률로 원래 토큰 그대로 유지</li>
+</ul>
+</li>
+<li>
+<p>모델의 주요 목표는 원본 문장을 예측하는 것이지만, 두 번째 목표가 있습니다: 입력으로 문장 A와 B (사이에는 구분 토큰이 있음)가 주어집니다. 이 문장 쌍이 연속될 확률은 50%이며, 나머지 50%는 서로 무관한 문장들입니다. 모델은 이 두 문장이 아닌지를 예측해야 합니다.</p>
+</li>
+</ul>
+<h3 id="scaled-dot-product-attentionsdpa-using-scaled-dot-product-attention-sdpa">Scaled Dot Product Attention(SDPA) 사용하기 [[Using Scaled Dot Product Attention (SDPA)]]</h3>
+<p>Pytorch는 <code>torch.nn.functional</code>의 일부로 Scaled Dot Product Attention(SDPA) 연산자를 기본적으로 제공합니다. 이 함수는 입력과 하드웨어에 따라 여러 구현 방식을 사용할 수 있습니다. 자세한 내용은 <a href="https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html">공식 문서</a>나 <a href="https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one#pytorch-scaled-dot-product-attention">GPU Inference</a>에서 확인할 수 있습니다.</p>
+<p><code>torch&gt;=2.1.1</code>에서는 구현이 가능한 경우 SDPA가 기본적으로 사용되지만, <code>from_pretrained()</code>함수에서 <code>attn_implementation="sdpa"</code>를 설정하여 SDPA를 명시적으로 사용하도록 지정할 수도 있습니다.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from<span class="w"> </span>transformers<span class="w"> </span>import<span class="w"> </span>BertModel
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>BertModel.from_pretrained<span class="o">(</span><span class="s2">&quot;bert-base-uncased&quot;</span>,<span class="w"> </span><span class="nv">dtype</span><span class="o">=</span>torch.float16,<span class="w"> </span><span class="nv">attn_implementation</span><span class="o">=</span><span class="s2">&quot;sdpa&quot;</span><span class="o">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>...
+</span></code></pre></div>
+<p>최적 성능 향상을 위해 모델을 반정밀도(예: <code>torch.float16</code> 또는 <code>torch.bfloat16</code>)로 불러오는 것을 권장합니다.</p>
+<p>로컬 벤치마크 (A100-80GB, CPUx12, RAM 96.6GB, PyTorch 2.2.0, OS Ubuntu 22.04)에서 <code>float16</code>을 사용해 학습 및 추론을 수행한 결과, 다음과 같은 속도 향상이 관찰되었습니다.</p>
+<h4 id="training">학습 [[Training]]</h4>
+<table>
+<thead>
+<tr>
+<th>batch_size</th>
+<th>seq_len</th>
+<th>Time per batch (eager - s)</th>
+<th>Time per batch (sdpa - s)</th>
+<th>Speedup (%)</th>
+<th>Eager peak mem (MB)</th>
+<th>sdpa peak mem (MB)</th>
+<th>Mem saving (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>256</td>
+<td>0.023</td>
+<td>0.017</td>
+<td>35.472</td>
+<td>939.213</td>
+<td>764.834</td>
+<td>22.800</td>
+</tr>
+<tr>
+<td>4</td>
+<td>512</td>
+<td>0.023</td>
+<td>0.018</td>
+<td>23.687</td>
+<td>1970.447</td>
+<td>1227.162</td>
+<td>60.569</td>
+</tr>
+<tr>
+<td>8</td>
+<td>256</td>
+<td>0.023</td>
+<td>0.018</td>
+<td>23.491</td>
+<td>1594.295</td>
+<td>1226.114</td>
+<td>30.028</td>
+</tr>
+<tr>
+<td>8</td>
+<td>512</td>
+<td>0.035</td>
+<td>0.025</td>
+<td>43.058</td>
+<td>3629.401</td>
+<td>2134.262</td>
+<td>70.054</td>
+</tr>
+<tr>
+<td>16</td>
+<td>256</td>
+<td>0.030</td>
+<td>0.024</td>
+<td>25.583</td>
+<td>2874.426</td>
+<td>2134.262</td>
+<td>34.680</td>
+</tr>
+<tr>
+<td>16</td>
+<td>512</td>
+<td>0.064</td>
+<td>0.044</td>
+<td>46.223</td>
+<td>6964.659</td>
+<td>3961.013</td>
+<td>75.830</td>
+</tr>
+</tbody>
+</table>
+<h4 id="inference">추론 [[Inference]]</h4>
+<table>
+<thead>
+<tr>
+<th>batch_size</th>
+<th>seq_len</th>
+<th>Per token latency eager (ms)</th>
+<th>Per token latency SDPA (ms)</th>
+<th>Speedup (%)</th>
+<th>Mem eager (MB)</th>
+<th>Mem BT (MB)</th>
+<th>Mem saved (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>128</td>
+<td>5.736</td>
+<td>4.987</td>
+<td>15.022</td>
+<td>282.661</td>
+<td>282.924</td>
+<td>-0.093</td>
+</tr>
+<tr>
+<td>1</td>
+<td>256</td>
+<td>5.689</td>
+<td>4.945</td>
+<td>15.055</td>
+<td>298.686</td>
+<td>298.948</td>
+<td>-0.088</td>
+</tr>
+<tr>
+<td>2</td>
+<td>128</td>
+<td>6.154</td>
+<td>4.982</td>
+<td>23.521</td>
+<td>314.523</td>
+<td>314.785</td>
+<td>-0.083</td>
+</tr>
+<tr>
+<td>2</td>
+<td>256</td>
+<td>6.201</td>
+<td>4.949</td>
+<td>25.303</td>
+<td>347.546</td>
+<td>347.033</td>
+<td>0.148</td>
+</tr>
+<tr>
+<td>4</td>
+<td>128</td>
+<td>6.049</td>
+<td>4.987</td>
+<td>21.305</td>
+<td>378.895</td>
+<td>379.301</td>
+<td>-0.107</td>
+</tr>
+<tr>
+<td>4</td>
+<td>256</td>
+<td>6.285</td>
+<td>5.364</td>
+<td>17.166</td>
+<td>443.209</td>
+<td>444.382</td>
+<td>-0.264</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">자료[[Resources]]</h2>
+<p>BERT를 시작하는 데 도움이 되는 Hugging Face와 community 자료 목록(🌎로 표시됨) 입니다. 여기에 포함될 자료를 제출하고 싶다면 PR(Pull Request)를 열어주세요. 리뷰 해드리겠습니다! 자료는 기존 자료를 복제하는 대신 새로운 내용을 담고 있어야 합니다.</p>
+<p><PipelineTag pipeline="text-classification"/></p>
+<ul>
+<li><a href="https://www.philschmid.de/bert-text-classification-in-a-different-language">BERT 텍스트 분류 (다른 언어로)</a>에 대한 블로그 포스트.</li>
+<li><a href="https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/BERT/Fine_tuning_BERT_(and_friends)_for_multi_label_text_classification.ipynb">다중 레이블 텍스트 분류를 위한 BERT (및 관련 모델) 미세 조정</a>에 대한 노트북.</li>
+<li><a href="htt기ps://colab.research.google.com/github/abhimishra91/transformers-tutorials/blob/master/transformers_multi_label_classification.ipynb">PyTorch를 이용해 BERT를 다중 레이블 분류를 위해 미세 조정하는 방법</a>에 대한 노트북. 🌎</li>
+<li><a href="https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/BERT2BERT_for_CNN_Dailymail.ipynb">BERT로 EncoderDecoder 모델을 warm-start하여 요약하기</a>에 대한 노트북.</li>
+<li>[<code>BertForSequenceClassification</code>]이  <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>TFBertForSequenceClassification</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification-tf.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>FlaxBertForSequenceClassification</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/text-classification">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification_flax.ipynb">노트북</a>에서 지원됩니다.</li>
+<li><a href="../tasks/sequence_classification">텍스트 분류 작업 가이드</a></li>
+</ul>
+<p><PipelineTag pipeline="token-classification"/></p>
+<ul>
+<li><a href="https://www.philschmid.de/huggingface-transformers-keras-tf">Keras와 함께 Hugging Face Transformers를 사용하여 비영리 BERT를 개체명 인식(NER)용으로 미세 조정하는 방법</a>에 대한 블로그 포스트.</li>
+<li><a href="https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/BERT/Custom_Named_Entity_Recognition_with_BERT_only_first_wordpiece.ipynb">BERT를 개체명 인식을 위해 미세 조정하기</a>에 대한 노트북. 각 단어의 첫 번째 wordpiece에만 레이블을 지정하여 학습하는 방법을 설명합니다. 모든 wordpiece에 레이블을 전파하는 방법은 <a href="https://github.com/NielsRogge/Transformers-Tutorials/blob/master/BERT/Custom_Named_Entity_Recognition_with_BERT.ipynb">이 버전</a>에서 확인할 수 있습니다.</li>
+<li>[<code>BertForTokenClassification</code>]이  <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification">예제 스크립트</a>와  <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>TFBertForTokenClassification</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>FlaxBertForTokenClassification</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/token-classification">예제 스크립트</a>에서 지원됩니다.</li>
+<li>🤗 Hugging Face 코스의 <a href="https://huggingface.co/course/chapter7/2?fw=pt">토큰 분류 챕터</a>.</li>
+<li><a href="../tasks/token_classification">토큰 분류 작업 가이드</a></li>
+</ul>
+<p><PipelineTag pipeline="fill-mask"/></p>
+<ul>
+<li>[<code>BertForMaskedLM</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>TFBertForMaskedLM</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy">예제 스크립트</a> 와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>FlaxBertForMaskedLM</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>🤗 Hugging Face 코스의 <a href="https://huggingface.co/course/chapter7/3?fw=pt">마스킹된 언어 모델링 챕터</a>.</li>
+<li><a href="../tasks/masked_language_modeling">마스킹된 언어 모델링 작업 가이드</a></li>
+</ul>
+<p><PipelineTag pipeline="question-answering"/></p>
+<ul>
+<li>[<code>BertForQuestionAnswering</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>TFBertForQuestionAnswering</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering">예제 스크립트</a> 와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb">노트북</a>에서 지원됩니다.</li>
+<li>[<code>FlaxBertForQuestionAnswering</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/question-answering">예제 스크립트</a>에서 지원됩니다.</li>
+<li>🤗 Hugging Face 코스의 <a href="https://huggingface.co/course/chapter7/7?fw=pt">질문 답변 챕터</a>.</li>
+<li><a href="../tasks/question_answering">질문 답변 작업 가이드</a></li>
+</ul>
+<p><strong>다중 선택</strong>
+- [<code>BertForMultipleChoice</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/multiple-choice">예제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/multiple_choice.ipynb">노트북</a>에서 지원됩니다.
+- [<code>TFBertForMultipleChoice</code>]이 <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/multiple-choice">에제 스크립트</a>와 <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/multiple_choice-tf.ipynb">노트북</a>에서 지원됩니다.
+- <a href="../tasks/multiple_choice">다중 선택 작업 가이드</a></p>
+<p>⚡️ <strong>추론</strong>
+- <a href="https://huggingface.co/blog/bert-inferentia-sagemaker">Hugging Face Transformers와 AWS Inferentia를 사용하여 BERT 추론을 가속화하는 방법</a>에 대한 블로그 포스트.
+- <a href="https://www.philschmid.de/bert-deepspeed-inference">GPU에서 DeepSpeed-Inference로 BERT 추론을 가속화하는 방법</a>에 대한 블로그 포스트.</p>
+<p>⚙️ <strong>사전 학습</strong>
+- <a href="https://www.philschmid.de/pre-training-bert-habana">Hugging Face Optimum으로 Transformers를 ONMX로 변환하는 방법</a>에 대한 블로그 포스트.</p>
+<p>🚀 <strong>배포</strong>
+- <a href="https://www.philschmid.de/convert-transformers-to-onnx">Hugging Face Optimum으로 Transformers를 ONMX로 변환하는 방법</a>에 대한 블로그 포스트.
+- <a href="https://www.philschmid.de/getting-started-habana-gaudi#conclusion">AWS에서 Hugging Face Transformers를 위한 Habana Gaudi 딥러닝 환경 설정 방법</a>에 대한 블로그 포스트.
+- <a href="https://www.philschmid.de/terraform-huggingface-amazon-sagemaker-advanced">Hugging Face Transformers, Amazon SageMaker 및 Terraform 모듈을 이용한 BERT 자동 확장</a>에 대한 블로그 포스트.
+- <a href="https://www.philschmid.de/serverless-bert-with-huggingface-aws-lambda-docker">Hugging Face, AWS Lambda, Docker를 활용하여 서버리스 BERT 설정하는 방법</a>에 대한 블로그 포스트.
+- <a href="https://www.philschmid.de/huggingface-amazon-sagemaker-training-compiler">Amazon SageMaker와 Training Compiler를 사용하여 Hugging Face Transformers에서 BERT 미세 조정하는 방법</a>에 대한 블로그.
+- <a href="https://www.philschmid.de/knowledge-distillation-bert-transformers">Amazon SageMaker를 사용한 Transformers와 BERT의 작업별 지식 증류</a>에 대한 블로그 포스트.</p>
+<h2 id="bertconfig">BertConfig</h2>
+<p>[[autodoc]] BertConfig
+    - all</p>
+<h2 id="berttokenizer">BertTokenizer</h2>
+<p>[[autodoc]] BertTokenizer
+    - build_inputs_with_special_tokens
+    - get_special_tokens_mask
+    - create_token_type_ids_from_sequences
+    - save_vocabulary</p>
+<h2 id="berttokenizerfast">BertTokenizerFast</h2>
+<p>[[autodoc]] BertTokenizerFast</p>
+<h2 id="bert-specific-outputs">Bert specific outputs</h2>
+<p>[[autodoc]] models.bert.modeling_bert.BertForPreTrainingOutput</p>
+<h2 id="bertmodel">BertModel</h2>
+<p>[[autodoc]] BertModel
+    - forward</p>
+<h2 id="bertforpretraining">BertForPreTraining</h2>
+<p>[[autodoc]] BertForPreTraining
+    - forward</p>
+<h2 id="bertlmheadmodel">BertLMHeadModel</h2>
+<p>[[autodoc]] BertLMHeadModel
+    - forward</p>
+<h2 id="bertformaskedlm">BertForMaskedLM</h2>
+<p>[[autodoc]] BertForMaskedLM
+    - forward</p>
+<h2 id="bertfornextsentenceprediction">BertForNextSentencePrediction</h2>
+<p>[[autodoc]] BertForNextSentencePrediction
+    - forward</p>
+<h2 id="bertforsequenceclassification">BertForSequenceClassification</h2>
+<p>[[autodoc]] BertForSequenceClassification
+    - forward</p>
+<h2 id="bertformultiplechoice">BertForMultipleChoice</h2>
+<p>[[autodoc]] BertForMultipleChoice
+    - forward</p>
+<h2 id="bertfortokenclassification">BertForTokenClassification</h2>
+<p>[[autodoc]] BertForTokenClassification
+    - forward</p>
+<h2 id="bertforquestionanswering">BertForQuestionAnswering</h2>
+<p>[[autodoc]] BertForQuestionAnswering
+    - forward</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

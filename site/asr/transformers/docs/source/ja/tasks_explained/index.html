@@ -1,0 +1,1781 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Tasks explained - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-transformers-solve-tasks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tasks explained
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#speech-and-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speech and audio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Speech and audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audio-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-speech-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic speech recognition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer vision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computer vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth estimation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural language processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural language processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-answering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question answering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!--Copyright 2023 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+⚠️ Note that this file is in Markdown but contain specific syntax for our doc-builder (similar to MDX) that may not be
+rendered properly in your Markdown viewer.
+
+-->
+
+<h1 id="how-transformers-solve-tasks">How 🤗 Transformers solve tasks</h1>
+<p><a href="task_summary">🤗 Transformersでできること</a>で、自然言語処理（NLP）、音声とオーディオ、コンピュータビジョンのタスク、それらの重要なアプリケーションについて学びました。このページでは、モデルがこれらのタスクをどのように解決するかを詳しく見て、モデルの内部で何が起こっているかを説明します。特定のタスクを解決するためには多くの方法があり、一部のモデルは特定のテクニックを実装するか、または新しい観点からタスクに取り組むかもしれませんが、Transformerモデルにとって、一般的なアイデアは同じです。柔軟なアーキテクチャのおかげで、ほとんどのモデルはエンコーダ、デコーダ、またはエンコーダ-デコーダ構造の変種です。Transformerモデル以外にも、当社のライブラリにはコンピュータビジョンタスクに今でも使用されているいくつかの畳み込みニューラルネットワーク（CNN）もあります。また、現代のCNNがどのように機能するかも説明します。</p>
+<p>タスクがどのように解決されるかを説明するために、モデル内部で有用な予測を出力するために何が起こるかについて説明します。</p>
+<ul>
+<li><a href="model_doc/wav2vec2">Wav2Vec2</a>：オーディオ分類および自動音声認識（ASR）向け</li>
+<li><a href="model_doc/vit">Vision Transformer（ViT）</a>および<a href="model_doc/convnext">ConvNeXT</a>：画像分類向け</li>
+<li><a href="model_doc/detr">DETR</a>：オブジェクト検出向け</li>
+<li><a href="model_doc/mask2former">Mask2Former</a>：画像セグメンテーション向け</li>
+<li><a href="model_doc/glpn">GLPN</a>：深度推定向け</li>
+<li><a href="model_doc/bert">BERT</a>：エンコーダを使用するテキスト分類、トークン分類、および質問応答などのNLPタスク向け</li>
+<li><a href="model_doc/gpt2">GPT2</a>：デコーダを使用するテキスト生成などのNLPタスク向け</li>
+<li><a href="model_doc/bart">BART</a>：エンコーダ-デコーダを使用する要約および翻訳などのNLPタスク向け</li>
+</ul>
+<p><Tip></p>
+<p>さらに進む前に、元のTransformerアーキテクチャの基本的な知識を持つと良いです。エンコーダ、デコーダ、および注意力がどのように動作するかを知っておくと、異なるTransformerモデルがどのように動作するかを理解するのに役立ちます。始めているか、リフレッシュが必要な場合は、詳細な情報については当社の<a href="https://huggingface.co/course/chapter1/4?fw=pt">コース</a>をチェックしてください！</p>
+<p></Tip></p>
+<h2 id="speech-and-audio">Speech and audio</h2>
+<p><a href="model_doc/wav2vec2">Wav2Vec2</a>は、未ラベルの音声データで事前トレーニングされ、オーディオ分類および自動音声認識のラベル付きデータでファインチューンされた自己教師モデルです。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
+</div>
+
+<p>このモデルには主に次の4つのコンポーネントがあります。</p>
+<ol>
+<li>
+<p><em>特徴エンコーダ</em>：生の音声波形を受け取り、平均値をゼロに正規化し、単位分散に変換し、それを20msごとの特徴ベクトルのシーケンスに変換します。</p>
+</li>
+<li>
+<p>波形は自然に連続しているため、テキストのシーケンスを単語に分割できるようにできるように、特徴ベクトルは<em>量子化モジュール</em>に渡され、離散音声ユニットを学習しようとします。音声ユニットは<em>コードブック</em>（語彙と考えることができます）として知られるコードワードのコレクションから選択されます。コードブックから、連続したオーディオ入力を最もよく表すベクトルまたは音声ユニット（ターゲットラベルと考えることができます）が選択され、モデルを介して転送されます。</p>
+</li>
+<li>
+<p>特徴ベクトルの約半分はランダムにマスクされ、マスクされた特徴ベクトルは<em>コンテキストネットワーク</em>に供給されます。これは、相対的な位置エンベッディングも追加するTransformerエンコーダです。</p>
+</li>
+<li>
+<p>コンテキストネットワークの事前トレーニングの目的は<em>コントラスティブタスク</em>です。モデルはマスクされた予測の真の量子化音声表現を、偽の予測のセットから予測しなければならず、モデルは最も似たコンテキストベクトルと量子化音声ユニット（ターゲットラベル）を見つけるように促されます。</p>
+</li>
+</ol>
+<p>今、Wav2Vec2は事前トレーニングされているので、オーディオ分類または自動音声認識のためにデータをファインチューンできます！</p>
+<h3 id="audio-classification">Audio classification</h3>
+<p>事前トレーニングされたモデルをオーディオ分類に使用するには、基本的なWav2Vec2モデルの上にシーケンス分類ヘッドを追加します。分類ヘッドはエンコーダの隠れた状態を受け入れる線形層で、各オーディオフレームから学習された特徴を表します。これらの隠れた状態は長さが異なる可能性があるため、最初に隠れた状態がプールされ、次にクラスラベルに対するロジットに変換されます。ロジットとターゲット間のクロスエントロピー損失が計算され、最も可能性の高いクラスを見つけるために使用されます。</p>
+<p>オーディオ分類を試す準備はできましたか？Wav2Vec2をファインチューンして推論に使用する方法を学ぶための完全な<a href="tasks/audio_classification">オーディオ分類ガイド</a>をチェックしてください！</p>
+<h3 id="automatic-speech-recognition">Automatic speech recognition</h3>
+<p>事前トレーニングされたモデルを自動音声認識に使用するには、<a href="glossary#connectionist-temporal-classification-ctc">connectionist temporal classification（CTC）</a>のための基本的なWav2Vec2モデルの上に言語モデリングヘッドを追加します。言語モデリングヘッドはエンコーダの隠れた状態を受け入れ、それらをロジットに変換します。各ロジットはトークンクラスを表し（トークン数はタスクの語彙から来ます）、ロジットとターゲット間のCTC損失が計算され、次に転写に変換されます。</p>
+<p>自動音声認識を試す準備はできましたか？Wav2Vec2をファインチューンして推論に使用する方法を学ぶための完全な<a href="tasks/asr">自動音声認識ガイド</a>をチェックしてください！</p>
+<h2 id="computer-vision">Computer vision</h2>
+<p>コンピュータビジョンのタスクをアプローチする方法は2つあります。</p>
+<ol>
+<li>画像をパッチのシーケンスに分割し、Transformerを使用して並列に処理します。</li>
+<li><a href="model_doc/convnext">ConvNeXT</a>などのモダンなCNNを使用します。これらは畳み込み層を使用しますが、モダンなネットワーク設計を採用しています。</li>
+</ol>
+<p><Tip></p>
+<p>サードアプローチでは、Transformerと畳み込みを組み合わせたものもあります（例：<a href="model_doc/cvt">Convolutional Vision Transformer</a>または<a href="model_doc/levit">LeViT</a>）。これらについては議論しませんが、これらはここで調べる2つのアプローチを組み合わせています。</p>
+<p></Tip></p>
+<p>ViTとConvNeXTは画像分類によく使用されますが、オブジェクト検出、セグメンテーション、深度推定などの他のビジョンタスクに対しては、DETR、Mask2Former、GLPNなどが適しています。</p>
+<h3 id="image-classification">Image classification</h3>
+<p>ViTとConvNeXTの両方を画像分類に使用できます。主な違いは、ViTが注意メカニズムを使用し、ConvNeXTが畳み込みを使用することです。</p>
+<h4 id="transformer">Transformer</h4>
+<p><a href="model_doc/vit">ViT</a>は畳み込みを完全にTransformerアーキテクチャで置き換えます。元のTransformerに精通している場合、ViTの理解は既にほとんど完了しています。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
+</div>
+
+<p>ViTが導入した主な変更点は、画像をTransformerに供給する方法です。</p>
+<ol>
+<li>
+<p>画像は正方形で重ならないパッチのシーケンスに分割され、各パッチはベクトルまたは<em>パッチ埋め込み</em>に変換されます。パッチ埋め込みは、適切な入力次元を作成するために2D畳み込み層から生成されます（基本のTransformerの場合、各パッチ埋め込みに768の値があります）。224x224ピクセルの画像がある場合、それを16x16の画像パッチに分割できます。テキストが単語にトークン化されるように、画像はパッチのシーケンスに「トークン化」されます。</p>
+</li>
+<li>
+<p><em>学習埋め込み</em>、つまり特別な <code>[CLS]</code> トークンが、BERTのようにパッチ埋め込みの先頭に追加されます。 <code>[CLS]</code> トークンの最終的な隠れた状態は、付属の分類ヘッドの入力として使用されます。他の出力は無視されます。このトークンは、モデルが画像の表現をエンコードする方法を学ぶのに役立ちます。</p>
+</li>
+<li>
+<p>パッチと学習埋め込みに追加する最後の要素は<em>位置埋め込み</em>です。モデルは画像パッチがどのように並べられているかを知りませんので、位置埋め込みも学習可能で、パッチ埋め込みと同じサイズを持ちます。最後に、すべての埋め込みがTransformerエンコーダに渡されます。</p>
+</li>
+<li>
+<p>出力、具体的には <code>[CLS]</code> トークンの出力だけが、多層パーセプトロンヘッド（MLP）に渡されます。ViTの事前トレーニングの目的は単純に分類です。他の分類ヘッドと同様に、MLPヘッドは出力をクラスラベルに対するロジットに変換し、クロスエントロピー損失を計算して最も可能性の高いクラスを見つけます。</p>
+</li>
+</ol>
+<p>画像分類を試す準備はできましたか？ViTをファインチューンして推論に使用する方法を学ぶための完全な<a href="tasks/image_classification">画像分類ガイド</a>をチェックしてください！</p>
+<h4 id="cnn">CNN</h4>
+<p><Tip></p>
+<p>このセクションでは畳み込みについて簡単に説明していますが、画像の形状とサイズがどのように変化するかを事前に理解していると役立ちます。畳み込みに慣れていない場合は、fastaiの書籍から<a href="https://github.com/fastai/fastbook/blob/master/13_convolutions.ipynb">Convolution Neural Networks chapter</a>をチェックしてみてください！</p>
+<p></Tip></p>
+<p><a href="model_doc/convnext">ConvNeXT</a>は、性能を向上させるために新しいモダンなネットワーク設計を採用したCNNアーキテクチャです。ただし、畳み込みはモデルの中核にまだあります。高レベルから見た場合、<a href="glossary#convolution">畳み込み（convolution）</a>は、小さな行列（<em>カーネル</em>）が画像のピクセルの小さなウィンドウに乗算される操作です。それは特定のテクスチャや線の曲率などの特徴を計算します。その後、次のピクセルのウィンドウに移動します。畳み込みが移動する距離は<em>ストライド</em>として知られています。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
+</div>
+
+<p><small><a href="https://huggingface.co/papers/1603.07285">Convolution Arithmetic for Deep Learning</a> からの基本的なパディングやストライドのない畳み込み。</small></p>
+<p>この出力を別の畳み込み層に供給し、各連続した層ごとに、ネットワークはホットドッグやロケットのようなより複雑で抽象的なものを学習します。畳み込み層の間には、特徴の次元を削減し、特徴の位置の変動に対してモデルをより堅牢にするためにプーリング層を追加するのが一般的です。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
+</div>
+
+<p>ConvNeXTは、以下の5つの方法でCNNをモダン化しています。</p>
+<ol>
+<li>
+<p>各ステージのブロック数を変更し、画像をより大きなストライドと対応するカーネルサイズで<em>パッチ化</em>します。重ならないスライディングウィンドウは、これにより画像をパッチに分割するViTの戦略と似ています。</p>
+</li>
+<li>
+<p><em>ボトルネック</em> レイヤーはチャネル数を縮小し、それを復元します。1x1の畳み込みを実行するのは速く、深さを増やすことができます。逆ボトルネックは逆のことを行い、チャネル数を拡張し、それを縮小します。これはメモリ効率が高いです。</p>
+</li>
+<li>
+<p>ボトルネックレイヤー内の通常の3x3の畳み込み層を、<em>深度方向の畳み込み</em>で置き換えます。これは各入力チャネルに個別に畳み込みを適用し、最後にそれらを積み重ねる畳み込みです。これにより、性能向上のためにネットワーク幅が広がります。</p>
+</li>
+<li>
+<p>ViTはグローバル受容野を持っているため、その注意メカニズムのおかげで一度に画像の多くを見ることができます。ConvNeXTはこの効果を再現しようとし、カーネルサイズを7x7に増やします。</p>
+</li>
+<li>
+<p>ConvNeXTはまた、Transformerモデルを模倣するいくつかのレイヤーデザイン変更を行っています。アクティベーションと正規化レイヤーが少なく、活性化関数はReLUの代わりにGELUに切り替え、BatchNormの代わりにLayerNormを使用しています。</p>
+</li>
+</ol>
+<p>畳み込みブロックからの出力は、分類ヘッドに渡され、出力をロジットに変換し、最も可能性の高いラベルを見つけるためにクロスエントロピー損失が計算されます。</p>
+<h3 id="object-detection">Object detection</h3>
+<p><a href="model_doc/detr">DETR</a>、<em>DEtection TRansformer</em>、はCNNとTransformerエンコーダーデコーダーを組み合わせたエンドツーエンドのオブジェクト検出モデルです。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
+</div>
+
+<ol>
+<li>
+<p>事前トレーニングされたCNN <em>バックボーン</em> は、ピクセル値で表される画像を受け取り、それの低解像度の特徴マップを作成します。特徴マップには次元削減のために1x1の畳み込みが適用され、高レベルの画像表現を持つ新しい特徴マップが作成されます。Transformerは連続モデルであるため、特徴マップは特徴ベクトルのシーケンスに平坦化され、位置エンベディングと組み合わせられます。</p>
+</li>
+<li>
+<p>特徴ベクトルはエンコーダーに渡され、その注意レイヤーを使用して画像表現を学習します。次に、エンコーダーの隠れ状態はデコーダーの<em>オブジェクトクエリ</em>と組み合わされます。オブジェクトクエリは、画像の異なる領域に焦点を当てる学習埋め込みで、各注意レイヤーを進行するにつれて更新されます。デコーダーの隠れ状態は、各オブジェクトクエリに対してバウンディングボックスの座標とクラスラベルを予測するフィードフォワードネットワークに渡されます。または、存在しない場合は <code>no object</code> が渡されます。</p>
+<p>DETRは各オブジェクトクエリを並行してデコードして、<em>N</em>の最終的な予測（<em>N</em>はクエリの数）を出力します。典型的な自己回帰モデルが1つの要素を1回ずつ予測するのとは異なり、オブジェクト検出はセット予測タスク（<code>バウンディングボックス</code>、<code>クラスラベル</code>）であり、1回のパスで<em>N</em>の予測を行います。</p>
+</li>
+<li>
+<p>訓練中、DETRは<em>二部マッチング損失</em>を使用して、固定された数の予測と固定された一連の正解ラベルを比較します。 <em>N</em>のラベルセットに正解ラベルが少ない場合、 <code>no object</code> クラスでパディングされます。この損失関数は、DETRに予測と正解ラベルとの間で1対1の割り当てを見つけるように促します。バウンディングボックスまたはクラスラベルのどちらかが正しくない場合、損失が発生します。同様に、DETRが存在しないオブジェクトを予測した場合、罰金が科せられます。これにより、DETRは1つの非常に顕著なオブジェクトに焦点を当てるのではなく、画像内の他のオブジェクトを見つけるように促されます。</p>
+</li>
+</ol>
+<p>DETRの上にオブジェクト検出ヘッドを追加して、クラスラベルとバウンディングボックスの座標を見つけます。オブジェクト検出ヘッドには2つのコンポーネントがあります：デコーダーの隠れ状態をクラスラベルのロジットに変換するための線形層、およびバウンディングボックスを予測するためのMLPです。</p>
+<p>オブジェクト検出を試す準備はできましたか？DETROの完全な<a href="tasks/object_detection">オブジェクト検出ガイド</a>をチェックして、DETROのファインチューニング方法と推論方法を学んでください！</p>
+<h3 id="image-segmentation">Image segmentation</h3>
+<p><a href="model_doc/mask2former">Mask2Former</a>は、すべての種類の画像セグメンテーションタスクを解決するためのユニバーサルアーキテクチャです。従来のセグメンテーションモデルは通常、インスタンス、セマンティック、またはパノプティックセグメンテーションの特定のサブタスクに合わせて設計されています。Mask2Formerは、それらのタスクのそれぞれを<em>マスク分類</em>の問題として捉えます。マスク分類はピクセルを<em>N</em>のセグメントにグループ化し、与えられた画像に対して<em>N</em>のマスクとそれに対応するクラスラベルを予測します。このセクションでは、Mask2Formerの動作方法を説明し、最後にSegFormerのファインチューニングを試すことができます。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
+</div>
+
+<p>Mask2Formerの主要なコンポーネントは次の3つです。</p>
+<ol>
+<li>
+<p><a href="model_doc/swin">Swin</a>バックボーンは画像を受け入れ、3つの連続する3x3の畳み込みから低解像度の画像特徴マップを作成します。</p>
+</li>
+<li>
+<p>特徴マップは<em>ピクセルデコーダー</em>に渡され、低解像度の特徴を高解像度のピクセル埋め込みに徐々にアップサンプリングします。ピクセルデコーダーは実際には解像度1/32、1/16、および1/8のオリジナル画像のマルチスケール特徴（低解像度と高解像度の特徴を含む）を生成します。</p>
+</li>
+<li>
+<p>これらの異なるスケールの特徴マップのそれぞれは、高解像度の特徴から小さいオブジェクトをキャプチャするために1回ずつトランスフォーマーデコーダーレイヤーに渡されます。Mask2Formerの要点は、デコーダーの<em>マスクアテンション</em>メカニズムです。クロスアテンションが画像全体に注意を向けることができるのに対し、マスクアテンションは画像の特定の領域にのみ焦点を当てます。これは速く、ローカルな画像特徴だけでもモデルが学習できるため、パフォーマンスが向上します。</p>
+</li>
+<li>
+<p><a href="tasks_explained#object-detection">DETR</a>と同様に、Mask2Formerも学習されたオブジェクトクエリを使用し、画像の特徴と組み合わせてセットの予測（<code>クラスラベル</code>、<code>マスク予測</code>）を行います。デコーダーの隠れ状態は線形層に渡され、クラスラベルに対するロジットに変換されます。ロジットと正解ラベル間のクロスエントロピー損失が最も可能性の高いものを見つけます。</p>
+<p>マスク予測は、ピクセル埋め込みと最終的なデコーダーの隠れ状態を組み合わせて生成されます。シグモイドクロスエントロピーやダイス損失がロジットと正解マスクの間で最も可能性の高いマスクを見つけます。</p>
+</li>
+</ol>
+<p>セグメンテーションタスクに取り組む準備ができましたか？SegFormerのファインチューニング方法と推論方法を学ぶために、完全な<a href="tasks/semantic_segmentation">画像セグメンテーションガイド</a>をチェックしてみてください！</p>
+<h3 id="depth-estimation">Depth estimation</h3>
+<p><a href="model_doc/glpn">GLPN</a>、<em>Global-Local Path Network</em>、はセグメンテーションまたは深度推定などの密な予測タスクに適しています。<a href="model_doc/segformer">SegFormer</a>エンコーダーを軽量デコーダーと組み合わせたTransformerベースの深度推定モデルです。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
+</div>
+
+<ol>
+<li>
+<p>ViTのように、画像はパッチのシーケンスに分割されますが、これらの画像パッチは小さいです。これはセグメンテーションや深度推定などの密な予測タスクに適しています。画像パッチはパッチ埋め込みに変換されます（パッチ埋め込みの作成方法の詳細については、<a href="#image-classification">画像分類</a>セクションを参照してください）。これらのパッチ埋め込みはエンコーダーに渡されます。</p>
+</li>
+<li>
+<p>エンコーダーはパッチ埋め込みを受け入れ、複数のエンコーダーブロックを通じてそれらを渡します。各ブロックにはアテンションとMix-FFNレイヤーが含まれています。後者の役割は位置情報を提供することです。各エンコーダーブロックの最後には、階層的表現を作成するための<em>パッチマージング</em>レイヤーがあります。隣接するパッチのグループごとの特徴が連結され、連結された特徴に対して線形層が適用され、パッチの数を1/4の解像度に削減します。これが次のエンコーダーブロックへの入力となり、ここではこのプロセス全体が繰り返され、元の画像の1/8、1/16、および1/32の解像度の画像特徴が得られます。</p>
+</li>
+<li>
+<p>軽量デコーダーは、エンコーダーからの最後の特徴マップ（1/32スケール）を受け取り、それを1/16スケールにアップサンプリングします。その後、特徴は各特徴に対するアテンションマップからローカルとグローバルな特徴を選択して組み合わせる<em>セレクティブフィーチャーフュージョン（SFF）</em>モジュールに渡され、1/8にアップサンプリングされます。このプロセスはデコードされた特徴が元の画像と同じサイズになるまで繰り返されます。</p>
+</li>
+<li>
+<p>デコードされた特徴は、最終的な予測を行うためにセマンティックセグメンテーション、深度推定、またはその他の密な予測タスクに供給されます。セマンティックセグメンテーションの場合、特徴はクラス数に対するロジットに変換され、クロスエントロピー損失を使用して最適化されます。深度推定の場合、特徴は深度マップに変換され、平均絶対誤差（MAE）または平均二乗誤差（MSE）損失が使用されます。</p>
+</li>
+</ol>
+<h2 id="natural-language-processing">Natural language processing</h2>
+<p>Transformerは最初に機械翻訳のために設計され、それ以降、ほとんどのNLPタスクを解決するためのデフォルトのアーキテクチャとなっています。一部のタスクはTransformerのエンコーダー構造に適しており、他のタスクはデコーダーに適しています。さらに、一部のタスクではTransformerのエンコーダー-デコーダー構造を使用します。</p>
+<h3 id="text-classification">Text classification</h3>
+<p><a href="model_doc/bert">BERT</a>はエンコーダーのみのモデルであり、テキストの豊かな表現を学習するために両側の単語に注意を払うことで、深い双方向性を効果的に実装した最初のモデルです。</p>
+<ol>
+<li>
+<p>BERTは<a href="tokenizer_summary#wordpiece">WordPiece</a>トークナイゼーションを使用してテキストのトークン埋め込みを生成します。単一の文と文のペアを区別するために、特別な <code>[SEP]</code> トークンが追加されます。 <code>[CLS]</code> トークンはすべてのテキストシーケンスの先頭に追加されます。 <code>[CLS]</code> トークンとともに最終出力は、分類タスクのための入力として使用されます。BERTはまた、トークンが文のペアの最初または2番目の文に属するかどうかを示すセグメント埋め込みを追加します。</p>
+</li>
+<li>
+<p>BERTは、事前トレーニングで2つの目標を使用します：マスクされた言語モデリングと次の文の予測です。マスクされた言語モデリングでは、入力トークンの一部がランダムにマスクされ、モデルはこれらを予測する必要があります。これにより、モデルが全ての単語を見て「次の単語」を予測することができる双方向性の問題が解決されます。予測されたマスクトークンの最終的な隠れた状態は、ソフトマックスを使用した単語のマスクを予測するためのフィードフォワードネットワークに渡されます。</p>
+<p>2番目の事前トレーニングオブジェクトは次の文の予測です。モデルは文Aの後に文Bが続くかどうかを予測する必要があります。半分の場合、文Bは次の文であり、残りの半分の場合、文Bはランダムな文です。予測（次の文かどうか）は、2つのクラス（<code>IsNext</code>および<code>NotNext</code>）に対するソフトマックスを持つフィードフォワードネットワークに渡されます。</p>
+</li>
+<li>
+<p>入力埋め込みは、最終的な隠れた状態を出力するために複数のエンコーダーレイヤーを介して渡されます。</p>
+</li>
+</ol>
+<p>事前訓練済みモデルをテキスト分類に使用するには、ベースのBERTモデルの上にシーケンス分類ヘッドを追加します。シーケンス分類ヘッドは最終的な隠れた状態を受け入れ、それらをロジットに変換するための線形層です。クロスエントロピー損失は、ロジットとターゲット間で最も可能性の高いラベルを見つけるために計算されます。</p>
+<p>テキスト分類を試してみる準備はできましたか？DistilBERTを微調整し、推論に使用する方法を学ぶために、完全な<a href="../en/tasks/sequence_classification">テキスト分類ガイド(英語版)</a>をチェックしてみてください！</p>
+<h3 id="token-classification">Token classification</h3>
+<p>BERTを名前エンティティ認識（NER）などのトークン分類タスクに使用するには、ベースのBERTモデルの上にトークン分類ヘッドを追加します。トークン分類ヘッドは最終的な隠れた状態を受け入れ、それらをロジットに変換するための線形層です。クロスエントロピー損失は、ロジットと各トークン間で最も可能性の高いラベルを見つけるために計算されます。</p>
+<p>トークン分類を試してみる準備はできましたか？DistilBERTを微調整し、推論に使用する方法を学ぶために、完全な<a href="tasks/token_classification">トークン分類ガイド</a>をチェックしてみてください！</p>
+<h3 id="question-answering">Question answering</h3>
+<p>BERTを質問応答に使用するには、ベースのBERTモデルの上にスパン分類ヘッドを追加します。この線形層は最終的な隠れた状態を受け入れ、回答に対応するテキストの「スパン」開始と終了のロジットを計算します。クロスエントロピー損失は、ロジットとラベル位置との間で最も可能性の高いテキストスパンを見つけるために計算されます。</p>
+<p>質問応答を試してみる準備はできましたか？DistilBERTを微調整し、推論に使用する方法を学ぶために、完全な<a href="tasks/question_answering">質問応答ガイド</a>をチェックしてみてください！</p>
+<p><Tip></p>
+<p>💡 注意してください。一度事前トレーニングが完了したBERTを使用してさまざまなタスクに簡単に適用できることに注目してください。必要なのは、事前トレーニング済みモデルに特定のヘッドを追加して、隠れた状態を所望の出力に変換することだけです！</p>
+<p></Tip></p>
+<h3 id="text-generation">Text generation</h3>
+<p><a href="model_doc/gpt2">GPT-2</a>は大量のテキストで事前トレーニングされたデコーダー専用モデルです。プロンプトを与えると説得力のあるテキストを生成し、明示的にトレーニングされていないにもかかわらず、質問応答などの他のNLPタスクも完了できます。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
+</div>
+
+<ol>
+<li>
+<p>GPT-2は<a href="tokenizer_summary#bytepair-encoding-bpe">バイトペアエンコーディング（BPE）</a>を使用して単語をトークナイズし、トークン埋め込みを生成します。位置エンコーディングがトークン埋め込みに追加され、各トークンの位置を示します。入力埋め込みは複数のデコーダーブロックを介して最終的な隠れた状態を出力するために渡されます。各デコーダーブロック内で、GPT-2は「マスクされた自己注意」レイヤーを使用します。これは、GPT-2が未来のトークンに注意を払うことはできないことを意味します。GPT-2は左側のトークンにのみ注意を払うことが許可されています。これはBERTの[<code>mask</code>]トークンとは異なり、マスクされた自己注意では未来のトークンに対してスコアを<code>0</code>に設定するための注意マスクが使用されます。</p>
+</li>
+<li>
+<p>デコーダーからの出力は、言語モデリングヘッドに渡され、最終的な隠れた状態をロジットに変換するための線形変換を実行します。ラベルはシーケンス内の次のトークンであり、これはロジットを右に1つずらして生成されます。クロスエントロピー損失は、シフトされたロジットとラベル間で計算され、次に最も可能性の高いトークンを出力します。</p>
+</li>
+</ol>
+<p>GPT-2の事前トレーニングの目標は完全に<a href="glossary#causal-language-modeling">因果言語モデリング</a>に基づいており、シーケンス内の次の単語を予測します。これにより、GPT-2はテキスト生成を含むタスクで特に優れた性能を発揮します。</p>
+<p>テキスト生成を試してみる準備はできましたか？DistilGPT-2を微調整し、推論に使用する方法を学ぶために、完全な<a href="tasks/language_modeling#causal-language-modeling">因果言語モデリングガイド</a>をチェックしてみてください！</p>
+<p><Tip></p>
+<p>テキスト生成に関する詳細は、<a href="generation_strategies">テキスト生成戦略</a>ガイドをチェックしてみてください！</p>
+<p></Tip></p>
+<h3 id="summarization">Summarization</h3>
+<p><a href="model_doc/bart">BART</a> や <a href="model_doc/t5">T5</a> のようなエンコーダーデコーダーモデルは、要約タスクのシーケンス・トゥ・シーケンス・パターンに設計されています。このセクションでは、BARTの動作方法を説明し、最後にT5の微調整を試すことができます。</p>
+<div class="flex justify-center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
+</div>
+
+<ol>
+<li>
+<p>BARTのエンコーダーアーキテクチャは、BERTと非常に似ており、テキストのトークンと位置エンベディングを受け入れます。BARTは、入力を破壊してからデコーダーで再構築することによって事前トレーニングされます。特定の破壊戦略を持つ他のエンコーダーとは異なり、BARTは任意の種類の破壊を適用できます。ただし、<em>テキストインフィリング</em>破壊戦略が最適です。テキストインフィリングでは、いくつかのテキストスパンが<strong>単一の</strong> [<code>mask</code>] トークンで置き換えられます。これは重要です、なぜならモデルはマスクされたトークンを予測しなければならず、モデルに欠落トークンの数を予測させるからです。入力埋め込みとマスクされたスパンはエンコーダーを介して最終的な隠れた状態を出力しますが、BERTとは異なり、BARTは単語を予測するための最終的なフィードフォワードネットワークを最後に追加しません。</p>
+</li>
+<li>
+<p>エンコーダーの出力はデコーダーに渡され、デコーダーはエンコーダーの出力からマスクされたトークンと非破壊トークンを予測する必要があります。これにより、デコーダーは元のテキストを復元するのに役立つ追加のコンテキストが提供されます。デコーダーからの出力は言語モデリングヘッドに渡され、隠れた状態をロジットに変換するための線形変換を実行します。クロスエントロピー損失は、ロジットとラベルの間で計算され、ラベルは単に右にシフトされたトークンです。</p>
+</li>
+</ol>
+<p>要約を試す準備はできましたか？T5を微調整して推論に使用する方法を学ぶために、完全な<a href="tasks/summarization">要約ガイド</a>をご覧ください！</p>
+<p><Tip></p>
+<p>テキスト生成に関する詳細は、<a href="generation_strategies">テキスト生成戦略</a>ガイドをチェックしてみてください！</p>
+<p></Tip></p>
+<h3 id="translation">Translation</h3>
+<p>翻訳は、もう一つのシーケンス・トゥ・シーケンス・タスクの例であり、<a href="model_doc/bart">BART</a> や <a href="model_doc/t5">T5</a> のようなエンコーダーデコーダーモデルを使用して実行できます。このセクションでは、BARTの動作方法を説明し、最後にT5の微調整を試すことができます。</p>
+<p>BARTは、ソース言語をターゲット言語にデコードできるようにするために、別個にランダムに初期化されたエンコーダーを追加することで翻訳に適応します。この新しいエンコーダーの埋め込みは、元の単語埋め込みの代わりに事前トレーニング済みのエンコーダーに渡されます。ソースエンコーダーは、モデルの出力からのクロスエントロピー損失を用いてソースエンコーダー、位置エンベディング、および入力エンベディングを更新することによって訓練されます。この最初のステップではモデルパラメータが固定され、すべてのモデルパラメータが2番目のステップで一緒に訓練されます。</p>
+<p>その後、翻訳のために多言語版のmBARTが登場し、多言語で事前トレーニングされたモデルとして利用可能です。</p>
+<p>翻訳を試す準備はできましたか？T5を微調整して推論に使用する方法を学ぶために、完全な<a href="tasks/summarization">翻訳ガイド</a>をご覧ください！</p>
+<p><Tip></p>
+<p>テキスト生成に関する詳細は、<a href="generation_strategies">テキスト生成戦略</a>ガイドをチェックしてみてください！</p>
+<p></Tip></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
