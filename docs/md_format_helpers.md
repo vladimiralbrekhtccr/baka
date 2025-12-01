@@ -36,3 +36,7 @@ allowfullscreen></iframe>
 
 > [!Note]
 > **Qwen3-Next-80B-A3B-Instruct** supports only instruct (non-thinking) mode and does not generate ``<think></think>`` blocks in its output.
+
+### Formatting:
+
+~~crossed-out text~~

@@ -5,7 +5,7 @@
 
 
 
-# setup
+~~# setup
 ## init
 ```
 mkdir baka
@@ -15,6 +15,7 @@ uva # alias uva='source .venv/bin/activate'
 code .gitgnore
 code readme.nd
 uv pip install mkdocs
+uv pip install mkdocs-material
 mkdocs new . 
 mkdocs serve -a localhost:7775
 ```

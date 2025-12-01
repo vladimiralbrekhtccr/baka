@@ -48,6 +48,8 @@ nav:
     - Benchmarks: vllm/benchmarks/performance_eval.md
   - LLM: 
     - Speculative Decoding: llm/speculative_decoding.md
+  - VLM:
+    - Qwen3VL: vlm/qwen3_vl_4B_object_detection.md
   - MD format helpers: md_format_helpers.md
   - Docker: docker.md
   - Linux: linux.md
