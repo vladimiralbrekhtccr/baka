@@ -1,0 +1,1772 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Migration - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrazione-da-pacchetti-precedenti" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#migrazione-da-transformers-v3x-a-v4x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrazione da transformers v3.x a v4.x
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrazione da transformers v3.x a v4.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-autotokenizer-e-pipeline-ora-utilizzano-tokenizer-veloci-rust-per-impostazione-predefinita" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. AutoTokenizer e pipeline ora utilizzano tokenizer veloci (rust) per impostazione predefinita.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. AutoTokenizer e pipeline ora utilizzano tokenizer veloci (rust) per impostazione predefinita.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-ottenere-lo-stesso-comportamento-di-v3x-in-v4x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come ottenere lo stesso comportamento di v3.x in v4.x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sentencepiece-e-stato-rimosso-dalle-dipendenze-richieste" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. SentencePiece è stato rimosso dalle dipendenze richieste
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SentencePiece è stato rimosso dalle dipendenze richieste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come ottenere lo stesso comportamento della v3.x nella v4.x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-larchitettura-delle-repo-e-stato-aggiornata-in-modo-che-ogni-modello-abbia-la-propria-cartella" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. L'architettura delle repo è stato aggiornata in modo che ogni modello abbia la propria cartella
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. L&#39;architettura delle repo è stato aggiornata in modo che ogni modello abbia la propria cartella">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come ottenere lo stesso comportamento della v3.x nella v4.x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-impostare-largomento-return_dict-su-true-per-impostazione-predefinita" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Impostare l'argomento return_dict su True per impostazione predefinita
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Impostare l&#39;argomento return_dict su True per impostazione predefinita">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come ottenere lo stesso comportamento della v3.x nella v4.x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-rimozione-di-alcuni-attributi-deprecati" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Rimozione di alcuni attributi deprecati
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passaggio-da-pytorch-transformers-a-transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passaggio da pytorch-transformers a 🤗 Transformers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passaggio da pytorch-transformers a 🤗 Transformers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lordine-posizionale-di-alcune-parole-chiave-di-input-dei-modelli-attention_mask-token_type_ids-e-cambiato" class="md-nav__link">
+    <span class="md-ellipsis">
+      L’ordine posizionale di alcune parole chiave di input dei modelli (attention_mask, token_type_ids...) è cambiato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrazione-da-pytorch-pretrained-bert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrazione da pytorch-pretrained-bert
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrazione da pytorch-pretrained-bert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-modelli-restituiscono-sempre-tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      I modelli restituiscono sempre tuple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serializzazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serializzazione
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ottimizzatori-bertadam-e-openaiadam-ora-sono-adamw-lo-scheduling-e-quello-standard-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ottimizzatori: BertAdam e OpenAIAdam ora sono AdamW, lo scheduling è quello standard PyTorch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!---
+Copyright 2020 The HuggingFace Team. Tutti i diritti riservati.
+
+Concesso in licenza in base alla Licenza Apache, Versione 2.0 (la "Licenza");
+non è possibile utilizzare questo file se non in conformità con la Licenza.
+È possibile ottenere una copia della Licenza all'indirizzo
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+A meno che non sia richiesto dalla legge applicabile o concordato per iscritto, il software
+distribuito con la Licenza è distribuito su BASE "COSÌ COM'È",
+SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, espresse o implicite.
+Per la lingua specifica vedi la Licenza che regola le autorizzazioni e
+le limitazioni ai sensi della STESSA.
+
+⚠️ Note that this file is in Markdown but contain specific syntax for our doc-builder (similar to MDX) that may not be
+rendered properly in your Markdown viewer.
+
+-->
+
+<h1 id="migrazione-da-pacchetti-precedenti">Migrazione da pacchetti precedenti</h1>
+<h2 id="migrazione-da-transformers-v3x-a-v4x">Migrazione da transformers <code>v3.x</code> a <code>v4.x</code></h2>
+<p>Un paio di modifiche sono state introdotte nel passaggio dalla versione 3 alla versione 4. Di seguito è riportato un riepilogo delle
+modifiche previste:</p>
+<h4 id="1-autotokenizer-e-pipeline-ora-utilizzano-tokenizer-veloci-rust-per-impostazione-predefinita">1. AutoTokenizer e pipeline ora utilizzano tokenizer veloci (rust) per impostazione predefinita.</h4>
+<p>I tokenizer python e rust hanno all'incirca le stesse API, ma i tokenizer rust hanno un set di funzionalità più completo.</p>
+<p>Ciò introduce due modifiche sostanziali:
+- La gestione dei token in overflow tra i tokenizer Python e Rust è diversa.
+- I tokenizers di rust non accettano numeri interi nei metodi di codifica.</p>
+<h5 id="come-ottenere-lo-stesso-comportamento-di-v3x-in-v4x">Come ottenere lo stesso comportamento di v3.x in v4.x</h5>
+<ul>
+<li>Le pipeline ora contengono funzionalità aggiuntive pronte all'uso. Vedi la <a href="main_classes/pipelines#transformers.TokenClassificationPipeline">pipeline di classificazione dei token con il flag <code>grouped_entities</code></a>.</li>
+<li>Gli auto-tokenizer ora restituiscono tokenizer rust. Per ottenere invece i tokenizer python, l'utente deve usare il flag <code>use_fast</code> impostandolo <code>False</code>:</li>
+</ul>
+<p>Nella versione <code>v3.x</code>:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoTokenizer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;google-bert/bert-base-cased&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+per ottenere lo stesso nella versione <code>v4.x</code>:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoTokenizer</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;google-bert/bert-base-cased&quot;</span><span class="p">,</span> <span class="n">use_fast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h4 id="2-sentencepiece-e-stato-rimosso-dalle-dipendenze-richieste">2. SentencePiece è stato rimosso dalle dipendenze richieste</h4>
+<p>Il requisito sulla dipendenza SentencePiece è stato rimosso da <code>setup.py</code>. È stato fatto per avere un canale su anaconda cloud senza basarsi su <code>conda-forge</code>. Ciò significa che i tokenizer che dipendono dalla libreria SentencePiece non saranno disponibili con un'installazione standard di <code>transformers</code>.</p>
+<p>Ciò include le versioni <strong>lente</strong> di:
+- <code>XLNetTokenizer</code>
+- <code>AlbertTokenizer</code>
+- <code>CamembertTokenizer</code>
+- <code>MBartTokenizer</code>
+- <code>PegasusTokenizer</code>
+- <code>T5Tokenizer</code>
+- <code>ReformerTokenizer</code>
+- <code>XLMRobertaTokenizer</code></p>
+<h5 id="come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x">Come ottenere lo stesso comportamento della v3.x nella v4.x</h5>
+<p>Per ottenere lo stesso comportamento della versione <code>v3.x</code>, devi installare anche <code>sentencepiece</code>:</p>
+<p>Nella versione <code>v3.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>transformers
+</span></code></pre></div>
+per ottenere lo stesso nella versione <code>v4.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>transformers<span class="o">[</span>sentencepiece<span class="o">]</span>
+</span></code></pre></div>
+o
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>transformers<span class="w"> </span>stentencepiece
+</span></code></pre></div></p>
+<h4 id="3-larchitettura-delle-repo-e-stato-aggiornata-in-modo-che-ogni-modello-abbia-la-propria-cartella">3. L'architettura delle repo è stato aggiornata in modo che ogni modello abbia la propria cartella</h4>
+<p>Con l’aggiunta di nuovi modelli, il numero di file nella cartella <code>src/transformers</code> continua a crescere e diventa più difficile navigare e capire. Abbiamo fatto la scelta di inserire ogni modello e i file che lo accompagnano nelle proprie sottocartelle.</p>
+<p>Si tratta di una modifica sostanziale in quanto l'importazione di layer intermedi utilizzando direttamente il modulo di un modello deve essere eseguita tramite un percorso diverso.</p>
+<h5 id="come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x_1">Come ottenere lo stesso comportamento della v3.x nella v4.x</h5>
+<p>Per ottenere lo stesso comportamento della versione <code>v3.x</code>, devi aggiornare il percorso utilizzato per accedere ai layer.</p>
+<p>Nella versione <code>v3.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>from<span class="w"> </span>transformers.modeling_bert<span class="w"> </span>import<span class="w"> </span>BertLayer
+</span></code></pre></div>
+per ottenere lo stesso nella versione <code>v4.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>from<span class="w"> </span>transformers.models.bert.modeling_bert<span class="w"> </span>import<span class="w"> </span>BertLayer
+</span></code></pre></div></p>
+<h4 id="4-impostare-largomento-return_dict-su-true-per-impostazione-predefinita">4. Impostare l'argomento <code>return_dict</code> su <code>True</code> per impostazione predefinita</h4>
+<p>L'<a href="main_classes/output">argomento <code>return_dict</code></a> abilita la restituzione di oggetti python dict-like contenenti gli output del modello, invece delle tuple standard. Questo oggetto è self-documented poiché le chiavi possono essere utilizzate per recuperare valori, comportandosi anche come una tupla e gli utenti possono recuperare oggetti per indexing o slicing.</p>
+<p>Questa è una modifica sostanziale poiché la tupla non può essere decompressa: <code>value0, value1 = outputs</code> non funzionerà.</p>
+<h5 id="come-ottenere-lo-stesso-comportamento-della-v3x-nella-v4x_2">Come ottenere lo stesso comportamento della v3.x nella v4.x</h5>
+<p>Per ottenere lo stesso comportamento della versione <code>v3.x</code>, specifica l'argomento <code>return_dict</code> come <code>False</code>, sia nella configurazione del modello che nel passaggio successivo.</p>
+<p>Nella versione <code>v3.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>BertModel.from_pretrained<span class="o">(</span><span class="s2">&quot;google-bert/bert-base-cased&quot;</span><span class="o">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>model<span class="o">(</span>**inputs<span class="o">)</span>
+</span></code></pre></div>
+per ottenere lo stesso nella versione <code>v4.x</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>BertModel.from_pretrained<span class="o">(</span><span class="s2">&quot;google-bert/bert-base-cased&quot;</span><span class="o">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>model<span class="o">(</span>**inputs,<span class="w"> </span><span class="nv">return_dict</span><span class="o">=</span>False<span class="o">)</span>
+</span></code></pre></div>
+o
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>BertModel.from_pretrained<span class="o">(</span><span class="s2">&quot;google-bert/bert-base-cased&quot;</span>,<span class="w"> </span><span class="nv">return_dict</span><span class="o">=</span>False<span class="o">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>model<span class="o">(</span>**inputs<span class="o">)</span>
+</span></code></pre></div></p>
+<h4 id="5-rimozione-di-alcuni-attributi-deprecati">5. Rimozione di alcuni attributi deprecati</h4>
+<p>Gli attributi sono stati rimossi se deprecati da almeno un mese. L'elenco completo degli attributi obsoleti è disponibile in <a href="https://github.com/huggingface/transformers/pull/8604">#8604</a>.</p>
+<p>Ecco un elenco di questi attributi/metodi/argomenti e quali dovrebbero essere le loro sostituzioni:</p>
+<p>In diversi modelli, le etichette diventano coerenti con gli altri modelli:
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>AlbertForMaskedLM</code> e <code>AlbertForPreTraining</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>BertForMaskedLM</code> e <code>BertForPreTraining</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>DistilBertForMaskedLM</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>ElectraForMaskedLM</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>LongformerForMaskedLM</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>MobileBertForMaskedLM</code>.
+- <code>masked_lm_labels</code> diventa <code>labels</code> in <code>RobertaForMaskedLM</code>.
+- <code>lm_labels</code> diventa <code>labels</code> in <code>BartForConditionalGeneration</code>.
+- <code>lm_labels</code> diventa <code>labels</code> in <code>GPT2DoubleHeadsModel</code>.
+- <code>lm_labels</code> diventa <code>labels</code> in <code>OpenAIGPTDoubleHeadsModel</code>.
+- <code>lm_labels</code> diventa <code>labels</code> in <code>T5ForConditionalGeneration</code>.</p>
+<p>In diversi modelli, il meccanismo di memorizzazione nella cache diventa coerente con gli altri:
+- <code>decoder_cached_states</code> diventa <code>past_key_values</code> in tutti i modelli BART-like, FSMT e T5.
+- <code>decoder_past_key_values</code> diventa <code>past_key_values</code> in tutti i modelli BART-like, FSMT e T5.
+- <code>past</code> diventa <code>past_key_values</code> in tutti i modelli CTRL.
+- <code>past</code> diventa <code>past_key_values</code> in tutti i modelli GPT-2.</p>
+<p>Per quanto riguarda le classi tokenizer:
+- L'attributo tokenizer <code>max_len</code> diventa <code>model_max_length</code>.
+- L'attributo tokenizer <code>return_lengths</code> diventa <code>return_length</code>.
+- L'argomento di codifica del tokenizer <code>is_pretokenized</code> diventa <code>is_split_into_words</code>.</p>
+<p>Per quanto riguarda la classe <code>Trainer</code>:
+- L'argomento <code>tb_writer</code> di <code>Trainer</code> è stato rimosso in favore della funzione richiamabile <code>TensorBoardCallback(tb_writer=...)</code>.
+- L'argomento <code>prediction_loss_only</code> di <code>Trainer</code> è stato rimosso in favore dell'argomento di classe <code>args.prediction_loss_only</code>.
+- L'attributo <code>data_collator</code> di <code>Trainer</code> sarà richiamabile.
+- Il metodo <code>_log</code> di <code>Trainer</code> è deprecato a favore di <code>log</code>.
+- Il metodo <code>_training_step</code> di <code>Trainer</code> è deprecato a favore di <code>training_step</code>.
+- Il metodo <code>_prediction_loop</code> di <code>Trainer</code> è deprecato a favore di <code>prediction_loop</code>.
+- Il metodo <code>is_local_master</code> di <code>Trainer</code> è deprecato a favore di <code>is_local_process_zero</code>.
+- Il metodo <code>is_world_master</code> di <code>Trainer</code> è deprecato a favore di <code>is_world_process_zero</code>.</p>
+<p>Per quanto riguarda la classe <code>TrainingArguments</code>:
+- L'argomento <code>evaluate_during_training</code> di <code>TrainingArguments</code> è deprecato a favore di <code>eval_strategy</code>.</p>
+<p>Per quanto riguarda il modello Transfo-XL:
+- L'attributo di configurazione <code>tie_weight</code> di Transfo-XL diventa <code>tie_word_embeddings</code>.
+- Il metodo di modellazione <code>reset_length</code> di Transfo-XL diventa <code>reset_memory_length</code>.</p>
+<p>Per quanto riguarda le pipeline:
+- L'argomento <code>topk</code> di <code>FillMaskPipeline</code> diventa <code>top_k</code>.</p>
+<h2 id="passaggio-da-pytorch-transformers-a-transformers">Passaggio da pytorch-transformers a 🤗 Transformers</h2>
+<p>Ecco un breve riepilogo di ciò a cui prestare attenzione durante il passaggio da <code>pytorch-transformers</code> a 🤗 Transformers.</p>
+<h3 id="lordine-posizionale-di-alcune-parole-chiave-di-input-dei-modelli-attention_mask-token_type_ids-e-cambiato">L’ordine posizionale di alcune parole chiave di input dei modelli (<code>attention_mask</code>, <code>token_type_ids</code>...) è cambiato</h3>
+<p>Per usare Torchscript (vedi #1010, #1204 e #1195) l'ordine specifico delle <strong>parole chiave di input</strong> di alcuni modelli (<code>attention_mask</code>, <code>token_type_ids</code>...) è stato modificato.</p>
+<p>Se inizializzavi i modelli usando parole chiave per gli argomenti, ad esempio <code>model(inputs_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)</code>, questo non dovrebbe causare alcun cambiamento.</p>
+<p>Se inizializzavi i modelli con input posizionali per gli argomenti, ad esempio <code>model(inputs_ids, attention_mask, token_type_ids)</code>, potrebbe essere necessario ricontrollare l'ordine esatto degli argomenti di input.</p>
+<h2 id="migrazione-da-pytorch-pretrained-bert">Migrazione da pytorch-pretrained-bert</h2>
+<p>Ecco un breve riepilogo di ciò a cui prestare attenzione durante la migrazione da <code>pytorch-pretrained-bert</code> a 🤗 Transformers</p>
+<h3 id="i-modelli-restituiscono-sempre-tuple">I modelli restituiscono sempre <code>tuple</code></h3>
+<p>La principale modifica di rilievo durante la migrazione da <code>pytorch-pretrained-bert</code> a 🤗 Transformers è che il metodo dei modelli di previsione dà sempre una <code>tupla</code> con vari elementi a seconda del modello e dei parametri di configurazione.</p>
+<p>Il contenuto esatto delle tuple per ciascun modello è mostrato in dettaglio nelle docstring dei modelli e nella <a href="https://huggingface.co/transformers/">documentazione</a>.</p>
+<p>In quasi tutti i casi, andrà bene prendendo il primo elemento dell'output come quello che avresti precedentemente utilizzato in <code>pytorch-pretrained-bert</code>.</p>
+<p>Ecco un esempio di conversione da <code>pytorch-pretrained-bert</code>
+ a 🤗 Transformers per un modello di classificazione <code>BertForSequenceClassification</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Carichiamo il nostro modello</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BertForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;google-bert/bert-base-uncased&quot;</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Se usavi questa riga in pytorch-pretrained-bert :</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">loss</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Ora usa questa riga in 🤗 Transformers per estrarre la perdita dalla tupla di output:</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">loss</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1"># In 🤗 Transformers puoi anche avere accesso ai logit:</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">loss</span><span class="p">,</span> <span class="n">logits</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1"># Ed anche agli attention weight se configuri il modello per restituirli (e anche altri output, vedi le docstring e la documentazione)</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BertForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot; google-bert/bert-base-uncased&quot;</span><span class="p">,</span> <span class="n">output_attentions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">loss</span><span class="p">,</span> <span class="n">logits</span><span class="p">,</span> <span class="n">attentions</span> <span class="o">=</span> <span class="n">outputs</span>
+</span></code></pre></div>
+<h3 id="serializzazione">Serializzazione</h3>
+<p>Modifica sostanziale nel metodo <code>from_pretrained()</code>:</p>
+<ol>
+<li>
+<p>I modelli sono ora impostati in modalità di valutazione in maniera predefinita quando usi il metodo <code>from_pretrained()</code>. Per addestrarli non dimenticare di riportarli in modalità di addestramento (<code>model.train()</code>) per attivare i moduli di dropout.</p>
+</li>
+<li>
+<p>Gli argomenti aggiuntivi <code>*inputs</code> e <code>**kwargs</code> forniti al metodo <code>from_pretrained()</code> venivano passati direttamente al metodo <code>__init__()</code> della classe sottostante del modello. Ora sono usati per aggiornare prima l'attributo di configurazione del modello, che può non funzionare con le classi del modello derivate costruite basandosi sui precedenti esempi di <code>BertForSequenceClassification</code>. Più precisamente, gli argomenti posizionali <code>*inputs</code> forniti a <code>from_pretrained()</code> vengono inoltrati direttamente al metodo <code>__init__()</code>  del modello mentre gli argomenti keyword <code>**kwargs</code> (i) che corrispondono agli attributi della classe di configurazione, vengono utilizzati per aggiornare tali attributi (ii) che non corrispondono ad alcun attributo della classe di configurazione, vengono inoltrati al metodo <code>__init__()</code>.</p>
+</li>
+</ol>
+<p>Inoltre, sebbene non si tratti di una modifica sostanziale, i metodi di serializzazione sono stati standardizzati e probabilmente dovresti passare al nuovo metodo <code>save_pretrained(save_directory)</code> se prima usavi qualsiasi altro metodo di serializzazione.</p>
+<p>Ecco un esempio:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">### Carichiamo un modello e un tokenizer</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BertForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;google-bert/bert-base-uncased&quot;</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;google-bert/bert-base-uncased&quot;</span><span class="p">)</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">### Facciamo fare alcune cose al nostro modello e tokenizer</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># Es: aggiungiamo nuovi token al vocabolario e agli embending del nostro modello</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">tokenizer</span><span class="o">.</span><span class="n">add_tokens</span><span class="p">([</span><span class="s2">&quot;[SPECIAL_TOKEN_1]&quot;</span><span class="p">,</span> <span class="s2">&quot;[SPECIAL_TOKEN_2]&quot;</span><span class="p">])</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">model</span><span class="o">.</span><span class="n">resize_token_embeddings</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">))</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1"># Alleniamo il nostro modello</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">train</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1">### Ora salviamo il nostro modello e il tokenizer in una cartella</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">model</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="s2">&quot;./my_saved_model_directory/&quot;</span><span class="p">)</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">tokenizer</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="s2">&quot;./my_saved_model_directory/&quot;</span><span class="p">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="c1">### Ricarichiamo il modello e il tokenizer</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BertForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./my_saved_model_directory/&quot;</span><span class="p">)</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./my_saved_model_directory/&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="ottimizzatori-bertadam-e-openaiadam-ora-sono-adamw-lo-scheduling-e-quello-standard-pytorch">Ottimizzatori: BertAdam e OpenAIAdam ora sono AdamW, lo scheduling è quello standard PyTorch</h3>
+<p>I due ottimizzatori precedenti inclusi, <code>BertAdam</code> e <code>OpenAIAdam</code>, sono stati sostituiti da un singolo <code>AdamW</code> che presenta alcune differenze:</p>
+<ul>
+<li>implementa solo la correzione del weights decay,</li>
+<li>lo scheduling ora è esterno (vedi sotto),</li>
+<li>anche il gradient clipping ora è esterno (vedi sotto).</li>
+</ul>
+<p>Il nuovo ottimizzatore <code>AdamW</code> corrisponde alle API di <code>Adam</code> di PyTorch e ti consente di utilizzare metodi PyTorch o apex per lo scheduling e il clipping.</p>
+<p>Lo scheduling è ora standard <a href="https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate">PyTorch learning rate schedulers</a> e non fanno più parte dell'ottimizzatore.</p>
+<p>Ecco un esempio di linear warmup e decay con <code>BertAdam</code> e con <code>AdamW</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Parametri:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">lr</span> <span class="o">=</span> <span class="mf">1e-3</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">max_grad_norm</span> <span class="o">=</span> <span class="mf">1.0</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">num_training_steps</span> <span class="o">=</span> <span class="mi">1000</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">num_warmup_steps</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">warmup_proportion</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="n">num_warmup_steps</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">num_training_steps</span><span class="p">)</span> <span class="c1"># 0.1</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c1">### In precedenza l&#39;ottimizzatore BertAdam veniva istanziato in questo modo:</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">optimizer</span> <span class="o">=</span> <span class="n">BertAdam</span><span class="p">(</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>   <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>   <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>   <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;warmup_linear&quot;</span><span class="p">,</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>   <span class="n">warmup</span><span class="o">=</span><span class="n">warmup_proportion</span><span class="p">,</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>   <span class="n">num_training_steps</span><span class="o">=</span><span class="n">num_training_steps</span><span class="p">,</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">)</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1">### e usato in questo modo:</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">train_data</span><span class="p">:</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>   <span class="n">loss</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>   <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>   <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="c1">### In 🤗 Transformers, ottimizzatore e schedule sono divisi e usati in questo modo:</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="n">optimizer</span> <span class="o">=</span> <span class="n">AdamW</span><span class="p">(</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>   <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span> <span class="n">correct_bias</span><span class="o">=</span><span class="kc">False</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="p">)</span> <span class="c1"># Per riprodurre il comportamento specifico di BertAdam impostare correct_bias=False</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="n">scheduler</span> <span class="o">=</span> <span class="n">get_linear_schedule_with_warmup</span><span class="p">(</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>   <span class="n">optimizer</span><span class="p">,</span> <span class="n">num_warmup_steps</span><span class="o">=</span><span class="n">num_warmup_steps</span><span class="p">,</span> <span class="n">num_training_steps</span><span class="o">=</span><span class="n">num_training_steps</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="p">)</span> <span class="c1"># PyTorch scheduler</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="c1">### e va usato così:</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">train_data</span><span class="p">:</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>   <span class="n">loss</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>   <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>   <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">clip_grad_norm_</span><span class="p">(</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>   <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">max_grad_norm</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>   <span class="p">)</span> <span class="c1"># Gradient clipping non è più in AdamW (quindi puoi usare amp senza problemi)</span>
+</span><span id="__span-12-36"><a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>   <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</span><span id="__span-12-37"><a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>   <span class="n">scheduler</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

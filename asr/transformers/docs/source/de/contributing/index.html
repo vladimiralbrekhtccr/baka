@@ -1,0 +1,1699 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Contributing - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zu-transformers-beitragen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contributing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beitragsmoglichkeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beitragsmöglichkeiten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bestehende-probleme-beheben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bestehende Probleme beheben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-fehlerspezifisches-issue-oder-eine-feature-anfrage-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein fehlerspezifisches Issue oder eine Feature-Anfrage erstellen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ein fehlerspezifisches Issue oder eine Feature-Anfrage erstellen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#haben-sie-einen-fehler-gefunden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Haben Sie einen Fehler gefunden?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mochten-sie-eine-neue-funktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Möchten Sie eine neue Funktion?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mochten-sie-ein-neues-modell-implementieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Möchten Sie ein neues Modell implementieren?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mochten-sie-die-dokumentation-erweitern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Möchten Sie die Dokumentation erweitern?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eine-pull-anfrage-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eine Pull-Anfrage erstellen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eine Pull-Anfrage erstellen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checkliste-fur-pull-anfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checkliste für Pull-Anfragen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stil-leitfaden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stil-Leitfaden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entwickeln-unter-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entwickeln unter Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ein-geforktes-repository-mit-dem-haupt-repository-von-hugging-face-synchronisieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein geforktes Repository mit dem Haupt-Repository von Hugging Face synchronisieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!---
+Copyright 2024 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1 id="zu-transformers-beitragen">Zu 🤗 Transformers beitragen</h1>
+<p>Jeder ist willkommen, einen Beitrag zu leisten, und wir schätzen den Beitrag jedes Einzelnen. Codebeiträge sind nicht der einzige Weg, der Community zu helfen. Fragen zu beantworten, anderen zu helfen und die Dokumentation zu verbessern, sind ebenfalls äußerst wertvoll.</p>
+<p>Es hilft uns auch, wenn Sie das Projekt weiterempfehlen! Erwähnen Sie die Bibliothek in Blogposts über die großartigen Projekte, die sie ermöglicht hat, tweeten Sie, wenn sie Ihnen geholfen hat, oder hinterlassen Sie dem Repository ein ⭐️, um Danke zu sagen.</p>
+<p>Wie auch immer Sie sich entscheiden beizutragen, seien Sie achtsam und respektieren Sie unseren <a href="https://github.com/huggingface/transformers/blob/main/CODE_OF_CONDUCT.md">Verhaltenskodex</a>.</p>
+<p><strong>Dieser Leitfaden wurde stark durch den fantastischen <a href="https://github.com/scikit-learn/scikit-learn/blob/main/CONTRIBUTING.md">scikit-learn-Leitfaden für Beiträge</a> inspiriert.</strong></p>
+<h2 id="beitragsmoglichkeiten">Beitragsmöglichkeiten</h2>
+<p>Es gibt mehrere Wege, wie Sie zu 🤗 Transformers beitragen können:</p>
+<ul>
+<li>Beheben Sie bestehende Probleme im vorhandenen Code.</li>
+<li>Erstellen Sie Issues im Zusammenhang mit Fehlern oder gewünschten neuen Funktionen.</li>
+<li>Implementieren Sie neue Modelle.</li>
+<li>Tragen Sie zu den Beispielen oder zur Dokumentation bei.</li>
+</ul>
+<p>Wenn Sie nicht wissen, wo Sie anfangen sollen, gibt es eine spezielle Liste von <a href="https://github.com/huggingface/transformers/contribute">Good First Issues</a>. Sie bietet Ihnen eine Liste offener und anfängerfreundlicher Probleme und hilft Ihnen, einen ersten Beitrag zu Open-Source zu leisten. Idealerweise erstellen Sie eine Pull-Anfrage und verlinken sie mit dem Issue, an dem Sie arbeiten möchten. Wir versuchen, erstellte PRs bevorzugt zu behandeln, da wir so den Fortschritt leicht verfolgen können, und die Option besteht, dass jemand anderes den PR übernehmen kann, falls der Beitragende keine Zeit mehr hat.</p>
+<p>Für etwas mehr Herausforderung, können Sie auch einen Blick auf die Liste der <a href="https://github.com/huggingface/transformers/labels/Good%20Second%20Issue">Good Second Issues</a> werfen. Generell gilt: Legen Sie los, wenn Sie sich den Anforderungen gewachsen sehen und wir helfen Ihnen dabei! 🚀</p>
+<blockquote>
+<p>Alle Beiträge sind für die Community gleichermaßen wertvoll. 🥰</p>
+</blockquote>
+<h2 id="bestehende-probleme-beheben">Bestehende Probleme beheben</h2>
+<p>Wenn Ihnen ein Problem im vorhandenen Code auffällt und Sie eine Lösung im Sinn haben, können Sie gerne einen Beitrag leisten und <a href="#eine-pull-anfrage-erstellen">eine Pull-Anfrage erstellen</a>!</p>
+<h2 id="ein-fehlerspezifisches-issue-oder-eine-feature-anfrage-erstellen">Ein fehlerspezifisches Issue oder eine Feature-Anfrage erstellen</h2>
+<p>Tun Sie Ihr Bestes, diesen Richtlinien zu folgen, wenn Sie ein fehlerspezifisches Issue erstellen oder eine Feature-Anfrage einreichen. Das macht es uns leichter, Ihnen schnell und mit gutem Feedback zu antworten.</p>
+<h3 id="haben-sie-einen-fehler-gefunden">Haben Sie einen Fehler gefunden?</h3>
+<p>Die 🤗 Transformers-Bibliothek verdankt ihre Robustheit und Zuverlässigkeit aller Nutzer, die frisch entdeckte Probleme melden.</p>
+<p>Wir würden es wirklich schätzen, wenn Sie <strong>sicherstellen könnten, dass der Fehler noch nicht gemeldet wurde</strong> (verwenden Sie die Suchleiste auf GitHub unter Issues), bevor Sie ein Issue erstellen. Ihr Problem sollte sich auch auf Fehler in der Bibliothek selbst und nicht auf Ihren eigenen Code beziehen. Wenn Sie sich nicht sicher sind, ob der Fehler in Ihrem eigenen Code oder der Bibliothek liegt, fragen Sie bitte zuerst im <a href="https://discuss.huggingface.co/">Forum</a> nach. Das hilft uns, schneller auf Probleme im Zusammenhang mit der Bibliothek zu reagieren, anstatt auf allgemeine Fragen.</p>
+<p>Wenn Sie sich vergewissert haben, dass der Fehler noch nicht gemeldet wurde, geben Sie bitte die folgenden Informationen in Ihrem Issue an, damit wir es schnell beheben können:</p>
+<ul>
+<li>Ihr <strong>Betriebssystem und Version</strong> sowie die Versionen von <strong>Python</strong>, <strong>PyTorch</strong> und <strong>TensorFlow</strong>, falls zutreffend.</li>
+<li>Ein kurzes und unabhängiges Code-Snippet, das es uns ermöglicht, den Fehler in weniger als 30 Sekunden nachzustellen.</li>
+<li>Den <em>vollständigen</em> Traceback, wenn eine Ausnahme geworfen wird.</li>
+<li>Fügen Sie weitere hilfreiche Informationen, wie z. B. Screenshots, an.</li>
+</ul>
+<p>Um das Betriebssystem und die Softwareversionen automatisch auszugeben, führen Sie den folgenden Befehl aus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>transformers<span class="w"> </span>env
+</span></code></pre></div>
+<p>Sie können denselben Befehl auch im Hauptverzeichnis des Repositorys ausführen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>src/transformers/commands/transformers_cli.py<span class="w"> </span>env
+</span></code></pre></div>
+<h3 id="mochten-sie-eine-neue-funktion">Möchten Sie eine neue Funktion?</h3>
+<p>Wenn Sie eine bestimmte neue Funktion in 🤗 Transformers sehen möchten, erstellen Sie bitte ein Issue und fügen Sie eine Beschreibung hinzu:</p>
+<ol>
+<li>Was ist die <em>Motivation</em> hinter dieser Funktion? Steht sie in Zusammenhang mit einem Problem oder einer Frustration mit der Bibliothek? Ist es eine Funktion, die Sie für ein Projekt benötigen? Ist es etwas, an dem Sie gearbeitet haben und denken, dass es der Community nutzen könnte?</li>
+</ol>
+<p>Was auch immer es ist, wir würden uns freuen, davon zu hören!</p>
+<ol>
+<li>Beschreiben Sie Ihre gewünschte Funktion so detailliert wie möglich. Je mehr Sie uns darüber erzählen können, desto besser können wir Ihnen helfen.</li>
+<li>Stellen Sie einen <em>Code-Schnipsel</em> bereit, der die Funktionsweise demonstriert.</li>
+<li>Falls die Funktion auf einem Paper beruht, verlinken Sie dieses bitte.</li>
+</ol>
+<p>Wenn Ihr Issue gut geschrieben ist, sind wir zum Zeitpunkt seiner Erstellung bereits zu 80 % fertig.</p>
+<p>Wir haben <a href="https://github.com/huggingface/transformers/tree/main/templates">Vorlagen</a> hinzugefügt, um Ihnen den Start Ihres Issues zu erleichtern.</p>
+<h2 id="mochten-sie-ein-neues-modell-implementieren">Möchten Sie ein neues Modell implementieren?</h2>
+<p>Es werden ständig neue Modelle veröffentlicht. Wenn Sie ein neues Modell implementieren möchten, geben Sie bitte folgende Informationen an:</p>
+<ul>
+<li>Eine kurze Beschreibung des Modells und einen Link zum Paper.</li>
+<li>Link zur Implementierung, falls sie Open-Source ist.</li>
+<li>Link zu den Modellgewichten, falls verfügbar.</li>
+</ul>
+<p>Lassen Sie es uns wissen, wenn Sie bereit sind, das Modell selbst beizutragen. Dann können wir Ihnen helfen, es zu 🤗 Transformers hinzuzufügen!</p>
+<p>Wir haben auch einen technischen Leitfaden dazu, <a href="https://huggingface.co/docs/transformers/add_new_model">wie man ein Modell zu 🤗 Transformers hinzufügt</a>.</p>
+<h2 id="mochten-sie-die-dokumentation-erweitern">Möchten Sie die Dokumentation erweitern?</h2>
+<p>Wir sind immer auf der Suche nach Verbesserungen, die die Dokumentation klarer und präziser machen. Bitte teilen Sie uns Verbesserungsvorschläge mit, wie z. B. Tippfehler und fehlende, unklare oder ungenaue Inhalte. Wir übernehmen gerne die Änderungen oder helfen Ihnen, einen Beitrag zu leisten, wenn Sie daran interessiert sind!</p>
+<p>Für weitere Einzelheiten darüber, wie man die Dokumentation generiert, erstellt und schreibt, werfen Sie einen Blick auf das <a href="https://github.com/huggingface/transformers/tree/main/docs">README</a> der Dokumentation.</p>
+<h2 id="eine-pull-anfrage-erstellen">Eine Pull-Anfrage erstellen</h2>
+<p>Bevor Sie irgendwelchen Code schreiben, empfehlen wir Ihnen dringend, die bestehenden PRs oder Issues zu durchsuchen, um sicherzustellen, dass niemand bereits an diesem Thema arbeitet. Wenn Sie sich unsicher sind, ist es immer eine gute Idee, nach Feedback in einem neuen Issue zu fragen.</p>
+<p>Sie benötigen grundlegende <code>git</code>-Kenntnisse, um zu 🤗 Transformers beizutragen. Obwohl <code>git</code> nicht das einfachste Werkzeug ist, hat es ein sehr gutes Handbuch. Geben Sie <code>git --help</code> in eine Shell ein und genießen Sie es! Wenn Sie Bücher bevorzugen, ist <a href="https://git-scm.com/book/en/v2">Pro Git</a> eine gute Anlaufstelle.</p>
+<p>Sie benötigen <strong><a href="https://github.com/huggingface/transformers/blob/main/setup.py#L426">Python 3.9</a></strong> oder höher, um zu 🤗 Transformers beizutragen. Folgen Sie den nachstehenden Schritten, um mit dem Beitrag zu beginnen:</p>
+<ol>
+<li>
+<p>Forken Sie das <a href="https://github.com/huggingface/transformers">Repository</a>, indem Sie auf den <strong><a href="https://github.com/huggingface/transformers/fork">Fork</a></strong>-Button auf der Seite des Repositorys klicken. Dadurch wird eine Kopie des Codes auf Ihrem GitHub-Account erstellt.</p>
+</li>
+<li>
+<p>Klonen Sie Ihren Fork auf Ihre lokale Festplatte und fügen Sie das ursprüngliche Repository als Remote hinzu:</p>
+</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;your<span class="w"> </span>Github<span class="w"> </span>handle&gt;/transformers.git
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>transformers
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/huggingface/transformers.git
+</span></code></pre></div>
+<ol>
+<li>Erstellen Sie einen neuen Branch, um Ihre Änderungen zu speichern:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>a-descriptive-name-for-my-changes
+</span></code></pre></div>
+<p>🚨 Arbeiten Sie <strong>nicht</strong> auf dem <code>main</code> Branch!</p>
+<ol>
+<li>Richten Sie eine Entwicklungsumgebung ein, indem Sie den folgenden Befehl in einer virtuellen Umgebung ausführen:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
+</span></code></pre></div>
+<p>Wenn 🤗 Transformers bereits in der virtuellen Umgebung installiert war, entfernen Sie es mit <code>pip uninstall transformers</code>, bevor Sie es im bearbeitbaren Modus mit dem <code>-e</code> Flag neu installieren.</p>
+<p>Abhängig von Ihrem Betriebssystem und durch die wachsende Anzahl der optionalen Abhängigkeiten von Transformers könnten Sie mit diesem Befehl einen Fehler verursachen. Wenn das der Fall ist, stellen Sie sicher, dass Sie ihr bevorzugtes Deep-Learning-Framework (PyTorch, TensorFlow und/oder Flax) installieren und anschließend den folgenden Befehl ausführen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[quality]&quot;</span>
+</span></code></pre></div>
+<p>Dies sollte für die meisten Anwendungsfälle ausreichend sein.</p>
+<ol>
+<li>Entwickeln Sie die Funktionen in Ihrem Branch.</li>
+</ol>
+<p>Während Sie an Ihrem Code arbeiten, sollten Sie sicherstellen, dass die Test-Suite erfolgreich durchläuft. Führen Sie die von Ihren Änderungen betroffenen Tests wie folgt aus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest<span class="w"> </span>tests/&lt;TEST_TO_RUN&gt;.py
+</span></code></pre></div>
+<p>Weitere Informationen über Tests finden Sie in der Anleitung zum Thema <a href="https://huggingface.co/docs/transformers/testing">Testen</a>.</p>
+<p>🤗 Transformers stützt sich auf <code>black</code> und <code>ruff</code>, um seinen Quellcode konsistent zu formatieren. Nachdem Sie Änderungen vorgenommen haben, wenden Sie automatische Stilkorrekturen und Codeprüfungen, die nicht automatisiert werden können, in einem Schritt an:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make<span class="w"> </span>fixup
+</span></code></pre></div>
+<p>Dieser Task ist optimiert, nur mit Dateien zu arbeiten, die von Ihrer PR modifiziert wurden.</p>
+<p>Wenn Sie die Prüfungen nacheinander ausführen möchten, wendet der folgende Befehl die Stilkorrekturen an:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>make<span class="w"> </span>style
+</span></code></pre></div>
+<p>🤗 Transformers verwendet auch <code>ruff</code> und einige benutzerdefinierte Skripte, um auf Programmierfehler zu prüfen. Qualitätskontrollen werden von der CI durchgeführt, aber Sie können die gleichen Überprüfungen auch selbst ausführen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>make<span class="w"> </span>quality
+</span></code></pre></div>
+<p>Abschließend haben wir viele Skripte, die sicherstellen, dass wir alle betroffenen Dateien aktualisieren, wenn wir ein neues Modell hinzufügen. Sie können diese wie folgt ausführen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>make<span class="w"> </span>repo-consistency
+</span></code></pre></div>
+<p>Um mehr über diese Prüfungen zu erfahren und wie man mit ihnen Probleme behebt, lesen Sie den Leitfaden zu <a href="https://huggingface.co/docs/transformers/pr_checks">Überprüfungen bei einer Pull-Anfrage</a>.</p>
+<p>Wenn Sie Dokumente im Verzeichnis <code>docs/source</code> ändern, stellen Sie sicher, dass die Dokumentation noch generiert werden kann. Diese Prüfung wird auch im CI laufen, wenn Sie eine Pull-Anfrage erstellen. Um eine lokale Prüfung durchzuführen, müssen Sie den Dukumentation-Builder installieren:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;.[docs]&quot;</span>
+</span></code></pre></div>
+<p>Führen Sie den folgenden Befehl im Hauptverzeichnis des Repositorys aus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>doc-builder<span class="w"> </span>build<span class="w"> </span>transformers<span class="w"> </span>docs/source/en<span class="w"> </span>--build_dir<span class="w"> </span>~/tmp/test-build
+</span></code></pre></div>
+<p>Dadurch wird die Dokumentation im Ordner <code>~/tmp/test-build</code> erstellt, wo Sie die erzeugten Markdown-Dateien mit Ihrem bevorzugten Editor überprüfen können. Sie können auch eine Vorschau der Dokumentation auf GitHub sehen, wenn Sie eine Pull-Anfrage öffnen.</p>
+<p>Wenn Sie mit Ihren Änderungen zufrieden sind, fügen Sie die geänderten Dateien mit <code>git add</code> hinzu und speichern Sie Ihre Änderungen lokal mit <code>git commit</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>add<span class="w"> </span>modified_file.py
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>commit
+</span></code></pre></div>
+<p>Bitte achten Sie darauf, <a href="https://chris.beams.io/posts/git-commit/">gute Commit-Nachrichten</a> zu schreiben, um die von Ihnen vorgenommenen Änderungen klar zu kommunizieren!</p>
+<p>Um Ihre Kopie des Codes auf dem aktuellen Stand des ursprünglichen Repositorys zu halten, rebasen Sie Ihren Branch auf <code>upstream/branch</code> <em>bevor</em> Sie eine Pull-Anfrage öffnen oder falls Sie von einem Maintainer dazu aufgefordert werden:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>rebase<span class="w"> </span>upstream/main
+</span></code></pre></div>
+<p>Pushen Sie Ihre Änderungen in Ihrem Branch:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>a-descriptive-name-for-my-changes
+</span></code></pre></div>
+<p>Wenn Sie bereits eine Pull-Anfrage erstellt haben, müssen Sie den Push mit dem <code>--force</code> Flag erzwingen. Andernfalls, wenn die Pull-Anfrage noch nicht erstellt wurde, können Sie Ihre Änderungen normal pushen.</p>
+<ol>
+<li>
+<p>Jetzt können Sie zu Ihrem Fork des Repositorys auf GitHub gehen und auf <strong>Pull-Anfrage</strong> klicken, um eine Pull-Anfrage zu erstellen. Stellen Sie sicher, dass Sie alle Punkte auf unserer <a href="#checkliste-für-pull-anfragen">Checkliste</a> unten abhaken. Wenn Sie fertig sind, können Sie Ihre Änderungen zur Überprüfung an die Projektverantwortlichen senden.</p>
+</li>
+<li>
+<p>Es ist kein Problem, wenn die Maintainer Änderungen beantragen, das geschieht auch bei unseren Kernmitarbeitern! Damit jeder die Änderungen in der Pull-Anfrage sehen kann, arbeiten Sie in Ihrem lokalen Branch und pushen die Änderungen zu Ihrem Fork. Sie werden automatisch in der Pull-Anfrage erscheinen.</p>
+</li>
+</ol>
+<h3 id="checkliste-fur-pull-anfragen">Checkliste für Pull-Anfragen</h3>
+<p>☐ Der Titel der Pull-Anfrage sollte Ihren Beitrag zusammenfassen.<br>
+☐ Wenn Ihre Pull-Anfrage ein bestimmtes Issue bearbeitet, erwähnen Sie bitte die zugehörige Nummer in der Beschreibung der Pull-Anfrage, sodass diese verlinkt sind (und Personen, die das Issue lesen, wissen, dass Sie daran arbeiten).<br>
+☐ Um eine fortlaufende Bearbeitung anzuzeigen, versehen Sie bitte den Titel mit einem <code>[WIP]</code> Präfix. Diese sind nützlich, um doppelte Arbeit zu verhindern und sie von PRs abzuheben, die bereit zum Zusammenführen sind.<br>
+☐ Stellen Sie sicher, dass existierende Tests bestanden werden.<br>
+☐ Wenn Sie eine neue Funktion hinzufügen, erstellen Sie auch Tests dafür.<br></p>
+<ul>
+<li>Wenn Sie ein neues Modell hinzufügen, stellen Sie sicher, dass Sie <code>ModelTester.all_model_classes = (MyModel, MyModelWithLMHead,...)</code> verwenden, um die gemeinsamen Tests auszulösen.</li>
+<li>Wenn Sie neue <code>@slow</code> Tests hinzufügen, stellen Sie mit <code>RUN_SLOW=1 python -m pytest tests/models/my_new_model/test_my_new_model.py</code> sicher, dass diese erfolgreich durchlaufen.</li>
+<li>Wenn Sie einen neuen Tokenizer hinzufügen, schreiben Sie Tests und stellen Sie mit <code>RUN_SLOW=1 python -m pytest tests/models/{your_model_name}/test_tokenization_{your_model_name}.py</code> sicher, dass diese erfolgreich durchlaufen.</li>
+<li>CircleCI führt die langsamen Tests nicht aus, aber GitHub Actions tut dies jede Nacht!<br></li>
+</ul>
+<p>☐ Alle public Methoden müssen informative Docstrings haben (siehe <a href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py"><code>modeling_bert.py</code></a> als Beispiel).<br>
+☐ Aufgrund des schnell wachsenden Repositorys fügen Sie bitte keine Bilder, Videos oder andere Nicht-Textdateien hinzu, die das Repository erheblich belasten würden. Verwenden Sie stattdessen ein Hub-Repository wie <a href="https://huggingface.co/hf-internal-testing"><code>hf-internal-testing</code></a>, um diese Dateien zu hosten und sie per URL zu verlinken. Wir empfehlen Bilder, die zur Dokumentation gehören, im folgenden Repository abzulegen: <a href="https://huggingface.co/datasets/huggingface/documentation-images">huggingface/documentation-images</a>. Sie können eine PR in diesem Datasets-Repository erstellen und ein Hugging-Face-Mitglied bitten, sie zu mergen.</p>
+<p>Um mehr über die Prüfungen zu erfahren, die bei einer Pull-Anfrage ausgelöst werden, lesen Sie unseren Leitfaden zu <a href="https://huggingface.co/docs/transformers/pr_checks">Überprüfungen bei einer Pull-Anfrage</a>.</p>
+<h3 id="tests">Tests</h3>
+<p>Eine umfangreiche Test-Suite ist enthalten, um das Verhalten der Bibliothek und mehrerer Beispiele zu testen. Tests für die Bibliothek und Beispiele finden Sie jeweils im <a href="https://github.com/huggingface/transformers/tree/main/tests">tests</a> und im <a href="https://github.com/huggingface/transformers/tree/main/examples">examples</a> Ordner.</p>
+<p>Wir bevorzugen <code>pytest</code> und <code>pytest-xdist</code>, weil es schneller ist. Geben Sie einen <em>Pfad zu einem Unterordner oder einer Testdatei</em> vom Hauptverzeichnis des Repositorys aus an, um den Test auszuführen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-n<span class="w"> </span>auto<span class="w"> </span>--dist<span class="o">=</span>loadfile<span class="w"> </span>-s<span class="w"> </span>-v<span class="w"> </span>./tests/models/my_new_model
+</span></code></pre></div>
+<p>Analog für den <code>examples</code> Ordner, geben Sie einen <em>Pfad zu einem Unterordner oder einer Testdatei</em> an, um den Test auszuführen. Z. B. führt der folgende Befehl den Test des Unterordners für Textklassifizierung im PyTorch <code>examples</code> Ordner durch:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>examples/xxx/requirements.txt<span class="w">  </span><span class="c1"># nur beim ersten Mal erforderlich</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-n<span class="w"> </span>auto<span class="w"> </span>--dist<span class="o">=</span>loadfile<span class="w"> </span>-s<span class="w"> </span>-v<span class="w"> </span>./examples/pytorch/text-classification
+</span></code></pre></div>
+<p>Tatsächlich ist dies genau, wie unsere <code>make test</code> und <code>make test-examples</code> Befehle implementiert sind (abgesehen von <code>pip install</code>)!</p>
+<p>Sie können auch eine kleinere Anzahl an Tests angeben, um nur die Funktion, an der Sie arbeiten, zu testen.</p>
+<p>Standardmäßig werden langsame Tests übersprungen, aber Sie können die Umgebungsvariable <code>RUN_SLOW</code> auf <code>yes</code> setzen, um sie auszuführen. Dies wird den Download vieler Gigabyte an Modellen starten - stellen Sie also sicher, dass Sie sowohl genügend Festplattenspeicher als auch eine gute Internetverbindung oder die nötige Geduld haben!</p>
+<p><Tip warning={true}></p>
+<p>Vergessen Sie nicht, einen <em>Pfad zu einem Unterordner oder einer Testdatei</em> anzugeben, um den Test auszuführen. Sonst führen Sie alle Tests im <code>tests</code> oder <code>examples</code> Ordner aus, was sehr lange dauern wird!</p>
+<p></Tip></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">RUN_SLOW</span><span class="o">=</span>yes<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-n<span class="w"> </span>auto<span class="w"> </span>--dist<span class="o">=</span>loadfile<span class="w"> </span>-s<span class="w"> </span>-v<span class="w"> </span>./tests/models/my_new_model
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nv">RUN_SLOW</span><span class="o">=</span>yes<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-n<span class="w"> </span>auto<span class="w"> </span>--dist<span class="o">=</span>loadfile<span class="w"> </span>-s<span class="w"> </span>-v<span class="w"> </span>./examples/pytorch/text-classification
+</span></code></pre></div>
+<p>Wie bei den langsamen Tests gibt es auch andere Umgebungsvariablen, die standardmäßig beim Testen nicht gesetzt sind:</p>
+<ul>
+<li><code>RUN_CUSTOM_TOKENIZERS</code>: Aktiviert Tests für benutzerdefinierte Tokenizer.</li>
+</ul>
+<p>Weitere Umgebungsvariablen und zusätzliche Informationen finden Sie in der <a href="src/transformers/testing_utils.py">testing_utils.py</a>.</p>
+<p>🤗 Transformers verwendet <code>pytest</code> nur als Test-Runner. Es verwendet keine <code>pytest</code>-spezifischen Funktionen in der Test-Suite selbst.</p>
+<p>Das bedeutet, <code>unittest</code> wird vollständig unterstützt. Folgend wird beschrieben, wie man Tests mit <code>unittest</code> ausführt:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>-s<span class="w"> </span>tests<span class="w"> </span>-t<span class="w"> </span>.<span class="w"> </span>-v
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>-s<span class="w"> </span>examples<span class="w"> </span>-t<span class="w"> </span>examples<span class="w"> </span>-v
+</span></code></pre></div>
+<h3 id="stil-leitfaden">Stil-Leitfaden</h3>
+<p>Für Docstrings befolgt 🤗 Transformers den <a href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a>.
+Lesen Sie unseren <a href="https://github.com/huggingface/transformers/tree/main/docs#writing-documentation---specification">Leitfaden zum Schreiben von Dokumentationen</a> für weitere Informationen.</p>
+<h3 id="entwickeln-unter-windows">Entwickeln unter Windows</h3>
+<p>Unter Windows (falls Sie nicht im <a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows-Subsystem für Linux</a> oder WSL arbeiten) müssen Sie git so konfigurieren, dass Windows <code>CRLF</code> in Linux <code>LF</code> Zeilenenden umgewandelt werden:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>config<span class="w"> </span>core.autocrlf<span class="w"> </span>input
+</span></code></pre></div>
+<p>Eine Möglichkeit, den <code>make</code>-Befehl unter Windows auszuführen, ist mit MSYS2:</p>
+<ol>
+<li>Laden Sie <a href="https://www.msys2.org/">MSYS2</a> herunter und installieren Sie es nach <code>C:\msys64</code>.</li>
+<li>Öffnen Sie die Kommandozeile <code>C:\msys64\msys2.exe</code> (sie sollte vom <strong>Start</strong>-Menü aus verfügbar sein).</li>
+<li>Führen Sie den Befehl in der Shell aus: <code>pacman -Syu</code> und installieren Sie <code>make</code> mit <code>pacman -S make</code>.</li>
+<li>Fügen Sie <code>C:\msys64\usr\bin</code> an Ihrer PATH-Umgebungsvariable an.</li>
+</ol>
+<p>Sie können nun <code>make</code> aus jedem Terminal heraus verwenden (PowerShell, cmd.exe usw.)! 🎉</p>
+<h3 id="ein-geforktes-repository-mit-dem-haupt-repository-von-hugging-face-synchronisieren">Ein geforktes Repository mit dem Haupt-Repository von Hugging Face synchronisieren</h3>
+<p>Beim Aktualisieren des main-Branches eines geforkten Repositories beachten Sie bitte die folgenden Schritte, um das Anpingen des Haupt-Repositorys zu vermeiden, was unnötige Verweise in abhängigen PRs vermerkt und beteiligte Entwickler benachrichtigt:</p>
+<ol>
+<li>Wenn möglich, vermeiden Sie die Synchronisation mit dem Haupt-Repository über einen Branch und PR im geforkten Repository. Mergen Sie stattdessen direkt in den main-Branch des Forks.</li>
+<li>Wenn ein PR unbedingt notwendig ist, verwenden Sie die folgenden Schritte, nachdem Sie Ihren Branch ausgecheckt haben:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>your-branch-for-syncing
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>git<span class="w"> </span>pull<span class="w"> </span>--squash<span class="w"> </span>--no-commit<span class="w"> </span>upstream<span class="w"> </span>main
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;&lt;your message without GitHub references&gt;&#39;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>your-branch-for-syncing
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

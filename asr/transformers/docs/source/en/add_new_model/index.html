@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Add new model - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#legacy-model-contribution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add new model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transformers-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformers overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transformers overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model and configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code style
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-model-addition-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      New model addition issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dev-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dev environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a pull request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#original-checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Original checkpoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Original checkpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adapt-the-model-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adapt the model code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adapt the model code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model initialization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-checkpoints-to-transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert checkpoints to Transformers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convert checkpoints to Transformers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-layer-weights-and-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch layer weights and names
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-the-forward-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement the forward pass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-model-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add model tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-tokenizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement tokenizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-image-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement image processor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement processor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-to-the-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload to the Hub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-your-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge your model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-addition-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model addition timeline
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!--Copyright 2024 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+
+⚠️ Note that this file is in Markdown but contain specific syntax for our doc-builder (similar to MDX) that may not be
+rendered properly in your Markdown viewer.
+
+-->
+
+<h1 id="legacy-model-contribution">Legacy model contribution</h1>
+<blockquote>
+<p>[!TIP]
+Try adding new models with a more <a href="./modular_transformers">modular</a> approach first. This makes it significantly easier to contribute a model to Transformers!</p>
+</blockquote>
+<p>Many of the models in Transformers are contributed by developers and researchers. As an open-source first project, we're invested in empowering the community to actively and independently add more models.</p>
+<p>When you add a model to Transformers, you'll learn:</p>
+<ul>
+<li>more about open-source best practices</li>
+<li>about a models architecture</li>
+<li>about Transformers' design principles</li>
+<li>how to efficiently test large models</li>
+<li>how to use Python utilities like <a href="https://black.readthedocs.io/en/stable/">Black</a> and <a href="https://docs.astral.sh/ruff/">Ruff</a> to create clean and readable code</li>
+</ul>
+<p>It is a challenging but rewarding process.</p>
+<p>This guide will walk you through adding an example BrandNewLlama PyTorch model to Transformers. Before you begin, it is a good idea to familiarize yourself with the library.</p>
+<h2 id="transformers-overview">Transformers overview</h2>
+<p>Transformers is an opinionated library with its own unique philosophy and design choices. These choices help us sustainably scale and maintain Transformers.</p>
+<blockquote>
+<p>[!TIP]
+Learn more about our design principles on the <a href="./philosophy">Philosophy</a> doc.</p>
+</blockquote>
+<p>Some of these design choices are:</p>
+<ul>
+<li>composition &gt; over-abstraction</li>
+<li>duplicate code isn't always bad if it greatly improves readability and accessibility</li>
+<li>model files are self-contained and all the necessary model code is found in the <code>modeling_mymodel.py</code> file</li>
+</ul>
+<p>These design choices are important <em>for everyone</em> interacting with the model. It is easier to read, understand, and modify.</p>
+<p>This section describes how the model and configuration classes interact and the Transformers code style.</p>
+<h3 id="model-and-configuration">Model and configuration</h3>
+<p>All Transformers' models inherit from a base [<code>PreTrainedModel</code>] and [<code>PreTrainedConfig</code>] class. The configuration is the models blueprint.</p>
+<p>There is never more than two levels of abstraction for any model to keep the code readable. The example model here, BrandNewLlama, inherits from <code>BrandNewLlamaPreTrainedModel</code> and [<code>PreTrainedModel</code>]. It is important that a new model only depends on [<code>PreTrainedModel</code>] so that it can use the [<code>~PreTrainedModel.from_pretrained</code>] and [<code>~PreTrainedModel.save_pretrained</code>] methods.</p>
+<p>Other important functions like the forward method are defined in the <code>modeling.py</code> file.</p>
+<p>Specific model heads (for example, sequence classification or language modeling) should call the base model in the forward pass rather than inheriting from it to keep abstraction low.</p>
+<p>New models require a configuration, for example <code>BrandNewLlamaConfig</code>, that is stored as an attribute of [<code>PreTrainedModel</code>].</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BrandNewLlamaModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;username/brand_new_llama&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">model</span><span class="o">.</span><span class="n">config</span>
+</span></code></pre></div>
+<p>[<code>PreTrainedConfig</code>] provides the [<code>~PreTrainedConfig.from_pretrained</code>] and [<code>~PreTrainedConfig.save_pretrained</code>] methods.</p>
+<p>When you use [<code>PreTrainedModel.save_pretrained</code>], it automatically calls [<code>PreTrainedConfig.save_pretrained</code>] so that both the model and configuration are saved together.</p>
+<p>A model is saved to a <code>model.safetensors</code> file and a configuration is saved to a <code>config.json</code> file.</p>
+<h3 id="code-style">Code style</h3>
+<p>Transformers prefers a clean and readable code over a more abstracted code style. Some of the code style choices include:</p>
+<ul>
+<li>
+<p>The code should be accessible to non-English users. Pick descriptive variable names and avoid abbreviations. For example, "activation" is preferred over "act". One letter variables names are highly discouraged unless it's an index in a for loop.</p>
+</li>
+<li>
+<p>Explicit code is preferred - even if it's longer - over shorter code.</p>
+</li>
+<li>
+<p>Avoid subclassing <a href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html">nn.Sequential</a>. Subclass <a href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module">nn.Module</a> instead so the code can be quickly debugged with print statements or breakpoints.</p>
+</li>
+<li>
+<p>Function signatures should be type-annotated. Otherwise, use good variable names so they're more understandable.</p>
+</li>
+</ul>
+<h2 id="new-model-addition-issue">New model addition issue</h2>
+<p>Open a <a href="https://github.com/huggingface/transformers/issues/new?assignees=&amp;labels=New+model&amp;template=new-model-addition.yml">New model addition</a> issue to add a specific model.</p>
+<blockquote>
+<p>[!TIP]
+Filter by the <a href="https://github.com/huggingface/transformers/labels/New%20model">New model</a> label on GitHub to view and add any existing model requests.</p>
+</blockquote>
+<p>Now is a good time to get familiar with BrandNewLlama. It is helpful to read a models research paper to understand its technical design and implementation. You don't necessarily have to worry too much about the theoretical details. Instead, focus on the practical ones. Use the questions below to guide your reading.</p>
+<ul>
+<li>What type of model is BrandNewLlama? Is it a encoder, decoder, or encoder-decoder model?</li>
+<li>What tasks can BrandNewLlama be used for?</li>
+<li>What makes BrandNewLlama different from other models?</li>
+<li>What models in Transformers are most similar to BrandNewLlama?</li>
+<li>What tokenizer does BrandNewLlama use?</li>
+</ul>
+<p>In addition to learning more about your model, use the tips below to help you add a model faster.</p>
+<blockquote>
+<p>[!TIP]
+Each contributor has a unique style and workflow for adding models to Transformers. For an example, take a look at how <a href="https://github.com/huggingface/transformers/pull/29167">Gemma</a> was added.</p>
+</blockquote>
+<ul>
+<li>Don't reinvent the wheel! Take your time to explore existing models and tokenizers to see what you can copy and reuse. <a href="https://www.gnu.org/software/grep/">Grep</a> and <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> are great tools for this.</li>
+<li>This is more of an engineering than a science challenge. Focus on the more practical (setting up an efficient debugging environment for example) instead of the theorertical aspects of the model.</li>
+<li>Don't be shy to ask for help! We are here to support you. 🤗</li>
+</ul>
+<h2 id="dev-environment">Dev environment</h2>
+<p>Click on the <strong>Fork</strong> button on the <a href="https://github.com/huggingface/transformers">Transformers</a> repository to create your own copy to work on. Clone the repository to your local disk and add the base repository as the remote.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/<span class="o">[</span>your<span class="w"> </span>Github<span class="w"> </span>handle<span class="o">]</span>/transformers.git
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>transformers
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/huggingface/transformers.git
+</span></code></pre></div>
+<p>Create a virtual environment and perform an <a href="./installation#editable-install">editable install</a> of the library with the "dev" or development dependencies.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.env
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">source</span><span class="w"> </span>.env/bin/activate
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
+</span></code></pre></div>
+<p>Due to the number of optional dependencies as Transformers grows, this command may fail. In this case, install the "quality" dependencies. Also make sure you have a deep learning framework installed.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[quality]&quot;</span>
+</span></code></pre></div>
+<p>Return to the parent directory and clone and install the original BrandNewLlama repository.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/org_that_created_brand_new_llama_org/brand_new_llama.git
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>brand_new_bert
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</span></code></pre></div>
+<p>Return to your clone of Transformers to begin porting BrandNewLlama.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>transformers
+</span></code></pre></div>
+<p>There are two possible debugging environments for running the original model, a notebook (<a href="https://colab.research.google.com/notebooks/intro.ipynb">Google Colab</a> or <a href="https://jupyter.org/">Jupyter</a>) or a local Python script.</p>
+<blockquote>
+<p>[!WARNING]
+We don't recommend setting up a GPU environment to run the original model because it can be expensive. Instead, work in a CPU environment first to verify the model works in Transformers. Once it does, then you can verify it on a GPU.</p>
+</blockquote>
+<p>Notebooks are great for executing code cell-by-cell which can help split logical components from one another. It can also accelerate debugging cycles because intermediate results can be stored. You can also share notebooks when working with other contributors.</p>
+<p>The downside is that if you aren't used to them, it may take some time to get used to.</p>
+<blockquote>
+<p>[!TIP]
+If the model architecture is identical to an existing model, skip ahead to add a <a href="#conversion-script">conversion script</a>, because you can reuse the architecture of the existing model.</p>
+</blockquote>
+<p>Run the command below to start and complete the questionnaire with some basic information about the new model. This command jumpstarts the process by automatically generating some model code that you'll need to adapt.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>transformers<span class="w"> </span>add-new-model-like
+</span></code></pre></div>
+<h2 id="create-a-pull-request">Create a pull request</h2>
+<p>Before you start adapting the code, create a pull request to track your progress and get feedback from the Transformers team. Title your pull request <strong>[WIP] Add BrandNewLlama</strong> so it's clear that this is a work in progress.</p>
+<p>Create a branch with a descriptive name from your main branch.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>add_brand_new_bert
+</span></code></pre></div>
+<p>Commit the code, and then fetch and rebase on the main branch.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>commit
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>git<span class="w"> </span>rebase<span class="w"> </span>upstream/main
+</span></code></pre></div>
+<p>Push any changes to your branch and click on <strong>Compare &amp; pull request</strong> to open a pull request on GitHub. Open the pull request as a <em>draft</em> to indicate it's a work in progress.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>a-descriptive-name-for-my-changes
+</span></code></pre></div>
+<p>Include relevant Hugging Face team members by adding their GitHub handles in the pull request for questions, feedback, comments, and reviews. Direct team members to specific parts of the code you want by clicking on the <strong>Files changed</strong> tab, and then clicking on <strong>+</strong> to the left of the line number to add a comment. When a question or problem is solved, click on <strong>Resolve</strong> to indicate the issue is resolved. This keeps the conversation organized and clean.</p>
+<p>Remember to periodically commit and push your work, and update your work with the current main branch.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>merge<span class="w"> </span>upstream/main
+</span></code></pre></div>
+<h2 id="original-checkpoint">Original checkpoint</h2>
+<p>Take some time to work on the original model implementation first to understand how it works.</p>
+<p>This can be difficult if the original model repository is lacking documentation or if the codebase is complex. But you should use this as your motivation to implement the model in Transformers. Your contribution makes it more accessible and user-friendly to everyone!</p>
+<p>Orient yourself with the original repository by doing the following.</p>
+<ul>
+<li>Locate the pretrained weights.</li>
+<li>Figure out how to the load pretrained weights into the model.</li>
+<li>Figure out how to run the tokenizer independently of the model.</li>
+<li>Trace one forward pass to understand which classes and functions are required. These are probably the only classes and functions you'll have to implement.</li>
+<li>Locate all the important components (model class, model subclasses, self-attention layer, etc.) of the model.</li>
+<li>Figure out how to debug the model in the original repository. Add print statements, use interactive debuggers like <a href="https://github.com/gotcha/ipdb">ipdb</a>, or a efficient integrated development environment (IDE) like <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.</li>
+</ul>
+<p>The last point is especially important because you'll need a thorough understanding of what's happening inside the original model before you can reimplement it in Transformers. Feel free to open issues and pull requests in the original repository if you encounter any issues.</p>
+<p>A good first step is to load a <em>small</em> pretrained checkpoint and try to reproduce a single forward pass with an example integer vector of inputs. For example, in pseudocode, this could look like the following.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BrandNewLlamaModel</span><span class="o">.</span><span class="n">load_pretrained_checkpoint</span><span class="p">(</span><span class="s2">&quot;/path/to/checkpoint/&quot;</span><span class="p">)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">input_ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>  <span class="c1"># vector of input ids</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">original_output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">input_ids</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="debugging">Debugging</h3>
+<p>If you run into issues, you'll need to choose one of the following debugging strategies depending on the original models codebase.</p>
+<p><hfoptions id="debug-strategy">
+<hfoption id="sub-components"></p>
+<p>This strategy relies on breaking the original model into smaller sub-components, such as when the code can be easily run in eager mode. While more difficult, there are some advantages to this approach.</p>
+<ol>
+<li>It is easier later to compare the original model to your implementation. You can automatically verify that each individual component matches its corresponding component in the Transformers' implementation. This is better than relying on a visual comparison based on print statements.</li>
+<li>It is easier to port individual components instead of the entire model.</li>
+<li>It is easier for understanding how a model works by breaking it up into smaller parts.</li>
+<li>It is easier to prevent regressions at a later stage when you change your code thanks to component-by-component tests.</li>
+</ol>
+<blockquote>
+<p>[!TIP]
+Refer to the ELECTRA <a href="https://gist.github.com/LysandreJik/db4c948f6b4483960de5cbac598ad4ed">integration checks</a> for a good example of how to decompose a model into smaller components.</p>
+</blockquote>
+<p></hfoption>
+<hfoption id="model and tokenizer"></p>
+<p>This strategy is viable when the original codebase is too complex, only allows intermediate components to be run in compiled mode, or if it's too time-consuming (maybe even impossible) to separate the model into smaller sub-components.</p>
+<p>For example, the MeshTensorFlow implementation of <a href="https://github.com/tensorflow/mesh/tree/master/mesh_tensorflow">T5</a> is too complex and doesn't offer a simple way to decompose the model into its sub-components. In this situation, you'll have to rely on verifying print statements.</p>
+<p></hfoption>
+</hfoptions></p>
+<p>Whichever strategy you choose, it is recommended to debug the initial layers first and the final layers last. Retrieve the output, either with print statements or sub-component functions, of the following layers in this order.</p>
+<ol>
+<li>input ids passed to the model</li>
+<li>word embeddings</li>
+<li>input of the first Transformer layer</li>
+<li>output of the first Transformer layer</li>
+<li>output of the following n-1 Transformer layers</li>
+<li>output of the whole model</li>
+</ol>
+<p>The input ids should just be an array of integers like <code>input_ids = [0, 4, 4, 3, 2, 4, 1, 7, 19]</code>.</p>
+<p>Layer outputs often consist of multi-dimensional float arrays.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">[[</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.1465</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6501</span><span class="p">,</span>  <span class="mf">0.1993</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span>  <span class="mf">0.1451</span><span class="p">,</span>  <span class="mf">0.3430</span><span class="p">,</span>  <span class="mf">0.6024</span><span class="p">],</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.4417</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5920</span><span class="p">,</span>  <span class="mf">0.3450</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3062</span><span class="p">,</span>  <span class="mf">0.6182</span><span class="p">,</span>  <span class="mf">0.7132</span><span class="p">],</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.5009</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7122</span><span class="p">,</span>  <span class="mf">0.4548</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3662</span><span class="p">,</span>  <span class="mf">0.6091</span><span class="p">,</span>  <span class="mf">0.7648</span><span class="p">],</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a> <span class="o">...</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.5613</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6332</span><span class="p">,</span>  <span class="mf">0.4324</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3792</span><span class="p">,</span>  <span class="mf">0.7372</span><span class="p">,</span>  <span class="mf">0.9288</span><span class="p">],</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.5416</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6345</span><span class="p">,</span>  <span class="mf">0.4180</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3564</span><span class="p">,</span>  <span class="mf">0.6992</span><span class="p">,</span>  <span class="mf">0.9191</span><span class="p">],</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a> <span class="p">[</span><span class="o">-</span><span class="mf">0.5334</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6403</span><span class="p">,</span>  <span class="mf">0.4271</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3339</span><span class="p">,</span>  <span class="mf">0.6533</span><span class="p">,</span>  <span class="mf">0.8694</span><span class="p">]]],</span>
+</span></code></pre></div>
+<p>Every Transformers model output should have a precision or error tolerance of <em>1e-3</em>. This accounts for any output differences that arise from using a different library framework. Compare the intermediate outputs of the original model with the Transformers implementation to ensure they're nearly identical. Having an <em>efficient</em> debugging environment is crucial for this step.</p>
+<p>Here are some tips for an efficient debugging environment.</p>
+<ul>
+<li>
+<p>To debug intermediate results, it depends on the machine learning framework the original model repository is using. For PyTorch, you should write a script to decompose the original model into smaller sub-components to retrieve the intermediate values.</p>
+</li>
+<li>
+<p>It is faster to debug with a smaller pretrained checkpoint versus a larger checkpoint where the forward pass takes more than 10 seconds. If only large checkpoints are available, create a dummy model with randomly initialized weights and save those weights to compare against the Transformers implementation.</p>
+</li>
+<li>
+<p>Find the easiest way to call the model's forward pass. Ideally, this function (may be called <code>predict</code>, <code>evaluate</code>, <code>forward</code>, or <code>__call__</code>) should only call the forward pass <em>once</em>. It is more difficult to debug a function that calls the forward pass multiple times.</p>
+</li>
+<li>
+<p>Separate tokenization from the forward pass. Locate where a string input is changed to input ids in the forward pass and start here. You may need to create a small script or modify the original code to directly input the input ids instead of an input string.</p>
+</li>
+<li>
+<p>Ensure the model is <em>not</em> in training mode. This can produce random outputs due to multiple dropout layers in a model. The forward pass in your debugging environment should be <em>deterministic</em> so that the dropout layers aren't used.</p>
+</li>
+</ul>
+<p>Once you're able to run the original checkpoint, you're ready to start adapting the model code for Transformers.</p>
+<h2 id="adapt-the-model-code">Adapt the model code</h2>
+<p>The <code>transformers add-new-model-like</code> command should have generated a model and configuration file.</p>
+<ul>
+<li><code>src/transformers/models/brand_new_llama/modeling_brand_new_llama.py</code></li>
+<li><code>src/transformers/models/brand_new_llama/configuration_brand_new_llama.py</code></li>
+</ul>
+<p>The automatically generated code in the <code>modeling.py</code> file has the same architecture as Llama if you answered it's a decoder-only model or it will have the same architecture as BART if you answered it's an encoder-decoder model. The generated code is just a starting point. Based on your research on the new model, you'll need to implement those specific changes by adapting the generated code. This may involve changes to the self-attention layer, the order of the normalization layer, and so on.</p>
+<h3 id="model-initialization">Model initialization</h3>
+<p>At this point, your code doesn't have to be clean or even fully correct, It is more efficient to quickly create a first draft and then iteratively improve on it. The most important thing is that your model can be instantiated from Transformers. The command below creates a model from the configuration with random weights, verifying that the <code>__init__</code> method works.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BrandNewLlama</span><span class="p">,</span> <span class="n">BrandNewLlamaConfig</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BrandNewLlama</span><span class="p">(</span><span class="n">BrandNewLlamaConfig</span><span class="p">())</span>
+</span></code></pre></div>
+<p>Random initialization occurs in the <code>_init_weights</code> method of <code>BrandNewLlamaPreTrainedModel</code>. All leaf modules are initialized depending on the configuration's variables.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_init_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">):</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the weights&quot;&quot;&quot;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">):</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="n">module</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">initializer_range</span><span class="p">)</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="k">if</span> <span class="n">module</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>            <span class="n">module</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">):</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        <span class="n">module</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">initializer_range</span><span class="p">)</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        <span class="k">if</span> <span class="n">module</span><span class="o">.</span><span class="n">padding_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>            <span class="n">module</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">module</span><span class="o">.</span><span class="n">padding_idx</span><span class="p">]</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">LayerNorm</span><span class="p">):</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>        <span class="n">module</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>        <span class="n">module</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The initialization scheme can look different if you need to adapt it to your model. For example, [<code>Wav2Vec2ForPreTraining</code>] initializes <a href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html">nn.Linear</a> in its last two linear layers.</p>
+<p>The <code>_is_hf_initialized</code> flag makes sure the submodule is only initialized once. Setting <code>module.project_q</code> and <code>module.project_hid</code> to <code>True</code> ensures the custom initialization is not overridden later. The <code>_init_weights</code> function won't be applied to these modules.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_init_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">):</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the weights&quot;&quot;&quot;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">Wav2Vec2ForPreTraining</span><span class="p">):</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="n">module</span><span class="o">.</span><span class="n">project_hid</span><span class="o">.</span><span class="n">reset_parameters</span><span class="p">()</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        <span class="n">module</span><span class="o">.</span><span class="n">project_q</span><span class="o">.</span><span class="n">reset_parameters</span><span class="p">()</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        <span class="n">module</span><span class="o">.</span><span class="n">project_hid</span><span class="o">.</span><span class="n">_is_hf_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        <span class="n">module</span><span class="o">.</span><span class="n">project_q</span><span class="o">.</span><span class="n">_is_hf_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">):</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="n">module</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">initializer_range</span><span class="p">)</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="k">if</span> <span class="n">module</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>            <span class="n">module</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="convert-checkpoints-to-transformers">Convert checkpoints to Transformers</h3>
+<p>The original checkpoint must be converted to a Transformers compatible checkpoint.</p>
+<blockquote>
+<p>[!TIP]
+Try looking for an existing conversion script to copy, adapt, and reuse for your model!</p>
+<ul>
+<li>If you're porting a model from TensorFlow to PyTorch, a good starting point may be the BERT <a href="https://github.com/huggingface/transformers/blob/7acfa95afb8194f8f9c1f4d2c6028224dbed35a2/src/transformers/models/bert/modeling_bert.py#L91">conversion script</a>.</li>
+<li>If you're porting a model from PyTorch to PyTorch, a good starting point may be the BART <a href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/bart/convert_bart_original_pytorch_checkpoint_to_pytorch.py">conversion script</a>.</li>
+</ul>
+</blockquote>
+<p>Make sure <strong>all</strong> required weights are initialized and print out all the checkpoint weights that weren't used for initialization to make sure the model has been converted correctly.</p>
+<p>You may encounter wrong shape statements or name assignments during the conversion. This is most likely because of incorrect parameters in <code>BrandNewLlamaConfig</code>, the wrong architecture, a bug in the <code>init</code> method of your implementation, or you need to transpose one of the checkpoint weights.</p>
+<p>Keep iterating on the <a href="#adapt-the-model-code">Adapt the model code</a> section until all the checkpoint weights are correctly loaded. Once you can load a checkpoint in your model, save it to a folder. This should contain a <code>model.safetensors</code> file and a <code>config.json</code> file.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">model</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="s2">&quot;/path/to/converted/checkpoint/folder&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>To help with conversion, the next section briefly describes how PyTorch models stores and defines layer weights and names.</p>
+<h4 id="pytorch-layer-weights-and-names">PyTorch layer weights and names</h4>
+<p>It is helpful to create a basic PyTorch model to understand how layer names are defined and weights are initialized.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">nn</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">SimpleModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">dense</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">intermediate</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">layer_norm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LayerNorm</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></code></pre></div>
+<p>PyTorch layer names are defined by the class attribute name of the layer (<code>dense</code>, <code>intermediate</code>, <code>layer_norm</code>). Create a instance of <code>SimpleModel</code> to fill all the layers with random weights.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">SimpleModel</span><span class="p">()</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">SimpleModel</span><span class="p">(</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  <span class="p">(</span><span class="n">dense</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  <span class="p">(</span><span class="n">intermediate</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>  <span class="p">(</span><span class="n">layer_norm</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">10</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>The weight values of a specific layer are randomly initialized.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">dense</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">tensor</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.0818</span><span class="p">,</span>  <span class="mf">0.2207</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0749</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0030</span><span class="p">,</span>  <span class="mf">0.0045</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1569</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1598</span><span class="p">,</span>  <span class="mf">0.0212</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>         <span class="o">-</span><span class="mf">0.2077</span><span class="p">,</span>  <span class="mf">0.2157</span><span class="p">],</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        <span class="p">[</span> <span class="mf">0.1044</span><span class="p">,</span>  <span class="mf">0.0201</span><span class="p">,</span>  <span class="mf">0.0990</span><span class="p">,</span>  <span class="mf">0.2482</span><span class="p">,</span>  <span class="mf">0.3116</span><span class="p">,</span>  <span class="mf">0.2509</span><span class="p">,</span>  <span class="mf">0.2866</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2190</span><span class="p">,</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>          <span class="mf">0.2166</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0212</span><span class="p">],</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.2000</span><span class="p">,</span>  <span class="mf">0.1107</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1999</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3119</span><span class="p">,</span>  <span class="mf">0.1559</span><span class="p">,</span>  <span class="mf">0.0993</span><span class="p">,</span>  <span class="mf">0.1776</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1950</span><span class="p">,</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>         <span class="o">-</span><span class="mf">0.1023</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0447</span><span class="p">],</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.0888</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1092</span><span class="p">,</span>  <span class="mf">0.2281</span><span class="p">,</span>  <span class="mf">0.0336</span><span class="p">,</span>  <span class="mf">0.1817</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0115</span><span class="p">,</span>  <span class="mf">0.2096</span><span class="p">,</span>  <span class="mf">0.1415</span><span class="p">,</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>         <span class="o">-</span><span class="mf">0.1876</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2467</span><span class="p">],</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>        <span class="p">[</span> <span class="mf">0.2208</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2352</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1426</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2636</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2889</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2061</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2849</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0465</span><span class="p">,</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>          <span class="mf">0.2577</span><span class="p">,</span>  <span class="mf">0.0402</span><span class="p">],</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>        <span class="p">[</span> <span class="mf">0.1502</span><span class="p">,</span>  <span class="mf">0.2465</span><span class="p">,</span>  <span class="mf">0.2566</span><span class="p">,</span>  <span class="mf">0.0693</span><span class="p">,</span>  <span class="mf">0.2352</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0530</span><span class="p">,</span>  <span class="mf">0.1859</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0604</span><span class="p">,</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>          <span class="mf">0.2132</span><span class="p">,</span>  <span class="mf">0.1680</span><span class="p">],</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>        <span class="p">[</span> <span class="mf">0.1733</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2407</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1721</span><span class="p">,</span>  <span class="mf">0.1484</span><span class="p">,</span>  <span class="mf">0.0358</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0633</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0721</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0090</span><span class="p">,</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>          <span class="mf">0.2707</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2509</span><span class="p">],</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.1173</span><span class="p">,</span>  <span class="mf">0.1561</span><span class="p">,</span>  <span class="mf">0.2945</span><span class="p">,</span>  <span class="mf">0.0595</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1996</span><span class="p">,</span>  <span class="mf">0.2988</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0802</span><span class="p">,</span>  <span class="mf">0.0407</span><span class="p">,</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>          <span class="mf">0.1829</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1568</span><span class="p">],</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.1164</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2228</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0403</span><span class="p">,</span>  <span class="mf">0.0428</span><span class="p">,</span>  <span class="mf">0.1339</span><span class="p">,</span>  <span class="mf">0.0047</span><span class="p">,</span>  <span class="mf">0.1967</span><span class="p">,</span>  <span class="mf">0.2923</span><span class="p">,</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>          <span class="mf">0.0333</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0536</span><span class="p">],</span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.1492</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1616</span><span class="p">,</span>  <span class="mf">0.1057</span><span class="p">,</span>  <span class="mf">0.1950</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2807</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2710</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1586</span><span class="p">,</span>  <span class="mf">0.0739</span><span class="p">,</span>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>          <span class="mf">0.2220</span><span class="p">,</span>  <span class="mf">0.2358</span><span class="p">]])</span><span class="o">.</span>
+</span></code></pre></div>
+<p>In the conversion script, the random weights should be replaced with the exact weights from the corresponding layer in the original checkpoint.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># retrieve matching layer weights with recursive algorithm</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">layer_name</span> <span class="o">=</span> <span class="s2">&quot;dense&quot;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">pretrained_weight</span> <span class="o">=</span> <span class="n">array_of_dense_layer</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">model_pointer</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;dense&quot;</span><span class="p">)</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">model_pointer</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">pretrained_weight</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Verify the randomly initialized weights and their corresponding pretrained checkpoint weights have the identical <strong>shape</strong> and <strong>name</strong>. Add assert statements for the shape and print out the checkpoint weight names.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">assert</span> <span class="p">(</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="n">model_pointer</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">pretrained_weight</span><span class="o">.</span><span class="n">shape</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Pointer shape of random weight </span><span class="si">{</span><span class="n">model_pointer</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and array shape of checkpoint weight </span><span class="si">{</span><span class="n">pretrained_weight</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> mismatched&quot;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initialize PyTorch weight </span><span class="si">{</span><span class="n">layer_name</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">pretrained_weight</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>When the shape or name don't match, you may have assigned the incorrect checkpoint weight to a randomly initialized layer. An incorrect shape may be because the <code>BrandNewLlama</code> parameters don't exactly match the original models parameters. But it could also be that the PyTorch layer implementation requires the weights to be transposed first.</p>
+<h3 id="implement-the-forward-pass">Implement the forward pass</h3>
+<p>The forward pass should be implemented next if the model loads correctly. It takes some inputs and returns the model output.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BrandNewLlamaModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;/path/to/converted/checkpoint/folder&quot;</span><span class="p">)</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">input_ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">input_ids</span><span class="p">)</span><span class="o">.</span><span class="n">last_hidden_states</span>
+</span></code></pre></div>
+<p>Don't be discouraged if your forward pass isn't identical with the output from the original model or if it returns an error. Check that the forward pass doesn't throw any errors. This is often because the dimensions are wrong or because the wrong data type is used (<a href="https://pytorch.org/docs/stable/generated/torch.Tensor.long.html">torch.long</a> instead of <a href="https://pytorch.org/docs/stable/tensors.html">torch.float32</a>).</p>
+<p>Your output should have a precision of <em>1e-3</em>. Ensure the output shapes and output values are identical. Common reasons for why the outputs aren't identical include:</p>
+<ul>
+<li>Some layers were not added (activation layer or a residual connection).</li>
+<li>The word embedding matrix is not tied.</li>
+<li>The wrong positional embeddings are used because the original implementation includes an offset.</li>
+<li>Dropout is applied during the forward pass. Fix this error by making sure <code>model.training</code> is <code>False</code> and passing <code>self.training</code> to <a href="https://pytorch.org/docs/stable/nn.functional.html?highlight=dropout#torch.nn.functional.dropout">torch.nn.functional.dropout</a>.</li>
+</ul>
+<p>Compare the forward pass of the original model and your implementation to check if there are any differences. Ideally, debug and print out the intermediate outputs of both implementations of the forward pass to pinpoint where the original implementation differs from yours.</p>
+<ol>
+<li>Make sure the hardcoded <code>input_ids</code> in both implementations are identical.</li>
+<li>Verify the outputs of the first transformation of <code>input_ids</code> (usually the word embeddings) are identical, and work your way through to the last layer.</li>
+</ol>
+<p>Any difference between the two implementations should point to the bug in your implementation.</p>
+<p>One of the best strategies is to add many print statements to the same positions in both implementations, and then successively remove them when they output identical values for the intermediate outputs.</p>
+<p>When both implementations produce the same output, verify the outputs are within a precision of <em>1e-3</em>.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">torch</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">original_output</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This is typically the most difficult part of the process. Congratulations if you've made it this far!</p>
+<p>And if you're stuck or struggling with this step, don't hesitate to ask for help on your pull request.</p>
+<h3 id="add-model-tests">Add model tests</h3>
+<p>While the model works, you still need to add tests to ensure it is compatible with Transformers. Tests are important because they help users understand your work by looking at specific tests, and because they prevent your model from breaking in the future if any changes are made.</p>
+<p><a href="https://cookiecutter.readthedocs.io/en/stable/">Cookiecutter</a> should have added a test file for your model. Run the test file below to make sure all common tests pass.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>pytest<span class="w"> </span>tests/models/brand_new_llama/test_modeling_brand_new_llama.py
+</span></code></pre></div>
+<p>The integration tests should be added first because they serve the same purpose as the debugging scripts you used earlier to implement the new model in Transformers. A template of those model tests, <code>BrandNewLlamaModelIntegrationTests</code>, was added by Cookiecutter and should be filled out. To ensure it passes, run the following command.</p>
+<p><hfoptions id="integration-test">
+<hfoption id="macOS"></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>-sv<span class="w"> </span>tests/models/brand_new_llama/test_modeling_brand_new_llama.py::BrandNewLlamaModelIntegrationTests
+</span></code></pre></div>
+<p></hfoption>
+<hfoption id="Windows"></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>SET<span class="w"> </span><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>-sv<span class="w"> </span>tests/models/brand_new_llama/test_modeling_brand_new_llama.py::BrandNewLlamaModelIntegrationTests
+</span></code></pre></div>
+<p></hfoption>
+</hfoptions></p>
+<p>All features unique to BrandNewLlama should be tested in a separate test under <code>BrandNewLlamaModelTester/BrandNewLlamaModelTest</code>. This test is often overlooked, but it is extremely important because:</p>
+<ul>
+<li>it helps transfer knowledge you acquired during the process to the community by showing how the models novel features work</li>
+<li>future contributors can quickly test changes to the model by running these special tests</li>
+</ul>
+<h2 id="implement-tokenizer">Implement tokenizer</h2>
+<blockquote>
+<p>[!TIP]
+We recommend adding a fast tokenizer ([<code>PreTrainedTokenizerFast</code>]) to give users the best performance. Feel free to tag <a href="https://github.com/ArthurZucker">@ArthurZucker</a> or <a href="https://github.com/itazap">@itazap</a> in your PR for help on how to add [<code>PreTrainedTokenizerFast</code>].</p>
+</blockquote>
+<p>With the model out of the way, time to focus on the tokenizer. The tokenizer should be identical or very similar to an existing tokenizer in Transformers.</p>
+<p>Find and load the original tokenizer file into your implementation. Create a script in the original repository that inputs a string and returns the <code>input_ids</code>. The pseudocode should look similar to the code below.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">input_str</span> <span class="o">=</span> <span class="s2">&quot;This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words.&quot;</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">BrandNewLlamaModel</span><span class="o">.</span><span class="n">load_pretrained_checkpoint</span><span class="p">(</span><span class="s2">&quot;/path/to/checkpoint/&quot;</span><span class="p">)</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">input_ids</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">input_str</span><span class="p">)</span>
+</span></code></pre></div>
+<p>You may need to search the original repository to find the correct tokenizer function or modify the existing tokenizer in your clone of the original repository to only return the <code>input_ids</code>. The script for your tokenizer should look similar to the following.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BrandNewLlamaTokenizer</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">input_str</span> <span class="o">=</span> <span class="s2">&quot;This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words.&quot;</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BrandNewLlamaTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;/path/to/tokenizer/folder/&quot;</span><span class="p">)</span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="n">input_ids</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">input_str</span><span class="p">)</span><span class="o">.</span><span class="n">input_ids</span>
+</span></code></pre></div>
+<p>When both implementations have the same <code>input_ids</code>, add a tokenizer test file. This file is analogous to the modeling test files. The tokenizer test files should contain a couple of hardcoded integration tests.</p>
+<h2 id="implement-image-processor">Implement image processor</h2>
+<blockquote>
+<p>[!TIP]
+Fast image processors use the <a href="https://pytorch.org/vision/stable/index.html">torchvision</a> library and can perform image processing on the GPU, significantly improving processing speed.
+We recommend adding a fast image processor ([<code>BaseImageProcessorFast</code>]) in addition to the "slow" image processor ([<code>BaseImageProcessor</code>]) to provide users with the best performance. Feel free to tag <a href="https://github.com/yonigozlan">@yonigozlan</a> for help adding a [<code>BaseImageProcessorFast</code>].</p>
+</blockquote>
+<p>While this example doesn't include an image processor, you may need to implement one if your model requires image inputs. The image processor is responsible for converting images into a format suitable for your model. Before implementing a new one, check whether an existing image processor in the Transformers library can be reused, as many models share similar image processing techniques. Note that you can also use <a href="./modular_transformers">modular</a> for image processors to reuse existing components.</p>
+<p>If you do need to implement a new image processor, refer to an existing image processor to understand the expected structure. Slow image processors ([<code>BaseImageProcessor</code>]) and fast image processors ([<code>BaseImageProcessorFast</code>]) are designed differently, so make sure you follow the correct structure based on the processor type you're implementing.</p>
+<p>Run the following command (only if you haven't already created the fast image processor with the <code>transformers add-new-model-like</code> command) to generate the necessary imports and to create a prefilled template for the fast image processor. Modify the template to fit your model.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>transformers<span class="w"> </span>add-fast-image-processor<span class="w"> </span>--model-name<span class="w"> </span>your_model_name
+</span></code></pre></div>
+<p>This command will generate the necessary imports and provide a pre-filled template for the fast image processor. You can then modify it to fit your model's needs.</p>
+<p>Add tests for the image processor in <code>tests/models/your_model_name/test_image_processing_your_model_name.py</code>. These tests should be similar to those for other image processors and should verify that the image processor correctly handles image inputs. If your image processor includes unique features or processing methods, ensure you add specific tests for those as well.</p>
+<h2 id="implement-processor">Implement processor</h2>
+<p>If your model accepts multiple modalities, like text and images, you need to add a processor. The processor centralizes the preprocessing of different modalities before passing them to the model.</p>
+<p>The processor should call the appropriate modality-specific processors within its <code>__call__</code> function to handle each type of input correctly. Be sure to check existing processors in the library to understand their expected structure. Transformers uses the following convention in the <code>__call__</code> function signature.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    <span class="bp">self</span><span class="p">,</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    <span class="n">images</span><span class="p">:</span> <span class="n">ImageInput</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    <span class="n">text</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">TextInput</span><span class="p">,</span> <span class="n">PreTokenizedInput</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">TextInput</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">PreTokenizedInput</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    <span class="n">audio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    <span class="n">videos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">YourModelProcessorKwargs</span><span class="p">],</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BatchFeature</span><span class="p">:</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    <span class="o">...</span>
+</span></code></pre></div>
+<p><code>YourModelProcessorKwargs</code> is a <code>TypedDict</code> that includes all the typical processing arguments and any extra arguments a specific processor may require.</p>
+<p>Add tests for the processor in <code>tests/models/your_model_name/test_processor_your_model_name.py</code>. These tests should be similar to those for other processors and should verify that the processor correctly handles the different modalities.</p>
+<h2 id="integration-tests">Integration tests</h2>
+<p>Now that you have a model and tokenizer, add end-to-end integration tests for the model and tokenizer to <code>tests/models/brand_new_llama/test_modeling_brand_new_llama.py</code>.</p>
+<p>The test should provide a meaningful text-to-text example to show the model works as expected. For example, you can include a source-to-target translation pair, an article-to-summary pair, or a question-to-answer pair.</p>
+<p>If the checkpoint hasn't been fine-tuned on a downstream task, then the model tests are sufficient.</p>
+<p>Finally, try to make sure your tests can run on a GPU by adding <code>.to(self.device)</code> statements to the models internal tensors. If you don't have access to a GPU, we can take care of that for you.</p>
+<h2 id="add-documentation">Add documentation</h2>
+<p>Your model is only useful if users know how to use it. This is why it's important to add documentation and docstrings. Cookiecutter added a template file, <code>docs/source/model_doc/brand_new_llama.md</code>, that you can fill out with information about your model.</p>
+<p>This is generally a user's first interaction with a model, so the documentation should be clear and concise. It is often very useful to add examples of how the model should be used.</p>
+<p>Make sure docstrings are added to <code>src/transformers/models/brand_new_llama/modeling_brand_new_llama.py</code> and includes all necessary inputs and outputs. Review our <a href="https://github.com/huggingface/transformers/tree/main/docs#writing-documentation---specification">guide</a> for writing documentation and docstrings.</p>
+<h2 id="refactor">Refactor</h2>
+<p>Time to tidy things up and make sure the code style is consistent with the rest of the library. Run the following command to automatically fix incorrect styles.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>make<span class="w"> </span>style
+</span></code></pre></div>
+<p>To verify the code style passes quality checks, run the command below.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>make<span class="w"> </span>quality
+</span></code></pre></div>
+<p>There may be other failing tests or checks (missing docstring or incorrect naming) on your pull request due to Transformers strict design tests. We can help you with these issues if you're stuck.</p>
+<p>After ensuring the code runs correctly, you may want to refactor it to make it more readable or cleaner.</p>
+<h2 id="upload-to-the-hub">Upload to the Hub</h2>
+<p>Convert and upload all checkpoints to the <a href="https://hf.co/models">Hub</a>. Add a model card to provide more transparency and context about the model. The model card should highlight specific characteristics of a checkpoint, how the model was trained, and code examples of how to use it.</p>
+<blockquote>
+<p>[!TIP]
+In many cases, adding an interactive notebook users can run is a great way to showcase how to use the model for inference or fine-tune it on a downstream task. While not required, including a notebook can drive greater adoption of your model.</p>
+</blockquote>
+<p>You should also consult with the Transformers team to decide on an appropriate name for the model, and getting the required access rights to upload the model.</p>
+<p>Use the [<code>~PreTrainedModel.push_to_hub</code>] method to upload the model.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">brand_new_bert</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;brand_new_llama&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Refer to the <a href="./model_sharing">Sharing</a> guide for more information about uploading models to the Hub.</p>
+<h2 id="merge-your-model">Merge your model</h2>
+<p>You're finally ready to merge your pull request and officially add the model to Transformers! Make sure all the tests are passing and all comments and feedback have been addressed.</p>
+<p>Congratulations on adding a new model to Transformers! 🥳</p>
+<p>This is a very significant contribution. Your work makes Transformers more accessible to developers and researchers around the world. You should be proud of your contribution and share your accomplishment with the community!</p>
+<h2 id="model-addition-timeline">Model addition timeline</h2>
+<p>There are four timelines for model additions depending on the model contributor and community demand for an architecture.</p>
+<ul>
+<li><strong>day-0 integration</strong>: If you plan on having a Transformers-first release, this is a great option because we can ensure the documentation is clear and optimize your model as much as possible (quantization, FlashAttention, KV-cache, etc.). We can also help you add the model, provide early reviews and make sure it works as expected.</li>
+</ul>
+<p>Reach out to transformers@huggingface.co a few days (preferably weeks) in advance, especially if an architecture is particularly novel, to ensure model integration. We'll work together on a private fork of Transformers until your checkpoint and release is ready.</p>
+<ul>
+<li><strong>same week integration</strong>: Models with significant requests/demand are usually added the same week if the model author doesn't reach out.</li>
+</ul>
+<p>Use the <a href="https://github.com/huggingface/transformers/issues/new?assignees=&amp;labels=New+model&amp;projects=&amp;template=new-model-addition.yml">issue tracker</a> to request a specific model to add. The more activity on the issue, the faster and more likely we'll integrate it.</p>
+<ul>
+<li><strong>post-release integration</strong>: Models without popular requests/demand or if we don't have the bandwidth to integrate it are added post-release.</li>
+</ul>
+<p>This is a good opportunity if you're interested in contributing a model to Transformers. Take a look at open issues tagged with <a href="https://github.com/huggingface/transformers/issues?q=is%3Aopen+is%3Aissue+label%3A%22New+model%22">"New model"</a>. Feel free to give the most requested models a try first to multiply the impact of your contribution. We'll be there to help you each step of the way!</p>
+<ul>
+<li><strong>Hub-first release</strong>: Transformers <a href="./models#custom-models">remote-code</a> feature allows Transformers-based projects to be shared directly on the Hub. This is a good option if you don't have the bandwidth to add a model directly to Transformers.</li>
+</ul>
+<p>If a model ends up being very popular, then it's very likely that we'll integrate it in Transformers ourselves to enable better support (documentation, maintenance, optimization, etc.) for it. A Hub-first release is the most frictionless way to add a model.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

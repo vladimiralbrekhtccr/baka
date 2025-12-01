@@ -1,0 +1,2547 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Testing - Ohayou</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#testing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ohayou
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Testing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../ohayou/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ohayou
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vLLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  VLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MD format helpers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../moe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mixture of Experts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../slurm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Slurm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Japanese Phrases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hack
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Ohayou
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ohayou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ohayou
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    vLLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            vLLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash online serve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speculative Decoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MD format helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../moe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mixture of Experts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Japanese Phrases
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Japanese Phrases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Daily Life
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shopping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Greetings
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Greetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime/Manga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-transformers-are-tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      How transformers are tested
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-which-tests-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing which tests to run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-list-of-all-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the list of all tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-specific-test-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a specific test module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-specific-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run specific tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-accelerate-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run accelerate tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-documentation-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run documentation tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-only-modified-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run only modified tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatically-rerun-failed-tests-on-source-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatically rerun failed tests on source modification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-a-test-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skip a test module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearing-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clearing state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests-in-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running tests in parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-order-and-repetition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test order and repetition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test order and repetition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeat-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-tests-in-a-random-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run tests in a random order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-and-feel-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Look and feel variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Look and feel variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest-sugar" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-sugar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-each-sub-test-name-and-its-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report each sub-test name and its progress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instantly-shows-failed-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instantly shows failed tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-gpu-or-not-to-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      To GPU or not to GPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-with-a-specific-pytorch-backend-or-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with a specific PyTorch backend or device
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed training
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output capture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-test-report-to-online-pastebin-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending test report to online pastebin service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametrization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametrization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files and directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporary-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary files and directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporary-syspath-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary sys.path override
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skipping-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skipping tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skipping tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-stdoutstderr-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the stdout/stderr output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturing-logger-stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing logger stream
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-with-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with environment variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-reproducible-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting reproducible results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-github-actions-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with github actions workflows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-experimental-ci-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Experimental CI Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!--Copyright 2023 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+⚠️ Note that this file is in Markdown but contain specific syntax for our doc-builder (similar to MDX) that may not be
+rendered properly in your Markdown viewer.
+
+-->
+
+<h1 id="testing">Testing</h1>
+<p>🤗 Transformersモデルがどのようにテストされ、新しいテストを書いて既存のテストを改善できるかを見てみましょう。</p>
+<p>このリポジトリには2つのテストスイートがあります：</p>
+<ol>
+<li><code>tests</code> -- 一般的なAPI用のテスト</li>
+<li><code>examples</code> -- APIの一部ではないさまざまなアプリケーション用のテスト</li>
+</ol>
+<h2 id="how-transformers-are-tested">How transformers are tested</h2>
+<ol>
+<li>PRが提出されると、9つのCircleCiジョブでテストされます。PRへの新しいコミットごとに再テストされます。これらのジョブは、<a href="https://github.com/huggingface/transformers/tree/main/.circleci/config.yml">この設定ファイル</a>で定義されており、必要な場合は同じ環境を自分のマシンで再現できます。</li>
+</ol>
+<p>これらのCIジョブは <code>@slow</code> テストを実行しません。</p>
+<ol>
+<li>
+<p><a href="https://github.com/huggingface/transformers/actions">GitHub Actions</a>によって実行される3つのジョブがあります：</p>
+</li>
+<li>
+<p><a href="https://github.com/huggingface/transformers/tree/main/.github/workflows/github-torch-hub.yml">torch hub integration</a>: torch hubの統合が動作するかどうかを確認します。</p>
+</li>
+<li>
+<p><a href="https://github.com/huggingface/transformers/tree/main/.github/workflows/self-push.yml">self-hosted (push)</a>: <code>main</code> にコミットが行われた場合に、GPUで高速テストを実行します。このジョブは、<code>main</code> でのコミットが以下のフォルダーのコードを更新した場合にのみ実行されます：<code>src</code>、<code>tests</code>、<code>.github</code>（追加されたモデルカード、ノートブックなどの実行を防ぐため）。</p>
+</li>
+<li>
+<p><a href="https://github.com/huggingface/transformers/tree/main/.github/workflows/self-scheduled.yml">self-hosted runner</a>: GPUで <code>tests</code> と <code>examples</code> の通常のテストと遅いテストを実行します。</p>
+</li>
+</ol>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>tests/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>examples/
+</span></code></pre></div>
+    結果は<a href="https://github.com/huggingface/transformers/actions">here</a>で観察できます。</p>
+<h2 id="running-tests">Running tests</h2>
+<h3 id="choosing-which-tests-to-run">Choosing which tests to run</h3>
+<p>このドキュメントは、テストを実行する方法の多くの詳細について説明しています。すべてを読んだ後でも、さらに詳細が必要な場合は、<a href="https://docs.pytest.org/en/latest/usage.html">こちら</a>で見つけることができます。</p>
+<p>以下は、テストを実行するためのいくつかの最も便利な方法です。</p>
+<p>すべて実行します:
+<div class="language-console highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">pytest</span>
+</span></code></pre></div></p>
+<p>または：
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>make<span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div></p>
+<p>後者は次のように定義されることに注意してください。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-n<span class="w"> </span>auto<span class="w"> </span>--dist<span class="o">=</span>loadfile<span class="w"> </span>-s<span class="w"> </span>-v<span class="w"> </span>./tests/
+</span></code></pre></div>
+<p>以下は、pytestに渡す設定情報です。</p>
+<ul>
+<li>テストプロセスをCPUコアの数と同じだけ実行するように指示します。ただし、RAMが十分でない場合は注意が必要です。</li>
+<li>同じファイルからのすべてのテストは、同じテストプロセスで実行されるようにします。</li>
+<li>出力のキャプチャを行いません。</li>
+<li>冗長モードで実行します。</li>
+</ul>
+<h3 id="getting-the-list-of-all-tests">Getting the list of all tests</h3>
+<p>テストスイートのすべてのテスト：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pytest<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<p>指定されたテスト ファイルのすべてのテスト:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pytest<span class="w"> </span>tests/test_optimization.py<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<h3 id="run-a-specific-test-module">Run a specific test module</h3>
+<p>個別のテスト モジュールを実行するには:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<h3 id="run-specific-tests">Run specific tests</h3>
+<p>ほとんどのテストでunittestが使用されているため、特定のサブテストを実行するには、それらのテストを含むunittestクラスの名前を知っている必要があります。例えば、それは次のようになるかもしれません：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest<span class="w"> </span>tests/test_optimization.py::OptimizationTest::test_adam_w
+</span></code></pre></div>
+<p>テストの実行方法:</p>
+<p>テストファイル: <code>tests/test_optimization.py</code>
+クラス名: <code>OptimizationTest</code>
+テスト関数の名前: <code>test_adam_w</code></p>
+<p>ファイルに複数のクラスが含まれている場合は、特定のクラスのテストのみを実行することを選択できます。例えば：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest<span class="w"> </span>tests/test_optimization.py::OptimizationTest
+</span></code></pre></div>
+<p>テストクラス内のすべてのテストを実行します。</p>
+<p>前述の通り、<code>OptimizationTest</code> クラスに含まれるテストを実行するには、次のコマンドを実行できます：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pytest<span class="w"> </span>tests/test_optimization.py::OptimizationTest<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<p>キーワード式を使用してテストを実行できます。</p>
+<p>名前に <code>adam</code> が含まれるテストのみを実行するには：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span>adam<span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<p><code>and</code>および<code>or</code>は、すべてのキーワードが一致するか、いずれかを示すために使用できます。<code>not</code>は否定するために使用できます。</p>
+<p><code>adam</code>という名前を含むテストを除いてすべてのテストを実行するには：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;not adam&quot;</span><span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<p>以下は、提供されたテキストの日本語訳です。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;ada and not adam&quot;</span><span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<p>たとえば、<code>test_adafactor</code>と<code>test_adam_w</code>の両方を実行するには、以下のコマンドを使用できます:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;test_adam_w or test_adam_w&quot;</span><span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<p>注意: ここでは、<code>or</code> を使用しています。キーワードのいずれか一つが一致すれば、両方を含めるためです。</p>
+<p>両方のパターンを含むテストのみを含めたい場合は、<code>and</code> を使用してください。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;test and ada&quot;</span><span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<h3 id="run-accelerate-tests">Run <code>accelerate</code> tests</h3>
+<p>時々、モデルに対して <code>accelerate</code> テストを実行する必要があります。たとえば、<code>OPT</code> 実行に対してこれらのテストを実行したい場合、コマンドに <code>-m accelerate_tests</code> を追加するだけで済みます：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>-m<span class="w"> </span>accelerate_tests<span class="w"> </span>tests/models/opt/test_modeling_opt.py
+</span></code></pre></div>
+<h3 id="run-documentation-tests">Run documentation tests</h3>
+<p>ドキュメンテーションの例が正しいかどうかをテストするには、<code>doctests</code> が合格しているかを確認する必要があります。
+例として、<a href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/whisper/modeling_whisper.py#L1017-L1035"><code>WhisperModel.forward</code> のドックストリング</a>を使用しましょう。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="sd">Returns:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="sd">Example:</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="sd">    ```python</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="sd">    &gt;&gt;&gt; import torch</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="sd">    &gt;&gt;&gt; from transformers import WhisperModel, WhisperFeatureExtractor</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="sd">    &gt;&gt;&gt; from datasets import load_dataset</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="sd">    &gt;&gt;&gt; model = WhisperModel.from_pretrained(&quot;openai/whisper-base&quot;)</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="sd">    &gt;&gt;&gt; feature_extractor = WhisperFeatureExtractor.from_pretrained(&quot;openai/whisper-base&quot;)</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="sd">    &gt;&gt;&gt; ds = load_dataset(&quot;hf-internal-testing/librispeech_asr_dummy&quot;, &quot;clean&quot;, split=&quot;validation&quot;)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="sd">    &gt;&gt;&gt; inputs = feature_extractor(ds[0][&quot;audio&quot;][&quot;array&quot;], return_tensors=&quot;pt&quot;)</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="sd">    &gt;&gt;&gt; input_features = inputs.input_features</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="sd">    &gt;&gt;&gt; decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="sd">    &gt;&gt;&gt; last_hidden_state = model(input_features, decoder_input_ids=decoder_input_ids).last_hidden_state</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="sd">    &gt;&gt;&gt; list(last_hidden_state.shape)</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="sd">    [1, 2, 512]</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="sd">    ```&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<p>指定したファイル内のすべてのドックストリング例を自動的にテストするために、以下の行を実行してください：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>pytest<span class="w"> </span>--doctest-modules<span class="w"> </span>&lt;path_to_file_or_dir&gt;
+</span></code></pre></div>
+<p>ファイルにマークダウン拡張子がある場合は、<code>--doctest-glob="*.md"</code>引数を追加する必要があります。</p>
+<h3 id="run-only-modified-tests">Run only modified tests</h3>
+<p><a href="https://github.com/anapaulagomes/pytest-picked">pytest-picked</a>を使用すると、未ステージングのファイルまたは現在のブランチ（Gitに従って）に関連するテストを実行できます。これは、変更内容に関連するテストのみ実行されるため、変更が何も壊れていないことを迅速に確認する素晴らしい方法です。変更されていないファイルに関連するテストは実行されません。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-picked
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>pytest<span class="w"> </span>--picked
+</span></code></pre></div>
+<p>すべてのテストは、変更されたがまだコミットされていないファイルとフォルダから実行されます。</p>
+<h3 id="automatically-rerun-failed-tests-on-source-modification">Automatically rerun failed tests on source modification</h3>
+<p><a href="https://github.com/pytest-dev/pytest-xdist">pytest-xdist</a>は、非常に便利な機能を提供しており、すべての失敗したテストを検出し、ファイルを修正する間にそれらの失敗したテストを連続して再実行することができます。そのため、修正を行った後にpytestを再起動する必要がありません。すべてのテストが合格するまで繰り返され、その後再度フルランが実行されます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-xdist
+</span></code></pre></div>
+<p>モードに入るには： <code>pytest -f</code>または<code>pytest --looponfail</code></p>
+<p>ファイルの変更は、<code>looponfailroots</code>ルートディレクトリとその内容全体（再帰的に）を見て検出されます。この値のデフォルトが機能しない場合、<code>setup.cfg</code>で設定オプションを変更してプロジェクト内で変更できます。</p>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">[tool:pytest]</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="na">looponfailroots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">transformers tests</span>
+</span></code></pre></div>
+<p>または <code>pytest.ini</code>/<code>tox.ini</code> ファイル:</p>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">[pytest]</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="na">looponfailroots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">transformers tests</span>
+</span></code></pre></div>
+<p>ファイルの変更を探すことは、iniファイルのディレクトリを基準にして指定されたディレクトリ内でのみ行われます。</p>
+<p><a href="https://github.com/joeyespo/pytest-watch">pytest-watch</a> は、この機能の代替実装です。</p>
+<h3 id="skip-a-test-module">Skip a test module</h3>
+<p>特定のテストモジュールを除外してすべてのテストモジュールを実行したい場合、実行するテストの明示的なリストを指定することができます。例えば、<code>test_modeling_*.py</code> テストを除外してすべてを実行するには次のようにします：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>pytest<span class="w"> </span>*ls<span class="w"> </span>-1<span class="w"> </span>tests/*py<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>test_modeling*
+</span></code></pre></div>
+<h3 id="clearing-state">Clearing state</h3>
+<p>CIビルドおよび速度に対する隔離が重要な場合（キャッシュに対して）、キャッシュをクリアする必要があります：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>pytest<span class="w"> </span>--cache-clear<span class="w"> </span>tests
+</span></code></pre></div>
+<h3 id="running-tests-in-parallel">Running tests in parallel</h3>
+<p>前述のように、<code>make test</code> は <code>pytest-xdist</code> プラグインを介してテストを並列実行します（<code>-n X</code> 引数、例: <code>-n 2</code> で2つの並列ジョブを実行）。</p>
+<p><code>pytest-xdist</code> の <code>--dist=</code> オプションを使用すると、テストがどのようにグループ化されるかを制御できます。<code>--dist=loadfile</code> は同じファイルにあるテストを同じプロセスに配置します。</p>
+<p>テストの実行順序が異なり予測不可能であるため、<code>pytest-xdist</code> を使用してテストスイートを実行すると失敗が発生する場合（つまり、いくつかの未検出の連動テストがある場合）、<a href="https://github.com/ESSS/pytest-replay">pytest-replay</a> を使用してテストを同じ順序で再生し、その後、失敗するシーケンスを最小限にするのに役立ちます。</p>
+<h3 id="test-order-and-repetition">Test order and repetition</h3>
+<p>潜在的な相互依存性や状態に関連するバグ（ティアダウン）を検出するために、テストを複数回、連続して、ランダムに、またはセットで繰り返すことは有用です。そして、単純な複数回の繰り返しは、DLのランダム性によって明らかになるいくつかの問題を検出するのに役立ちます。</p>
+<h4 id="repeat-tests">Repeat tests</h4>
+<ul>
+<li><a href="https://github.com/dropbox/pytest-flakefinder">pytest-flakefinder</a>:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-flakefinder
+</span></code></pre></div>
+<p>そして、すべてのテストを複数回実行します (デフォルトでは 50 回)。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>pytest<span class="w"> </span>--flake-finder<span class="w"> </span>--flake-runs<span class="o">=</span><span class="m">5</span><span class="w"> </span>tests/test_failing_test.py
+</span></code></pre></div>
+<p><Tip></p>
+<p>このプラグインは、<code>pytest-xdist</code> の <code>-n</code> フラグでは動作しません。</p>
+<p></Tip></p>
+<p><Tip></p>
+<p>別のプラグイン <code>pytest-repeat</code> もありますが、これは <code>unittest</code> では動作しません。</p>
+<p></Tip></p>
+<h4 id="run-tests-in-a-random-order">Run tests in a random order</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-random-order
+</span></code></pre></div>
+<p>重要: <code>pytest-random-order</code> が存在すると、テストは自動的にランダム化されます。設定の変更や変更は必要ありません。
+コマンドラインオプションは必須です。</p>
+<p>前に説明したように、これにより、結合されたテスト (1 つのテストの状態が別のテストの状態に影響を与える) の検出が可能になります。いつ
+<code>pytest-random-order</code> がインストールされていると、そのセッションに使用されたランダム シードが出力されます。例:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>pytest<span class="w"> </span>tests
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="o">[</span>...<span class="o">]</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Using<span class="w"> </span>--random-order-bucket<span class="o">=</span>module
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Using<span class="w"> </span>--random-order-seed<span class="o">=</span><span class="m">573663</span>
+</span></code></pre></div>
+<p>そのため、指定された特定のシーケンスが失敗した場合、その正確なシードを追加することでそれを再現できます。例:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>pytest<span class="w"> </span>--random-order-seed<span class="o">=</span><span class="m">573663</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="o">[</span>...<span class="o">]</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>Using<span class="w"> </span>--random-order-bucket<span class="o">=</span>module
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>Using<span class="w"> </span>--random-order-seed<span class="o">=</span><span class="m">573663</span>
+</span></code></pre></div>
+<p>特定のテストのリストを使用しない場合、またはまったくリストを使用しない場合、同じテストの正確な順序を再現します。テストのリストを手動で絞り込み始めると、シードに依存せず、テストが失敗した正確な順序で手動でリストを指定する必要があります。これには、<code>--random-order-bucket=none</code> を使用してランダム化を無効にするようpytestに指示する必要があります。例えば、次のようにします：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>pytest<span class="w"> </span>--random-order-bucket<span class="o">=</span>none<span class="w"> </span>tests/test_a.py<span class="w"> </span>tests/test_c.py<span class="w"> </span>tests/test_b.py
+</span></code></pre></div>
+<p>すべてのテストのシャッフルを無効にするには:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pytest<span class="w"> </span>--random-order-bucket<span class="o">=</span>none
+</span></code></pre></div>
+<p>デフォルトでは、<code>--random-order-bucket=module</code> が暗黙的に適用され、モジュールレベルでファイルをシャッフルします。また、<code>class</code>、<code>package</code>、<code>global</code>、および<code>none</code> レベルでシャッフルすることもできます。詳細については、その<a href="https://github.com/jbasko/pytest-random-order">ドキュメンテーション</a>を参照してください。</p>
+<p>別のランダム化の代替手段は、<a href="https://github.com/pytest-dev/pytest-randomly"><code>pytest-randomly</code></a> です。このモジュールは非常に似た機能/インターフェースを持っていますが、<code>pytest-random-order</code> で利用可能なバケットモードを持っていません。インストール後に自動的に有効になるという同じ問題があります。</p>
+<h3 id="look-and-feel-variations">Look and feel variations</h3>
+<h4 id="pytest-sugar">pytest-sugar</h4>
+<p><a href="https://github.com/Frozenball/pytest-sugar">pytest-sugar</a> は、外観と操作性を向上させ、プログレスバーを追加し、即座に失敗したテストとアサーションを表示するプラグインです。インストール後に自動的にアクティブ化されます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-sugar
+</span></code></pre></div>
+<p>これを使用せずにテストを実行するには、次を実行します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>pytest<span class="w"> </span>-p<span class="w"> </span>no:sugar
+</span></code></pre></div>
+<p>またはアンインストールします。</p>
+<h4 id="report-each-sub-test-name-and-its-progress">Report each sub-test name and its progress</h4>
+<p><code>pytest</code> による単一またはグループのテストの場合 (<code>pip install pytest-pspec</code> の後):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pytest<span class="w"> </span>--pspec<span class="w"> </span>tests/test_optimization.py
+</span></code></pre></div>
+<h4 id="instantly-shows-failed-tests">Instantly shows failed tests</h4>
+<p><a href="https://github.com/pytest-dev/pytest-instafail">pytest-instafail</a> では、失敗とエラーが即座に表示されます。
+テストセッションが終了するまで待機します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest-instafail
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>pytest<span class="w"> </span>--instafail
+</span></code></pre></div>
+<h3 id="to-gpu-or-not-to-gpu">To GPU or not to GPU</h3>
+<p>GPU が有効な設定で、CPU のみモードでテストするには、<code>CUDA_VISIBLE_DEVICES=""</code>を追加します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span>pytest<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<p>または、複数の GPU がある場合は、<code>pytest</code> でどれを使用するかを指定できます。たとえば、
+2 番目の GPU GPU <code>0</code> と <code>1</code> がある場合は、次を実行できます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span>pytest<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<p>これは、異なるGPUで異なるタスクを実行したい場合に便利です。</p>
+<p>一部のテストはCPUのみで実行する必要があり、他のテストはCPU、GPU、またはTPUで実行する必要があり、また別のテストは複数のGPUで実行する必要があります。次のスキップデコレーターは、テストのCPU/GPU/TPUに関する要件を設定するために使用されます：</p>
+<ul>
+<li><code>require_torch</code> - このテストはtorchの下でのみ実行されます。</li>
+<li><code>require_torch_gpu</code> - <code>require_torch</code> に加えて、少なくとも1つのGPUが必要です。</li>
+<li><code>require_torch_multi_gpu</code> - <code>require_torch</code> に加えて、少なくとも2つのGPUが必要です。</li>
+<li><code>require_torch_non_multi_gpu</code> - <code>require_torch</code> に加えて、0または1つのGPUが必要です。</li>
+<li><code>require_torch_up_to_2_gpus</code> - <code>require_torch</code> に加えて、0、1、または2つのGPUが必要です。</li>
+<li><code>require_torch_xla</code> - <code>require_torch</code> に加えて、少なくとも1つのTPUが必要です。</li>
+</ul>
+<p>以下の表にGPUの要件を示します：</p>
+<p>| n gpus | decorator                      |
+|--------+--------------------------------|
+| <code>&gt;= 0</code> | <code>@require_torch</code>               |
+| <code>&gt;= 1</code> | <code>@require_torch_gpu</code>           |
+| <code>&gt;= 2</code> | <code>@require_torch_multi_gpu</code>     |
+| <code>&lt; 2</code>  | <code>@require_torch_non_multi_gpu</code> |
+| <code>&lt; 3</code>  | <code>@require_torch_up_to_2_gpus</code>  |</p>
+<p>たとえば、使用可能な GPU が 2 つ以上あり、pytorch がインストールされている場合にのみ実行する必要があるテストを次に示します。</p>
+<p>```python no-style
+@require_torch_multi_gpu
+def test_example_with_multi_gpu():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>これらのデコレータは積み重ねることができます。たとえば、テストが遅く、pytorch<span class="w"> </span>で少なくとも<span class="w"> </span><span class="m">1</span><span class="w"> </span>つの<span class="w"> </span>GPU<span class="w"> </span>が必要な場合は、次のようになります。
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>設定方法:
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="sb">```</span>python<span class="w"> </span>no-style
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>@require_torch_gpu
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>@slow
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>def<span class="w"> </span>test_example_slow_on_gpu<span class="o">()</span>:
+</span></code></pre></div></p>
+<p><code>@parametrized</code> のような一部のデコレータはテスト名を書き換えるため、<code>@require_*</code> スキップ デコレータをリストする必要があります。
+最後にそれらが正しく動作するようにします。正しい使用例は次のとおりです</p>
+<p>```python no-style
+@parameterized.expand(...)
+@require_torch_multi_gpu
+def test_integration_foo():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>この順序の問題は<span class="w"> </span><span class="sb">`</span>@pytest.mark.parametrize<span class="sb">`</span><span class="w"> </span>には存在しません。最初または最後に配置しても、それでも問題は解決されます。
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>仕事。ただし、それは非単体テストでのみ機能します。
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>内部テスト:
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>-<span class="w"> </span>利用可能な<span class="w"> </span>GPU<span class="w"> </span>の数:
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="sb">```</span>python
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>from<span class="w"> </span>transformers.testing_utils<span class="w"> </span>import<span class="w"> </span>get_gpu_count
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="nv">n_gpu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>get_gpu_count<span class="o">()</span><span class="w">  </span><span class="c1"># works with torch and tf</span>
+</span></code></pre></div></p>
+<h3 id="testing-with-a-specific-pytorch-backend-or-device">Testing with a specific PyTorch backend or device</h3>
+<p>特定のtorchデバイスでテストスイートを実行するには、<code>TRANSFORMERS_TEST_DEVICE="$device"</code> を追加します。ここで <code>$device</code> は対象のバックエンドです。例えば、CPUでテストするには以下のようにします：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nv">TRANSFORMERS_TEST_DEVICE</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span><span class="w"> </span>pytest<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<p>この変数は、<code>mps</code>などのカスタムまたはあまり一般的ではない PyTorch バックエンドをテストするのに役立ちます。また、特定の GPU をターゲットにしたり、CPU 専用モードでテストしたりすることで、<code>CUDA_VISIBLE_DEVICES</code>と同じ効果を達成するために使用することもできます。</p>
+<p>特定のデバイスでは、初めて「torch」をインポートした後、追加のインポートが必要になります。これは、環境変数 <code>TRANSFORMERS_TEST_BACKEND</code> を使用して指定できます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nv">TRANSFORMERS_TEST_BACKEND</span><span class="o">=</span><span class="s2">&quot;torch_npu&quot;</span><span class="w"> </span>pytest<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<h3 id="distributed-training">Distributed training</h3>
+<p><code>pytest</code> は直接的に分散トレーニングを処理することはできません。試みると、サブプロセスは正しい処理を行わず、自分自身が <code>pytest</code> であると思い込んでテストスイートをループで実行し続けます。ただし、通常のプロセスを生成し、それから複数のワーカーを生成し、IOパイプを管理するプロセスを生成すれば機能します。</p>
+<p>これを使用するいくつかのテストがあります：</p>
+<ul>
+<li><a href="https://github.com/huggingface/transformers/tree/main/tests/trainer/test_trainer_distributed.py">test_trainer_distributed.py</a></li>
+<li><a href="https://github.com/huggingface/transformers/tree/main/tests/deepspeed/test_deepspeed.py">test_deepspeed.py</a></li>
+</ul>
+<p>実行ポイントにすぐに移動するには、これらのテスト内で <code>execute_subprocess_async</code> 呼び出しを検索してください。</p>
+<p>これらのテストを実行するには、少なくとも2つのGPUが必要です：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span>,1<span class="w"> </span><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>-sv<span class="w"> </span>tests/test_trainer_distributed.py
+</span></code></pre></div>
+<h3 id="output-capture">Output capture</h3>
+<p>テストの実行中に、<code>stdout</code> および <code>stderr</code> に送信された出力はキャプチャされます。テストまたはセットアップメソッドが失敗した場合、通常、それに対応するキャプチャされた出力が失敗のトレースバックと共に表示されます。</p>
+<p>出力のキャプチャを無効にし、<code>stdout</code> と <code>stderr</code> を通常通りに取得するには、<code>-s</code> または <code>--capture=no</code> を使用してください：</p>
+<p>これらのテストを実行するには少なくとも2つのGPUが必要です：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>pytest<span class="w"> </span>-s<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<p>テスト結果を JUnit 形式の出力に送信するには:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>py.test<span class="w"> </span>tests<span class="w"> </span>--junitxml<span class="o">=</span>result.xml
+</span></code></pre></div>
+<h3 id="color-control">Color control</h3>
+<p>色を持たないようにする（例：黄色のテキストを白い背景に表示すると読みにくいです）：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>pytest<span class="w"> </span>--color<span class="o">=</span>no<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<h3 id="sending-test-report-to-online-pastebin-service">Sending test report to online pastebin service</h3>
+<p>テスト失敗ごとに URL を作成します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>pytest<span class="w"> </span>--pastebin<span class="o">=</span>failed<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<p>これにより、テスト実行情報がリモートのPasteサービスに送信され、各エラーに対してURLが提供されます。通常通りテストを選択するか、たとえば特定のエラーのみを送信したい場合は <code>-x</code> を追加で指定できます。</p>
+<p>テストセッション全体のログに対するURLを作成する方法：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>pytest<span class="w"> </span>--pastebin<span class="o">=</span>all<span class="w"> </span>tests/utils/test_logging.py
+</span></code></pre></div>
+<h2 id="writing-tests">Writing tests</h2>
+<p>🤗 transformersのテストは <code>unittest</code> を基にしていますが、 <code>pytest</code> で実行されるため、ほとんどの場合、両方のシステムの機能を使用できます。</p>
+<p><a href="https://docs.pytest.org/en/stable/unittest.html">こちら</a>でサポートされている機能を読むことができますが、重要なことは、ほとんどの <code>pytest</code> のフィクスチャが動作しないことです。パラメータ化も同様ですが、似たような方法で動作する <code>parameterized</code> モジュールを使用しています。</p>
+<h3 id="parametrization">Parametrization</h3>
+<p>同じテストを異なる引数で複数回実行する必要があることがよくあります。これはテスト内部から行うこともできますが、その場合、そのテストを単一の引数セットで実行する方法はありません。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1"># test_this1.py</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">parameterized</span><span class="w"> </span><span class="kn">import</span> <span class="n">parameterized</span>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">TestMathUnitTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>    <span class="nd">@parameterized</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span>
+</span><span id="__span-49-8"><a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>        <span class="p">[</span>
+</span><span id="__span-49-9"><a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>            <span class="p">(</span><span class="s2">&quot;negative&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">),</span>
+</span><span id="__span-49-10"><a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>            <span class="p">(</span><span class="s2">&quot;integer&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+</span><span id="__span-49-11"><a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>            <span class="p">(</span><span class="s2">&quot;large fraction&quot;</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-49-12"><a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>        <span class="p">]</span>
+</span><span id="__span-49-13"><a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a>    <span class="p">)</span>
+</span><span id="__span-49-14"><a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_floor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+</span><span id="__span-49-15"><a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a>        <span class="n">assert_equal</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="nb">input</span><span class="p">),</span> <span class="n">expected</span><span class="p">)</span>
+</span></code></pre></div>
+<p>デフォルトでは、このテストは3回実行され、それぞれの実行で <code>test_floor</code> の最後の3つの引数がパラメータリストの対応する引数に割り当てられます。</p>
+<p>そして、<code>negative</code> と <code>integer</code> パラメータのセットのみを実行することもできます:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;negative and integer&quot;</span><span class="w"> </span>tests/test_mytest.py
+</span></code></pre></div>
+<p>または、<code>Negative</code>のサブテストを除くすべての場合、次のようになります。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;not negative&quot;</span><span class="w"> </span>tests/test_mytest.py
+</span></code></pre></div>
+<p><code>-k</code> フィルターを使用することに加えて、各サブテストの正確な名前を調べ、その正確な名前を使用して任意のサブテストまたはすべてのサブテストを実行することができます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>pytest<span class="w"> </span>test_this1.py<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<p>すると次のものがリストされます:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>test_this1.py::TestMathUnitTest::test_floor_0_negative
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>test_this1.py::TestMathUnitTest::test_floor_1_integer
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>test_this1.py::TestMathUnitTest::test_floor_2_large_fraction
+</span></code></pre></div>
+<p>したがって、2 つの特定のサブテストのみを実行できるようになりました。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>pytest<span class="w"> </span>test_this1.py::TestMathUnitTest::test_floor_0_negative<span class="w">  </span>test_this1.py::TestMathUnitTest::test_floor_1_integer
+</span></code></pre></div>
+<p><code>transformers</code>の開発者依存関係にすでに含まれているモジュール<a href="https://pypi.org/project/parameterized/">parameterized</a> は、<code>unittests</code> と <code>pytest</code> テストの両方で機能します。</p>
+<p>ただし、テストが <code>unittest</code> でない場合、<code>pytest.mark.parametrize</code> を使用することができます（または既存のテストのいくつかで、主に <code>examples</code> の下で使用されているのを見ることができます）。</p>
+<p>次に、同じ例を示しますが、今度は <code>pytest</code> の <code>parametrize</code> マーカーを使用しています：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="c1"># test_this2.py</span>
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>    <span class="s2">&quot;name, input, expected&quot;</span><span class="p">,</span>
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>    <span class="p">[</span>
+</span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>        <span class="p">(</span><span class="s2">&quot;negative&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">),</span>
+</span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a>        <span class="p">(</span><span class="s2">&quot;integer&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+</span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a>        <span class="p">(</span><span class="s2">&quot;large fraction&quot;</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-55-11"><a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a>    <span class="p">],</span>
+</span><span id="__span-55-12"><a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a><span class="p">)</span>
+</span><span id="__span-55-13"><a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_floor</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+</span><span id="__span-55-14"><a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a>    <span class="n">assert_equal</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="nb">input</span><span class="p">),</span> <span class="n">expected</span><span class="p">)</span>
+</span></code></pre></div>
+<p><code>parameterized</code> と同様に、<code>pytest.mark.parametrize</code> を使用すると、<code>-k</code> フィルタが役立たない場合でも、サブテストの実行を細かく制御できます。ただし、このパラメータ化関数はサブテストの名前をわずかに異なるものにします。以下にその例を示します：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>pytest<span class="w"> </span>test_this2.py<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<p>すると次のものがリストされます:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>test_this2.py::test_floor<span class="o">[</span>integer-1-1.0<span class="o">]</span>
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>test_this2.py::test_floor<span class="o">[</span>negative--1.5--2.0<span class="o">]</span>
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>test_this2.py::test_floor<span class="o">[</span>large<span class="w"> </span>fraction-1.6-1<span class="o">]</span>
+</span></code></pre></div>
+<p>これで、特定のテストのみを実行できるようになりました。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>pytest<span class="w"> </span>test_this2.py::test_floor<span class="o">[</span>negative--1.5--2.0<span class="o">]</span><span class="w"> </span>test_this2.py::test_floor<span class="o">[</span>integer-1-1.0<span class="o">]</span>
+</span></code></pre></div>
+<p>前の例と同様に。</p>
+<h3 id="files-and-directories">Files and directories</h3>
+<p>テストの中で、現在のテストファイルからの相対位置を知る必要があることがよくあります。しかし、これは簡単なことではありません。なぜなら、テストは複数のディレクトリから呼び出されるか、異なる深さのサブディレクトリに存在することがあるからです。<code>transformers.test_utils.TestCasePlus</code> というヘルパークラスは、すべての基本パスを整理し、簡単にアクセスできるようにすることで、この問題を解決します。</p>
+<ul>
+<li>
+<p><code>pathlib</code> オブジェクト（すべて完全に解決されたもの）：</p>
+</li>
+<li>
+<p><code>test_file_path</code> - 現在のテストファイルのパス、つまり <code>__file__</code></p>
+</li>
+<li><code>test_file_dir</code> - 現在のテストファイルを含むディレクトリ</li>
+<li><code>tests_dir</code> - <code>tests</code> テストスイートのディレクトリ</li>
+<li><code>examples_dir</code> - <code>examples</code> テストスイートのディレクトリ</li>
+<li><code>repo_root_dir</code> - リポジトリのディレクトリ</li>
+<li>
+<p><code>src_dir</code> - <code>transformers</code> サブディレクトリが存在する場所</p>
+</li>
+<li>
+<p>パスの文字列表現――上記と同じですが、これらは <code>pathlib</code> オブジェクトではなく文字列としてパスを返します：</p>
+</li>
+<li>
+<p><code>test_file_path_str</code></p>
+</li>
+<li><code>test_file_dir_str</code></li>
+<li><code>tests_dir_str</code></li>
+<li><code>examples_dir_str</code></li>
+<li><code>repo_root_dir_str</code></li>
+<li><code>src_dir_str</code></li>
+</ul>
+<p>これらを使用し始めるには、テストが <code>transformers.test_utils.TestCasePlus</code> のサブクラスに存在することを確認するだけです。例：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCasePlus</span>
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>
+</span><span id="__span-59-4"><a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">PathExampleTest</span><span class="p">(</span><span class="n">TestCasePlus</span><span class="p">):</span>
+</span><span id="__span-59-5"><a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_something_involving_local_locations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-59-6"><a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>        <span class="n">data_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tests_dir</span> <span class="o">/</span> <span class="s2">&quot;fixtures/tests_samples/wmt_en_ro&quot;</span>
+</span></code></pre></div>
+<p>もし、<code>pathlib</code> を介してパスを操作する必要がない場合、または単に文字列としてパスが必要な場合は、<code>pathlib</code> オブジェクトに <code>str()</code> を呼び出すか、<code>_str</code> で終わるアクセサを使用できます。例：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCasePlus</span>
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>
+</span><span id="__span-60-4"><a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">PathExampleTest</span><span class="p">(</span><span class="n">TestCasePlus</span><span class="p">):</span>
+</span><span id="__span-60-5"><a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_something_involving_stringified_locations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-60-6"><a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>        <span class="n">examples_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">examples_dir_str</span>
+</span></code></pre></div>
+<h3 id="temporary-files-and-directories">Temporary files and directories</h3>
+<p>一意の一時ファイルとディレクトリの使用は、並列テストの実行には欠かせません。これにより、テストがお互いのデータを上書きしないようにします。また、これらを作成した各テストの終了時に一時ファイルとディレクトリが削除されることを望みます。そのため、これらのニーズを満たすパッケージである <code>tempfile</code> のようなパッケージの使用は重要です。</p>
+<p>しかし、テストのデバッグ時には、一時ファイルやディレクトリに何が格納されているかを確認できる必要があり、テストを再実行するたびにランダムに変更されないその正確なパスを知りたいと思います。</p>
+<p><code>transformers.test_utils.TestCasePlus</code> というヘルパークラスは、このような目的に最適です。これは <code>unittest.TestCase</code> のサブクラスであるため、テストモジュールで簡単に継承することができます。</p>
+<p>以下はその使用例です：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCasePlus</span>
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>
+</span><span id="__span-61-3"><a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>
+</span><span id="__span-61-4"><a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">ExamplesTests</span><span class="p">(</span><span class="n">TestCasePlus</span><span class="p">):</span>
+</span><span id="__span-61-5"><a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_whatever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-61-6"><a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>        <span class="n">tmp_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_auto_remove_tmp_dir</span><span class="p">()</span>
+</span></code></pre></div>
+<p>このコードはユニークな一時ディレクトリを作成し、<code>tmp_dir</code> をその場所に設定します。</p>
+<ul>
+<li>ユニークな一時ディレクトリを作成します：</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_whatever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>    <span class="n">tmp_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_auto_remove_tmp_dir</span><span class="p">()</span>
+</span></code></pre></div>
+<p><code>tmp_dir</code> には、作成された一時ディレクトリへのパスが含まれます。期間終了後は自動的に削除されます
+テスト。</p>
+<ul>
+<li>任意の一時ディレクトリを作成し、テストの開始前にそれが空であることを確認し、テスト後には空にしないでください。</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_whatever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-63-2"><a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>    <span class="n">tmp_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_auto_remove_tmp_dir</span><span class="p">(</span><span class="s2">&quot;./xxx&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>これは、特定のディレクトリを監視し、前のテストがそこにデータを残さないことを確認したい場合に、デバッグに役立ちます。</p>
+<ul>
+<li>
+<p><code>before</code> と <code>after</code> 引数を直接オーバーライドすることで、デフォルトの動作をオーバーライドできます。以下のいずれかの動作に導きます：</p>
+</li>
+<li>
+<p><code>before=True</code>：テストの開始時に常に一時ディレクトリがクリアされます。</p>
+</li>
+<li><code>before=False</code>：一時ディレクトリが既に存在する場合、既存のファイルはそのままになります。</li>
+<li><code>after=True</code>：テストの終了時に常に一時ディレクトリが削除されます。</li>
+<li><code>after=False</code>：テストの終了時に常に一時ディレクトリはそのままになります。</li>
+</ul>
+<p><Tip></p>
+<p><code>rm -r</code>の相当を安全に実行するために、明示的な <code>tmp_dir</code> が使用される場合、プロジェクトリポジトリのチェックアウトのサブディレクトリのみが許可されます。誤って <code>/tmp</code> などのファイルシステムの重要な部分が削除されないように、常に <code>./</code> から始まるパスを渡してください。</p>
+<p></Tip></p>
+<p><Tip></p>
+<p>各テストは複数の一時ディレクトリを登録でき、要求がない限りすべて自動で削除されます。</p>
+<p></Tip></p>
+<h3 id="temporary-syspath-override">Temporary sys.path override</h3>
+<p>別のテストからインポートするために一時的に <code>sys.path</code> をオーバーライドする必要がある場合、<code>ExtendSysPath</code> コンテキストマネージャを使用できます。例：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExtendSysPath</span>
+</span><span id="__span-64-3"><a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>
+</span><span id="__span-64-4"><a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a><span class="n">bindir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+</span><span id="__span-64-5"><a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a><span class="k">with</span> <span class="n">ExtendSysPath</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bindir</span><span class="si">}</span><span class="s2">/..&quot;</span><span class="p">):</span>
+</span><span id="__span-64-6"><a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">test_trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">TrainerIntegrationCommon</span>  <span class="c1"># noqa</span>
+</span></code></pre></div>
+<h3 id="skipping-tests">Skipping tests</h3>
+<p>これは、バグが見つかり、新しいテストが作成された場合であっても、バグがまだ修正されていない場合に役立ちます。メインリポジトリにコミットできるようにするには、<code>make test</code> の実行中にそれをスキップする必要があります。</p>
+<p>メソッド：</p>
+<ul>
+<li>
+<p><strong>skip</strong> は、テストが特定の条件が満たされた場合にのみパスすることを期待しており、それ以外の場合は pytest がテストの実行をスキップします。一般的な例は、Windows専用のテストを非Windowsプラットフォームでスキップする場合、または現在利用できない外部リソースに依存するテストをスキップする場合です（例: データベースが利用できない場合）。</p>
+</li>
+<li>
+<p><strong>xfail</strong> は、何らかの理由でテストが失敗することを期待しています。一般的な例は、まだ実装されていない機能のテストや、まだ修正されていないバグのテストです。テストが予想される失敗にもかかわらずパスした場合（pytest.mark.xfailでマークされたテスト）、それはxpassとしてテストサマリーに報告されます。</p>
+</li>
+</ul>
+<p>これらの2つの間の重要な違いの1つは、<code>skip</code> はテストを実行しない点であり、<code>xfail</code> は実行します。したがって、バグのあるコードが他のテストに影響を与える場合は、<code>xfail</code> を使用しないでください。</p>
+<h4 id="implementation">Implementation</h4>
+<ul>
+<li>テスト全体を無条件にスキップする方法は次のとおりです：</li>
+</ul>
+<p>```python no-style
+@unittest.skip(reason="this bug needs to be fixed")
+def test_feature_x():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>または<span class="w"> </span>pytest<span class="w"> </span>経由:
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>
+</span><span id="__span-65-3"><a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="sb">```</span>python<span class="w"> </span>no-style
+</span><span id="__span-65-4"><a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>@pytest.mark.skip<span class="o">(</span><span class="nv">reason</span><span class="o">=</span><span class="s2">&quot;this bug needs to be fixed&quot;</span><span class="o">)</span>
+</span></code></pre></div></p>
+<p>または <code>xfail</code> の方法:</p>
+<p>```python no-style
+@pytest.mark.xfail
+def test_feature_x():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>-<span class="w"> </span>テスト内の内部チェックに基づいてテストをスキップする方法は次のとおりです。
+</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>
+</span><span id="__span-66-3"><a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="sb">```</span>python
+</span><span id="__span-66-4"><a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>def<span class="w"> </span>test_feature_x<span class="o">()</span>:
+</span><span id="__span-66-5"><a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span>not<span class="w"> </span>has_something<span class="o">()</span>:
+</span><span id="__span-66-6"><a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a><span class="w">        </span>pytest.skip<span class="o">(</span><span class="s2">&quot;unsupported configuration&quot;</span><span class="o">)</span>
+</span></code></pre></div></p>
+<p>またはモジュール全体:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>
+</span><span id="__span-67-3"><a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">pytest</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">getoption</span><span class="p">(</span><span class="s2">&quot;--custom-flag&quot;</span><span class="p">):</span>
+</span><span id="__span-67-4"><a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>    <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;--custom-flag is missing, skipping tests&quot;</span><span class="p">,</span> <span class="n">allow_module_level</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>または <code>xfail</code> の方法:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_feature_x</span><span class="p">():</span>
+</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>    <span class="n">pytest</span><span class="o">.</span><span class="n">xfail</span><span class="p">(</span><span class="s2">&quot;expected to fail until bug XYZ is fixed&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li>一部のインポートが欠落している場合にモジュール内のすべてのテストをスキップする方法は次のとおりです。</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="n">docutils</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">importorskip</span><span class="p">(</span><span class="s2">&quot;docutils&quot;</span><span class="p">,</span> <span class="n">minversion</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li>条件に基づいてテストをスキップします。</li>
+</ul>
+<p>```python no-style
+@pytest.mark.skipif(sys.version_info &lt; (3,6), reason="requires python3.6 or higher")
+def test_feature_x():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>または：
+</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>
+</span><span id="__span-70-3"><a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="sb">```</span>python<span class="w"> </span>no-style
+</span><span id="__span-70-4"><a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>@unittest.skipIf<span class="o">(</span><span class="nv">torch_device</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;cpu&quot;</span>,<span class="w"> </span><span class="s2">&quot;Can&#39;t do half precision&quot;</span><span class="o">)</span>
+</span><span id="__span-70-5"><a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a>def<span class="w"> </span>test_feature_x<span class="o">()</span>:
+</span></code></pre></div></p>
+<p>またはモジュール全体をスキップします。</p>
+<p>```python no-style
+@pytest.mark.skipif(sys.platform == 'win32', reason="does not run on windows")
+class TestClass():
+    def test_feature_x(self):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>詳細、例、および方法についての詳細は<span class="o">[</span>こちら<span class="o">](</span>https://docs.pytest.org/en/latest/skipping.html<span class="o">)</span>を参照してください。
+</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>
+</span><span id="__span-71-3"><a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a><span class="c1">### Slow tests</span>
+</span><span id="__span-71-4"><a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a>
+</span><span id="__span-71-5"><a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a>テストライブラリは着実に成長しており、テストの一部は数分かかります。そのため、CIでテストスイートの完了を待つのは1時間待つ余裕がないことがあります。したがって、いくつかの例外を除いて、遅いテストは以下の例のようにマークすべきです：
+</span><span id="__span-71-6"><a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a>
+</span><span id="__span-71-7"><a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a>
+</span><span id="__span-71-8"><a id="__codelineno-71-8" name="__codelineno-71-8" href="#__codelineno-71-8"></a><span class="sb">```</span>python<span class="w"> </span>no-style
+</span><span id="__span-71-9"><a id="__codelineno-71-9" name="__codelineno-71-9" href="#__codelineno-71-9"></a>from<span class="w"> </span>transformers.testing_utils<span class="w"> </span>import<span class="w"> </span>slow
+</span><span id="__span-71-10"><a id="__codelineno-71-10" name="__codelineno-71-10" href="#__codelineno-71-10"></a>@slow
+</span><span id="__span-71-11"><a id="__codelineno-71-11" name="__codelineno-71-11" href="#__codelineno-71-11"></a>def<span class="w"> </span>test_integration_foo<span class="o">()</span>:
+</span></code></pre></div></p>
+<p>テストが<code>@slow</code>としてマークされたら、そのようなテストを実行するには、環境変数 <code>RUN_SLOW=1</code>を設定します。例:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="nv">RUN_SLOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>pytest<span class="w"> </span>tests
+</span></code></pre></div>
+<p><code>@parameterized</code> のようなデコレータはテスト名を書き換えるため、<code>@slow</code> および他のスキップデコレータ <code>@require_*</code> は正しく動作するためには、最後にリストアップする必要があります。以下は正しい使用例の一例です：</p>
+<p>```python no-style
+@parameterized.expand(...)
+@slow
+def test_integration_foo():
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>このドキュメントの冒頭で説明したように、遅いテストは定期的なスケジュールに従って実行され、PRのCIチェックでは実行されません。そのため、一部の問題がPRの提出時に見落とされ、マージされる可能性があります。そのような問題は次回のスケジュールされたCIジョブで検出されます。しかし、それはまた、PRを提出する前に自分のマシンで遅いテストを実行する重要性を意味しています。
+</span><span id="__span-73-2"><a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>
+</span><span id="__span-73-3"><a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>どのテストを遅いテストとしてマークすべきかを選択するための、おおまかな意思決定メカニズムが次に示されています：
+</span><span id="__span-73-4"><a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>
+</span><span id="__span-73-5"><a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>-<span class="w"> </span>テストがライブラリの内部コンポーネントの1つに焦点を当てている場合（例:<span class="w"> </span>モデリングファイル、トークン化ファイル、パイプライン）、そのテストは遅いテストスイートで実行する必要があります。それがライブラリの他の側面、たとえばドキュメンテーションや例に焦点を当てている場合、それらのテストは遅いテストスイートで実行する必要があります。そして、このアプローチを洗練させるために例外を設ける必要があります。
+</span><span id="__span-73-6"><a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a>
+</span><span id="__span-73-7"><a id="__codelineno-73-7" name="__codelineno-73-7" href="#__codelineno-73-7"></a>-<span class="w"> </span>重いウェイトセットや約50MB以上のデータセットをダウンロードする必要があるすべてのテスト（例:<span class="w"> </span>モデル統合テスト、トークナイザ統合テスト、パイプライン統合テスト）は遅いテストとして設定する必要があります。新しいモデルを追加する場合、統合テスト用にランダムなウェイトを持つ小さなバージョンを作成し、ハブにアップロードする必要があります。これについては以下の段落で詳しく説明します。
+</span><span id="__span-73-8"><a id="__codelineno-73-8" name="__codelineno-73-8" href="#__codelineno-73-8"></a>
+</span><span id="__span-73-9"><a id="__codelineno-73-9" name="__codelineno-73-9" href="#__codelineno-73-9"></a>-<span class="w"> </span>特に高速化されていないトレーニングを行う必要があるすべてのテストは遅いテストとして設定する必要があります。
+</span><span id="__span-73-10"><a id="__codelineno-73-10" name="__codelineno-73-10" href="#__codelineno-73-10"></a>
+</span><span id="__span-73-11"><a id="__codelineno-73-11" name="__codelineno-73-11" href="#__codelineno-73-11"></a>-<span class="w"> </span>一部の「遅い」であるべきでないテストが非常に遅い場合、およびそれらを<span class="w"> </span><span class="sb">`</span>@slow<span class="sb">`</span><span class="w"> </span>として設定する必要がある場合には例外を導入できます。大容量のファイルをディスクに保存および読み込みする自動モデリングテストは、<span class="sb">`</span>@slow<span class="sb">`</span><span class="w"> </span>としてマークされたテストの良い例です。
+</span><span id="__span-73-12"><a id="__codelineno-73-12" name="__codelineno-73-12" href="#__codelineno-73-12"></a>
+</span><span id="__span-73-13"><a id="__codelineno-73-13" name="__codelineno-73-13" href="#__codelineno-73-13"></a>-<span class="w"> </span>CIで1秒未満でテストが完了する場合（ダウンロードを含む）、それは通常のテストであるべきです。
+</span><span id="__span-73-14"><a id="__codelineno-73-14" name="__codelineno-73-14" href="#__codelineno-73-14"></a>
+</span><span id="__span-73-15"><a id="__codelineno-73-15" name="__codelineno-73-15" href="#__codelineno-73-15"></a>すべての非遅いテストは、さまざまな内部要素を完全にカバーする必要がありますが、高速である必要があります。たとえば、特別に作成された小さなモデル（レイヤー数が最小限で、語彙サイズが小さいなど）を使用して、かなりのカバレッジを実現できます。その後、<span class="sb">`</span>@slow<span class="sb">`</span><span class="w"> </span>テストでは大規模な遅いモデルを使用して質的なテストを実行できます。これらを使用するには、以下のように<span class="w"> </span>*tiny*<span class="w"> </span>モデルを探してください：
+</span><span id="__span-73-16"><a id="__codelineno-73-16" name="__codelineno-73-16" href="#__codelineno-73-16"></a>
+</span><span id="__span-73-17"><a id="__codelineno-73-17" name="__codelineno-73-17" href="#__codelineno-73-17"></a>
+</span><span id="__span-73-18"><a id="__codelineno-73-18" name="__codelineno-73-18" href="#__codelineno-73-18"></a><span class="sb">```</span>bash
+</span><span id="__span-73-19"><a id="__codelineno-73-19" name="__codelineno-73-19" href="#__codelineno-73-19"></a>grep<span class="w"> </span>tiny<span class="w"> </span>tests<span class="w"> </span>examples
+</span></code></pre></div></p>
+<p><a href="https://github.com/huggingface/transformers/tree/main/scripts/fsmt/fsmt-make-tiny-model.py">スクリプトの例</a>があり、これにより tiny-wmt19-en-de のような小さなモデルが作成されます。特定のモデルのアーキテクチャに簡単に調整できます。</p>
+<p>実行時間を誤って測定することが簡単です。たとえば、巨大なモデルのダウンロードに関するオーバーヘッドがある場合、ローカルでテストするとダウンロードされたファイルがキャッシュされ、ダウンロード時間が計測されなくなります。したがって、CIログの実行速度レポート（<code>pytest --durations=0 tests</code> の出力）を確認してください。</p>
+<p>このレポートは、遅いテストとしてマークされていない遅い外れ値や、高速に書き直す必要があるテストを見つけるのにも役立ちます。テストスイートがCIで遅くなり始めた場合、このレポートのトップリストには最も遅いテストが表示されます。</p>
+<h3 id="testing-the-stdoutstderr-output">Testing the stdout/stderr output</h3>
+<p><code>stdout</code> および/または <code>stderr</code> に書き込む関数をテストするために、テストは <code>pytest</code> の <a href="https://docs.pytest.org/en/latest/capture.html">capsys システム</a> を使用してこれらのストリームにアクセスできます。以下はその方法です：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+</span><span id="__span-74-2"><a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>
+</span><span id="__span-74-3"><a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>
+</span><span id="__span-74-4"><a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">print_to_stdout</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span><span id="__span-74-5"><a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-74-6"><a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a>
+</span><span id="__span-74-7"><a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a>
+</span><span id="__span-74-8"><a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">print_to_stderr</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span><span id="__span-74-9"><a id="__codelineno-74-9" name="__codelineno-74-9" href="#__codelineno-74-9"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-74-10"><a id="__codelineno-74-10" name="__codelineno-74-10" href="#__codelineno-74-10"></a>
+</span><span id="__span-74-11"><a id="__codelineno-74-11" name="__codelineno-74-11" href="#__codelineno-74-11"></a>
+</span><span id="__span-74-12"><a id="__codelineno-74-12" name="__codelineno-74-12" href="#__codelineno-74-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_result_and_stdout</span><span class="p">(</span><span class="n">capsys</span><span class="p">):</span>
+</span><span id="__span-74-13"><a id="__codelineno-74-13" name="__codelineno-74-13" href="#__codelineno-74-13"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span id="__span-74-14"><a id="__codelineno-74-14" name="__codelineno-74-14" href="#__codelineno-74-14"></a>    <span class="n">print_to_stdout</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-74-15"><a id="__codelineno-74-15" name="__codelineno-74-15" href="#__codelineno-74-15"></a>    <span class="n">print_to_stderr</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-74-16"><a id="__codelineno-74-16" name="__codelineno-74-16" href="#__codelineno-74-16"></a>    <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">capsys</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>  <span class="c1"># consume the captured output streams</span>
+</span><span id="__span-74-17"><a id="__codelineno-74-17" name="__codelineno-74-17" href="#__codelineno-74-17"></a>    <span class="c1"># optional: if you want to replay the consumed streams:</span>
+</span><span id="__span-74-18"><a id="__codelineno-74-18" name="__codelineno-74-18" href="#__codelineno-74-18"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</span><span id="__span-74-19"><a id="__codelineno-74-19" name="__codelineno-74-19" href="#__codelineno-74-19"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span id="__span-74-20"><a id="__codelineno-74-20" name="__codelineno-74-20" href="#__codelineno-74-20"></a>    <span class="c1"># test:</span>
+</span><span id="__span-74-21"><a id="__codelineno-74-21" name="__codelineno-74-21" href="#__codelineno-74-21"></a>    <span class="k">assert</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">out</span>
+</span><span id="__span-74-22"><a id="__codelineno-74-22" name="__codelineno-74-22" href="#__codelineno-74-22"></a>    <span class="k">assert</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">err</span>
+</span></code></pre></div>
+<p>そしてもちろん、ほとんどの場合、<code>stderr</code>は例外の一部として提供されるため、そのような場合には try/excel を使用する必要があります。
+ケース：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">raise_exception</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+</span><span id="__span-75-2"><a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-75-3"><a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a>
+</span><span id="__span-75-4"><a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a>
+</span><span id="__span-75-5"><a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_something_exception</span><span class="p">():</span>
+</span><span id="__span-75-6"><a id="__codelineno-75-6" name="__codelineno-75-6" href="#__codelineno-75-6"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Not a good value&quot;</span>
+</span><span id="__span-75-7"><a id="__codelineno-75-7" name="__codelineno-75-7" href="#__codelineno-75-7"></a>    <span class="n">error</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</span><span id="__span-75-8"><a id="__codelineno-75-8" name="__codelineno-75-8" href="#__codelineno-75-8"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-75-9"><a id="__codelineno-75-9" name="__codelineno-75-9" href="#__codelineno-75-9"></a>        <span class="n">raise_exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-75-10"><a id="__codelineno-75-10" name="__codelineno-75-10" href="#__codelineno-75-10"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span id="__span-75-11"><a id="__codelineno-75-11" name="__codelineno-75-11" href="#__codelineno-75-11"></a>        <span class="n">error</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span><span id="__span-75-12"><a id="__codelineno-75-12" name="__codelineno-75-12" href="#__codelineno-75-12"></a>        <span class="k">assert</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">error</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2"> is in the exception:</span><span class="se">\n</span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p>stdout をキャプチャするもう 1 つのアプローチは、<code>contextlib.redirect_stdout</code>を使用することです。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringIO</span>
+</span><span id="__span-76-2"><a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">redirect_stdout</span>
+</span><span id="__span-76-3"><a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a>
+</span><span id="__span-76-4"><a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a>
+</span><span id="__span-76-5"><a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">print_to_stdout</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span><span id="__span-76-6"><a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-76-7"><a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a>
+</span><span id="__span-76-8"><a id="__codelineno-76-8" name="__codelineno-76-8" href="#__codelineno-76-8"></a>
+</span><span id="__span-76-9"><a id="__codelineno-76-9" name="__codelineno-76-9" href="#__codelineno-76-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_result_and_stdout</span><span class="p">():</span>
+</span><span id="__span-76-10"><a id="__codelineno-76-10" name="__codelineno-76-10" href="#__codelineno-76-10"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span id="__span-76-11"><a id="__codelineno-76-11" name="__codelineno-76-11" href="#__codelineno-76-11"></a>    <span class="n">buffer</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+</span><span id="__span-76-12"><a id="__codelineno-76-12" name="__codelineno-76-12" href="#__codelineno-76-12"></a>    <span class="k">with</span> <span class="n">redirect_stdout</span><span class="p">(</span><span class="n">buffer</span><span class="p">):</span>
+</span><span id="__span-76-13"><a id="__codelineno-76-13" name="__codelineno-76-13" href="#__codelineno-76-13"></a>        <span class="n">print_to_stdout</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-76-14"><a id="__codelineno-76-14" name="__codelineno-76-14" href="#__codelineno-76-14"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+</span><span id="__span-76-15"><a id="__codelineno-76-15" name="__codelineno-76-15" href="#__codelineno-76-15"></a>    <span class="c1"># optional: if you want to replay the consumed streams:</span>
+</span><span id="__span-76-16"><a id="__codelineno-76-16" name="__codelineno-76-16" href="#__codelineno-76-16"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</span><span id="__span-76-17"><a id="__codelineno-76-17" name="__codelineno-76-17" href="#__codelineno-76-17"></a>    <span class="c1"># test:</span>
+</span><span id="__span-76-18"><a id="__codelineno-76-18" name="__codelineno-76-18" href="#__codelineno-76-18"></a>    <span class="k">assert</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">out</span>
+</span></code></pre></div>
+<p>stdout をキャプチャする際の重要な潜在的な問題は、通常の <code>print</code> でこれまでに出力された内容をリセットする可能性がある <code>\r</code> 文字が含まれている可能性があることです。<code>pytest</code> 自体には問題はありませんが、<code>pytest -s</code> ではこれらの文字がバッファに含まれるため、<code>-s</code> ありとなしでテストを実行できるようにするには、<code>re.sub(r'~.*\r', '', buf, 0, re.M)</code> を使用してキャプチャされた出力に対して追加のクリーンアップを行う必要があります。</p>
+<p>しかし、その後、<code>\r</code> が含まれているかどうかにかかわらず、すべての操作を自動的に処理するヘルパーコンテキストマネージャラッパーがあります。したがって、次のように簡単に行えます：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptureStdout</span>
+</span><span id="__span-77-2"><a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>
+</span><span id="__span-77-3"><a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="k">with</span> <span class="n">CaptureStdout</span><span class="p">()</span> <span class="k">as</span> <span class="n">cs</span><span class="p">:</span>
+</span><span id="__span-77-4"><a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a>    <span class="n">function_that_writes_to_stdout</span><span class="p">()</span>
+</span><span id="__span-77-5"><a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">out</span><span class="p">)</span>
+</span></code></pre></div>
+<p>完全なテスト例は次のとおりです。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptureStdout</span>
+</span><span id="__span-78-2"><a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>
+</span><span id="__span-78-3"><a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Secret message</span><span class="se">\r</span><span class="s2">&quot;</span>
+</span><span id="__span-78-4"><a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a><span class="n">final</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>
+</span><span id="__span-78-5"><a id="__codelineno-78-5" name="__codelineno-78-5" href="#__codelineno-78-5"></a><span class="k">with</span> <span class="n">CaptureStdout</span><span class="p">()</span> <span class="k">as</span> <span class="n">cs</span><span class="p">:</span>
+</span><span id="__span-78-6"><a id="__codelineno-78-6" name="__codelineno-78-6" href="#__codelineno-78-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="n">final</span><span class="p">)</span>
+</span><span id="__span-78-7"><a id="__codelineno-78-7" name="__codelineno-78-7" href="#__codelineno-78-7"></a><span class="k">assert</span> <span class="n">cs</span><span class="o">.</span><span class="n">out</span> <span class="o">==</span> <span class="n">final</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;captured: </span><span class="si">{</span><span class="n">cs</span><span class="o">.</span><span class="n">out</span><span class="si">}</span><span class="s2">, expecting </span><span class="si">{</span><span class="n">final</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p><code>stderr</code> をキャプチャしたい場合は、代わりに <code>CaptureStderr</code> クラスを使用してください。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptureStderr</span>
+</span><span id="__span-79-2"><a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a>
+</span><span id="__span-79-3"><a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a><span class="k">with</span> <span class="n">CaptureStderr</span><span class="p">()</span> <span class="k">as</span> <span class="n">cs</span><span class="p">:</span>
+</span><span id="__span-79-4"><a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a>    <span class="n">function_that_writes_to_stderr</span><span class="p">()</span>
+</span><span id="__span-79-5"><a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">err</span><span class="p">)</span>
+</span></code></pre></div>
+<p>両方のストリームを一度にキャプチャする必要がある場合は、親の <code>CaptureStd</code> クラスを使用します。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptureStd</span>
+</span><span id="__span-80-2"><a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>
+</span><span id="__span-80-3"><a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="k">with</span> <span class="n">CaptureStd</span><span class="p">()</span> <span class="k">as</span> <span class="n">cs</span><span class="p">:</span>
+</span><span id="__span-80-4"><a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a>    <span class="n">function_that_writes_to_stdout_and_stderr</span><span class="p">()</span>
+</span><span id="__span-80-5"><a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">err</span><span class="p">,</span> <span class="n">cs</span><span class="o">.</span><span class="n">out</span><span class="p">)</span>
+</span></code></pre></div>
+<p>また、テストの問題のデバッグを支援するために、デフォルトで、これらのコンテキスト マネージャーは終了時にキャプチャされたストリームを自動的に再生します。
+文脈から。</p>
+<h3 id="capturing-logger-stream">Capturing logger stream</h3>
+<p>ロガーの出力を検証する必要がある場合は、<code>CaptureLogger</code>を使用できます。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-81-1"><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">logging</span>
+</span><span id="__span-81-2"><a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptureLogger</span>
+</span><span id="__span-81-3"><a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a>
+</span><span id="__span-81-4"><a id="__codelineno-81-4" name="__codelineno-81-4" href="#__codelineno-81-4"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Testing 1, 2, 3&quot;</span>
+</span><span id="__span-81-5"><a id="__codelineno-81-5" name="__codelineno-81-5" href="#__codelineno-81-5"></a><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity_info</span><span class="p">()</span>
+</span><span id="__span-81-6"><a id="__codelineno-81-6" name="__codelineno-81-6" href="#__codelineno-81-6"></a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">get_logger</span><span class="p">(</span><span class="s2">&quot;transformers.models.bart.tokenization_bart&quot;</span><span class="p">)</span>
+</span><span id="__span-81-7"><a id="__codelineno-81-7" name="__codelineno-81-7" href="#__codelineno-81-7"></a><span class="k">with</span> <span class="n">CaptureLogger</span><span class="p">(</span><span class="n">logger</span><span class="p">)</span> <span class="k">as</span> <span class="n">cl</span><span class="p">:</span>
+</span><span id="__span-81-8"><a id="__codelineno-81-8" name="__codelineno-81-8" href="#__codelineno-81-8"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-81-9"><a id="__codelineno-81-9" name="__codelineno-81-9" href="#__codelineno-81-9"></a><span class="k">assert</span> <span class="n">cl</span><span class="o">.</span><span class="n">out</span><span class="p">,</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<h3 id="testing-with-environment-variables">Testing with environment variables</h3>
+<p>特定のテストで環境変数の影響をテストしたい場合は、ヘルパー デコレータを使用できます。
+<code>transformers.testing_utils.mockenv</code></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-82-1"><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">mockenv</span>
+</span><span id="__span-82-2"><a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a>
+</span><span id="__span-82-3"><a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a>
+</span><span id="__span-82-4"><a id="__codelineno-82-4" name="__codelineno-82-4" href="#__codelineno-82-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">HfArgumentParserTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span><span id="__span-82-5"><a id="__codelineno-82-5" name="__codelineno-82-5" href="#__codelineno-82-5"></a>    <span class="nd">@mockenv</span><span class="p">(</span><span class="n">TRANSFORMERS_VERBOSITY</span><span class="o">=</span><span class="s2">&quot;error&quot;</span><span class="p">)</span>
+</span><span id="__span-82-6"><a id="__codelineno-82-6" name="__codelineno-82-6" href="#__codelineno-82-6"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_env_override</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-82-7"><a id="__codelineno-82-7" name="__codelineno-82-7" href="#__codelineno-82-7"></a>        <span class="n">env_level_str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TRANSFORMERS_VERBOSITY&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+<p>場合によっては、外部プログラムを呼び出す必要があるため、<code>os.environ</code> に<code>PYTHONPATH</code>を設定してインクルードする必要があります。
+複数のローカル パス。ヘルパー クラス <code>transformers.test_utils.TestCasePlus</code> が役に立ちます。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers.testing_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCasePlus</span>
+</span><span id="__span-83-2"><a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a>
+</span><span id="__span-83-3"><a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a>
+</span><span id="__span-83-4"><a id="__codelineno-83-4" name="__codelineno-83-4" href="#__codelineno-83-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">EnvExampleTest</span><span class="p">(</span><span class="n">TestCasePlus</span><span class="p">):</span>
+</span><span id="__span-83-5"><a id="__codelineno-83-5" name="__codelineno-83-5" href="#__codelineno-83-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_external_prog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-83-6"><a id="__codelineno-83-6" name="__codelineno-83-6" href="#__codelineno-83-6"></a>        <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_env</span><span class="p">()</span>
+</span><span id="__span-83-7"><a id="__codelineno-83-7" name="__codelineno-83-7" href="#__codelineno-83-7"></a>        <span class="c1"># now call the external program, passing `env` to it</span>
+</span></code></pre></div>
+<p>テストファイルが <code>tests</code> テストスイートまたは <code>examples</code> のどちらにあるかに応じて
+<code>env[PYTHONPATH]</code> を使用して、これら 2 つのディレクトリのいずれかを含めます。また、テストが確実に行われるようにするための <code>src</code> ディレクトリも含めます。
+現在のリポジトリに対して実行され、最後に、テストが実行される前にすでに設定されていた <code>env[PYTHONPATH]</code> を使用して実行されます。
+何かあれば呼ばれます。</p>
+<p>このヘルパー メソッドは <code>os.environ</code> オブジェクトのコピーを作成するため、元のオブジェクトはそのまま残ります。</p>
+<h3 id="getting-reproducible-results">Getting reproducible results</h3>
+<p>状況によっては、テストのランダム性を削除したい場合があります。同一の再現可能な結果セットを取得するには、
+シードを修正する必要があります:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-84-2"><a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>
+</span><span id="__span-84-3"><a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="c1"># python RNG</span>
+</span><span id="__span-84-4"><a id="__codelineno-84-4" name="__codelineno-84-4" href="#__codelineno-84-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+</span><span id="__span-84-5"><a id="__codelineno-84-5" name="__codelineno-84-5" href="#__codelineno-84-5"></a>
+</span><span id="__span-84-6"><a id="__codelineno-84-6" name="__codelineno-84-6" href="#__codelineno-84-6"></a><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</span><span id="__span-84-7"><a id="__codelineno-84-7" name="__codelineno-84-7" href="#__codelineno-84-7"></a>
+</span><span id="__span-84-8"><a id="__codelineno-84-8" name="__codelineno-84-8" href="#__codelineno-84-8"></a><span class="c1"># pytorch RNGs</span>
+</span><span id="__span-84-9"><a id="__codelineno-84-9" name="__codelineno-84-9" href="#__codelineno-84-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+</span><span id="__span-84-10"><a id="__codelineno-84-10" name="__codelineno-84-10" href="#__codelineno-84-10"></a>
+</span><span id="__span-84-11"><a id="__codelineno-84-11" name="__codelineno-84-11" href="#__codelineno-84-11"></a><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</span><span id="__span-84-12"><a id="__codelineno-84-12" name="__codelineno-84-12" href="#__codelineno-84-12"></a><span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">cudnn</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-84-13"><a id="__codelineno-84-13" name="__codelineno-84-13" href="#__codelineno-84-13"></a><span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+</span><span id="__span-84-14"><a id="__codelineno-84-14" name="__codelineno-84-14" href="#__codelineno-84-14"></a>    <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">manual_seed_all</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</span><span id="__span-84-15"><a id="__codelineno-84-15" name="__codelineno-84-15" href="#__codelineno-84-15"></a>
+</span><span id="__span-84-16"><a id="__codelineno-84-16" name="__codelineno-84-16" href="#__codelineno-84-16"></a><span class="c1"># numpy RNG</span>
+</span><span id="__span-84-17"><a id="__codelineno-84-17" name="__codelineno-84-17" href="#__codelineno-84-17"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-84-18"><a id="__codelineno-84-18" name="__codelineno-84-18" href="#__codelineno-84-18"></a>
+</span><span id="__span-84-19"><a id="__codelineno-84-19" name="__codelineno-84-19" href="#__codelineno-84-19"></a><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="debugging-tests">Debugging tests</h3>
+<p>警告が発生した時点でデバッガーを開始するには、次の手順を実行します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>pytest<span class="w"> </span>tests/utils/test_logging.py<span class="w"> </span>-W<span class="w"> </span>error::UserWarning<span class="w"> </span>--pdb
+</span></code></pre></div>
+<h2 id="working-with-github-actions-workflows">Working with github actions workflows</h2>
+<p>セルフプッシュのワークフローCIジョブをトリガーするには、以下の手順を実行する必要があります：</p>
+<ol>
+<li><code>transformers</code> のリモートリポジトリで新しいブランチを作成します（フォークではなく、元のリポジトリで行います）。</li>
+<li>ブランチの名前は <code>ci_</code> または <code>ci-</code> で始まる必要があります（<code>main</code> もトリガーしますが、<code>main</code> ではPRを作成できません）。また、特定のパスでのみトリガーされます - このドキュメントが書かれた後に変更された場合に備えて、最新の定義は<a href="https://github.com/huggingface/transformers/blob/main/.github/workflows/self-push.yml">こちら</a>の <em>push:</em> にあります。</li>
+<li>このブランチからPRを作成します。</li>
+<li>その後、このジョブが<a href="https://github.com/huggingface/transformers/actions/workflows/self-push.yml">ここ</a>に表示されます。ジョブはバックログがある場合、すぐに実行されないことがあります。</li>
+</ol>
+<h2 id="testing-experimental-ci-features">Testing Experimental CI Features</h2>
+<p>CI機能のテストは通常のCIの正常な動作に干渉する可能性があるため、新しいCI機能を追加する場合、以下の手順に従う必要があります。</p>
+<ol>
+<li>テストが必要なものをテストするための新しい専用のジョブを作成します。</li>
+<li>新しいジョブは常に成功する必要があるため、常にグリーン ✓（詳細は以下参照）を表示する必要があります。</li>
+<li>さまざまな種類のPR（ユーザーフォークブランチ、非フォークブランチ、github.com UIから直接ファイルを編集するブランチ、さまざまな強制プッシュなど）が実行されるまでいくつかの日間実行し、実験的なジョブのログを監視します（意図的に常にグリーンになるようになっている全体のジョブの緑ではなく）。</li>
+<li>すべてが安定していることが明確になったら、新しい変更を既存のジョブに統合します。</li>
+</ol>
+<p>このように、CI機能自体の実験が通常のワークフローに干渉しないようにできます。</p>
+<p>では、新しいCI機能が開発中である間、ジョブを常に成功させるにはどうすればいいでしょうか？</p>
+<p>TravisCIのような一部のCIは <code>ignore-step-failure</code> をサポートし、全体のジョブを成功として報告しますが、この文書が作成された時点ではCircleCIとGithub Actionsはそれをサポートしていません。</p>
+<p>したがって、以下のワークアラウンドを使用できます：</p>
+<ol>
+<li>bashスクリプト内で潜在的な失敗を抑制するために実行コマンドの冒頭に <code>set +euo pipefail</code> を記述します。</li>
+<li>最後のコマンドは成功する必要があります。たとえば <code>echo "done"</code> または単に <code>true</code> を使用できます。</li>
+</ol>
+<p>以下は例です：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+</span><span id="__span-86-2"><a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run CI experiment</span>
+</span><span id="__span-86-3"><a id="__codelineno-86-3" name="__codelineno-86-3" href="#__codelineno-86-3"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-86-4"><a id="__codelineno-86-4" name="__codelineno-86-4" href="#__codelineno-86-4"></a><span class="w">        </span><span class="no">set +euo pipefail</span>
+</span><span id="__span-86-5"><a id="__codelineno-86-5" name="__codelineno-86-5" href="#__codelineno-86-5"></a><span class="w">        </span><span class="no">echo &quot;setting run-all-despite-any-errors-mode&quot;</span>
+</span><span id="__span-86-6"><a id="__codelineno-86-6" name="__codelineno-86-6" href="#__codelineno-86-6"></a><span class="w">        </span><span class="no">this_command_will_fail</span>
+</span><span id="__span-86-7"><a id="__codelineno-86-7" name="__codelineno-86-7" href="#__codelineno-86-7"></a><span class="w">        </span><span class="no">echo &quot;but bash continues to run&quot;</span>
+</span><span id="__span-86-8"><a id="__codelineno-86-8" name="__codelineno-86-8" href="#__codelineno-86-8"></a><span class="w">        </span><span class="no"># emulate another failure</span>
+</span><span id="__span-86-9"><a id="__codelineno-86-9" name="__codelineno-86-9" href="#__codelineno-86-9"></a><span class="w">        </span><span class="no">false</span>
+</span><span id="__span-86-10"><a id="__codelineno-86-10" name="__codelineno-86-10" href="#__codelineno-86-10"></a><span class="w">        </span><span class="no"># but the last command must be a success</span>
+</span><span id="__span-86-11"><a id="__codelineno-86-11" name="__codelineno-86-11" href="#__codelineno-86-11"></a><span class="w">        </span><span class="no">echo &quot;during experiment do not remove: reporting success to CI, even if there were failures&quot;</span>
+</span></code></pre></div>
+<p>単純なコマンドの場合は、次のようにすることもできます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>cmd_that_may_fail<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+</span></code></pre></div>
+<p>もちろん、結果に満足したら、実験的なステップやジョブを通常のジョブと統合し、<code>set +euo pipefail</code> などの追加した要素を削除して、実験的なジョブが通常のCIの動作に干渉しないようにします。</p>
+<p>このプロセス全体は、実験的なステップに対して <code>allow-failure</code> のようなものを設定し、PRの全体のステータスに影響を与えずに失敗させることができれば、はるかに簡単になったでしょう。しかし、前述の通り、現在はCircleCIとGithub Actionsはこの機能をサポートしていません。</p>
+<p>この機能に関しての投票や、CIに特有のスレッドでその進捗状況を確認できます：</p>
+<ul>
+<li><a href="https://github.com/actions/toolkit/issues/399">Github Actions:</a></li>
+<li><a href="https://ideas.circleci.com/ideas/CCI-I-344">CircleCI:</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
