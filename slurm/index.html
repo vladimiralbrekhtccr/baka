@@ -977,6 +977,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-extend-the-time-on-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to extend the time on node
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1361,6 +1370,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-extend-the-time-on-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to extend the time on node
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1443,6 +1461,10 @@
 </span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">    </span>--nproc_per_node<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span>-m<span class="w"> </span>test_train.py
 </span></code></pre></div></p>
+<h2 id="how-to-extend-the-time-on-node">How to extend the time on node</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>scontrol<span class="w"> </span>update<span class="w"> </span><span class="nv">jobid</span><span class="o">=</span><span class="m">3881</span><span class="w"> </span><span class="nv">TimeLimit</span><span class="o">=</span><span class="m">20</span>-00:00:00<span class="w"> </span><span class="c1"># to extend time for 20 days</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>squeue<span class="w"> </span>-h<span class="w"> </span>-j<span class="w"> </span><span class="m">3881</span><span class="w"> </span>-O<span class="w"> </span>TimeLeft<span class="w"> </span><span class="c1"># to check how much time left</span>
+</span></code></pre></div>
 
 
 
