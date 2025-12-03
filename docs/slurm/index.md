@@ -90,3 +90,11 @@ srun torchrun \
     --nproc_per_node 8 \
     -m test_train.py
 ```
+
+
+## How to extend the time on node
+
+```bash
+scontrol update jobid=3881 TimeLimit=20-00:00:00 # to extend time for 20 days
+squeue -h -j 3881 -O TimeLeft # to check how much time left
+```

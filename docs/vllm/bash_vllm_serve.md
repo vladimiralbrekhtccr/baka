@@ -2,6 +2,48 @@
 ## Default
 
 
+Minimal code just for simple serve.
+
+```bash
+# Model and environment settings
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+
+MODEL="Qwen/Qwen3-VL-4B-Instruct"
+
+
+MODEL_SERVED_NAME="qwen_deployed_model" 
+PORT=6655
+HOST="0.0.0.0"
+SEED=0
+
+# vLLM conf
+GPU_MEMORY_UTILIZATION=0.90
+TENSOR_PARALLEL_SIZE=4 # amount of gpus to use for splitting
+DTYPE="auto"
+MAX_NUM_BATCHED_TOKENS=32768
+MAX_MODEL_LEN=8196
+KV_CACHE_DTYPE="auto"
+MAX_NUM_SEQS=50
+
+
+CMD="vllm serve $MODEL \
+  --tokenizer "$MODEL" \
+  --host $HOST \
+  --port $PORT \
+  --served-model-name $MODEL_SERVED_NAME \
+  --gpu-memory-utilization $GPU_MEMORY_UTILIZATION \
+  --max-num-batched-tokens $MAX_NUM_BATCHED_TOKENS \
+  --max-model-len $MAX_MODEL_LEN \
+  --trust-remote-code \
+  --dtype $DTYPE \
+  --tensor-parallel-size $TENSOR_PARALLEL_SIZE \
+  --kv-cache-dtype $KV_CACHE_DTYPE \
+  --max-num-seqs $MAX_NUM_SEQS \
+  --seed $SEED"
+
+eval $CMD 2>&1
+```
+
 > ![Note] newgrp docker
 ```bash
 export VLLM_USE_V1=1
