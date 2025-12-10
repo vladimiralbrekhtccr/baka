@@ -740,6 +740,8 @@
       
         
       
+        
+      
     
     
     
@@ -788,7 +790,30 @@
   
   
   <span class="md-ellipsis">
-    Qwen3VL
+    Qwen3VL_adema_grounding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vlm/qwen3_vla_4B_audio_training_aspandiyar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen3VLA_aspandiyar_thinking
     
   </span>
   
@@ -981,6 +1006,15 @@
   <a href="#how-to-extend-the-time-on-node" class="md-nav__link">
     <span class="md-ellipsis">
       How to extend the time on node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-restart-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to restart the node
     </span>
   </a>
   
@@ -1379,6 +1413,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-restart-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to restart the node
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1465,6 +1508,13 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>scontrol<span class="w"> </span>update<span class="w"> </span><span class="nv">jobid</span><span class="o">=</span><span class="m">3881</span><span class="w"> </span><span class="nv">TimeLimit</span><span class="o">=</span><span class="m">20</span>-00:00:00<span class="w"> </span><span class="c1"># to extend time for 20 days</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>squeue<span class="w"> </span>-h<span class="w"> </span>-j<span class="w"> </span><span class="m">3881</span><span class="w"> </span>-O<span class="w"> </span>TimeLeft<span class="w"> </span><span class="c1"># to check how much time left</span>
 </span></code></pre></div>
+<h2 id="how-to-restart-the-node">How to restart the node</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ipmitool<span class="w"> </span>-I<span class="w"> </span>lanplus<span class="w"> </span>-H<span class="w"> </span><span class="m">10</span>.142.0.x<span class="w"> </span>-U<span class="w"> </span>console<span class="w"> </span>-P<span class="w"> </span>Password@123<span class="w"> </span>chassis<span class="w"> </span>power<span class="w"> </span>reset<span class="w"> </span><span class="c1"># after that we wait for 15 mins 10.142.0.1-8 </span>
+</span></code></pre></div>
+<p>Move back node to the cluster.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>scontrol<span class="w"> </span>update<span class="w"> </span><span class="nv">NodeName</span><span class="o">=</span>node00x<span class="w"> </span><span class="nv">state</span><span class="o">=</span>resume
+</span></code></pre></div></p>
+<p>Sometimes it works from the second time when you restart the node 2 times.</p>
 
 
 
