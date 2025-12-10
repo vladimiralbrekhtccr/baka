@@ -98,3 +98,17 @@ srun torchrun \
 scontrol update jobid=3881 TimeLimit=20-00:00:00 # to extend time for 20 days
 squeue -h -j 3881 -O TimeLeft # to check how much time left
 ```
+
+
+## How to restart the node
+
+```bash
+ipmitool -I lanplus -H 10.142.0.x -U console -P Password@123 chassis power reset # after that we wait for 15 mins 10.142.0.1-8 
+```
+
+Move back node to the cluster.
+```bash
+scontrol update NodeName=node00x state=resume
+```
+
+Sometimes it works from the second time when you restart the node 2 times.

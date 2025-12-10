@@ -49,7 +49,8 @@ nav:
   - LLM: 
     - Speculative Decoding: llm/speculative_decoding.md
   - VLM:
-    - Qwen3VL: vlm/qwen3_vl_4B_object_detection.md
+    - Qwen3VL_adema_grounding: vlm/qwen3_vl_4B_object_detection.md
+    - Qwen3VLA_aspandiyar_thinking: vlm/qwen3_vla_4B_audio_training_aspandiyar.md
   - MD format helpers: md_format_helpers.md
   - Docker: docker.md
   - Linux: linux.md
