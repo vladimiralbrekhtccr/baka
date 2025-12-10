@@ -1,251 +1,145 @@
-/* Light mode - slightly darker background */
-[data-md-color-scheme="default"] {
-  --md-primary-bg-color: #fbfaf6;
-  --md-default-bg-color: #fbfaf6;
-}
+/* ============================================
+   CODE BLOCKS - Highlight.js Based
+   ============================================ */
 
-[data-md-color-scheme="default"] body,
-[data-md-color-scheme="default"] html {
-  background-color: #fbfaf6 !important;
-}
-
-[data-md-color-scheme="default"] .md-main {
-  background-color: #fbfaf6 !important;
-}
-
-[data-md-color-scheme="default"] .md-content {
-  background-color: #fbfaf6 !important;
-}
-
-[data-md-color-scheme="default"] .md-main__inner {
-  background-color: #fbfaf6 !important;
-}
-
-/* Dark mode - custom background */
-[data-md-color-scheme="slate"] {
-  --md-primary-bg-color: #1e1f1c;
-  --md-default-bg-color: #1e1f1c;
-}
-
-[data-md-color-scheme="slate"] body,
-[data-md-color-scheme="slate"] html {
-  background-color: #1e1f1c !important;
-}
-
-[data-md-color-scheme="slate"] .md-main {
-  background-color: #1e1f1c !important;
-}
-
-[data-md-color-scheme="slate"] .md-content {
-  background-color: #1e1f1c !important;
-}
-
-[data-md-color-scheme="slate"] .md-main__inner {
-  background-color: #1e1f1c !important;
-}
-
-/* Centered video styling */
-.video-center {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.video-center video {
-  max-width: 800px;
-  width: 100%;
-  height: auto;
-}
-
-/* Centered iframe styling */
-.iframe-center {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.iframe-center iframe {
-  max-width: 100%;
-}
-
-
-/* Custom Vladimir Kitan Monokai syntax highlighting */
-.highlight {
-  background-color: #1A1A1A !important;  /* Your editor background */
-  color: #f2fee4 !important;              /* Your editor foreground */
+/* Light mode */
+[data-md-color-scheme="default"] .hljs {
+  background-color: #f9f8f4 !important;
+  color: #1f2328 !important;
+  border: 1px solid #e5e3dc;
   border-radius: 6px;
   padding: 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: block;
+  overflow-x: auto;
+  line-height: 1.6;
 }
 
-.highlight pre {
-  background-color: transparent !important;
-  margin: 0;
+/* Override Highlight.js default Monokai for light mode */
+[data-md-color-scheme="default"] .hljs-keyword,
+[data-md-color-scheme="default"] .hljs-selector-tag,
+[data-md-color-scheme="default"] .hljs-literal,
+[data-md-color-scheme="default"] .hljs-section,
+[data-md-color-scheme="default"] .hljs-link {
+  color: #cf222e !important;
+  /* Keywords - red */
 }
 
-.highlight code {
-  background-color: transparent !important;
-  color: inherit;
+[data-md-color-scheme="default"] .hljs-string {
+  color: #0a3069 !important;
+  /* Strings - dark blue */
 }
 
-/* Your custom Monokai colors */
-.highlight .k { color: #F92672 !important; }   /* Keywords - pink */
-.highlight .kn { color: #F92672 !important; }  /* Keyword.Namespace */
-.highlight .kd { color: #F92672 !important; }  /* Keyword.Declaration */
-.highlight .s { color: #E6DB74 !important; }   /* Strings - yellow */
-.highlight .s1 { color: #E6DB74 !important; }  /* String.Single */
-.highlight .s2 { color: #E6DB74 !important; }  /* String.Double */
-.highlight .se { color: #AE81FF !important; }  /* String.Escape - purple */
-.highlight .si { color: #E6DB74 !important; }  /* String.Interpol */
-.highlight .n { color: #F8F8F2 !important; }   /* Names - white */
-.highlight .nf { color: #A6E22E !important; }  /* Function names - green */
-.highlight .nc { color: #A6E22E !important; }  /* Class names - green */
-.highlight .nn { color: #F8F8F2 !important; }  /* Namespace */
-.highlight .nb { color: #66D9EF !important; }  /* Builtins - cyan */
-.highlight .bp { color: #F8F8F2 !important; }  /* Builtin.Pseudo */
-.highlight .m { color: #AE81FF !important; }   /* Numbers - purple */
-.highlight .mi { color: #AE81FF !important; }  /* Number.Integer */
-.highlight .mf { color: #AE81FF !important; }  /* Number.Float */
-.highlight .c { color: #88846f !important; }   /* Comments - your custom gray */
-.highlight .c1 { color: #88846f !important; }  /* Comment.Single */
-.highlight .cm { color: #88846f !important; }  /* Comment.Multiline */
-.highlight .o { color: #F92672 !important; }   /* Operators - pink */
-.highlight .ow { color: #F92672 !important; }  /* Operator.Word */
-.highlight .p { color: #F8F8F2 !important; }   /* Punctuation */
-.highlight .kc { color: #AE81FF !important; }  /* Keyword.Constant - purple */
-.highlight .nd { color: #A6E22E !important; }  /* Decorator - green */
-.highlight .vg { color: #F8F8F2 !important; }  /* Variable.Global */
-.highlight .vi { color: #F8F8F2 !important; }  /* Variable.Instance */
-.highlight .vm { color: #FD971F !important; }  /* Variable.Magic - orange */
-
-/* Enhanced Bash/Shell specific highlighting to match VS Code */
-.highlight .nb { color: #A6E22E !important; }  /* Shell builtins like sudo - green */
-.highlight .nv { color: #FD971F !important; }  /* Shell variables - orange */
-.highlight .w { color: #F8F8F2 !important; }   /* Whitespace */
-.highlight .err { color: #F44747 !important; } /* Errors - red */
-
-/* More specific bash highlighting */
-.highlight .c1 { color: #88846f !important; }  /* Comments */
-.highlight .n { color: #F8F8F2 !important; }   /* Regular names */
-.highlight .nn { color: #A6E22E !important; }  /* Commands */
-.highlight .o { color: #F92672 !important; }   /* Operators like = */
-
-/* Target specific bash elements */
-pre[class*="language-bash"] .token.function,
-pre[class*="language-bash"] .token.builtin,
-.highlight .language-bash .n {
-  color: #A6E22E !important; /* sudo, docker commands - green */
+[data-md-color-scheme="default"] .hljs-title,
+[data-md-color-scheme="default"] .hljs-name,
+[data-md-color-scheme="default"] .hljs-type,
+[data-md-color-scheme="default"] .hljs-attribute,
+[data-md-color-scheme="default"] .hljs-symbol,
+[data-md-color-scheme="default"] .hljs-bullet,
+[data-md-color-scheme="default"] .hljs-built_in,
+[data-md-color-scheme="default"] .hljs-builtin-name {
+  color: #953800 !important;
+  /* Commands/builtins - brown */
 }
 
-pre[class*="language-bash"] .token.operator,
-.highlight .language-bash .o {
-  color: #F92672 !important; /* = signs - pink */
+[data-md-color-scheme="default"] .hljs-number {
+  color: #0550ae !important;
+  /* Numbers - blue */
 }
 
-pre[class*="language-bash"] .token.string,
-.highlight .language-bash .s,
-.highlight .language-bash .s1,
-.highlight .language-bash .s2 {
-  color: #E6DB74 !important; /* Strings - yellow */
+[data-md-color-scheme="default"] .hljs-comment {
+  color: #57606a !important;
+  /* Comments - gray */
 }
 
-pre[class*="language-bash"] .token.number,
-.highlight .language-bash .m,
-.highlight .language-bash .mi {
-  color: #AE81FF !important; /* Numbers - purple */
+[data-md-color-scheme="default"] .hljs-variable,
+[data-md-color-scheme="default"] .hljs-template-variable {
+  color: #1f2328 !important;
+  /* Variables */
 }
 
-/* ---------- Top tabs readability ---------- */
-/* Shared style for both light/dark schemes */
-.md-tabs__list {
-  gap: .35rem;                /* a little breathing room between tabs */
+[data-md-color-scheme="default"] .hljs-meta {
+  color: #8250df !important;
+  /* Meta - purple */
 }
 
-.md-tabs__link {
-  position: relative;
-  font-weight: 600;           /* stronger weight for readability */
-  opacity: .9;
+/* Dark mode - Your Monokai colors */
+[data-md-color-scheme="slate"] .hljs {
+  background-color: #1A1A1A !important;
+  color: #f8f8f2 !important;
+  border-radius: 6px;
+  padding: 1em;
+  display: block;
+  overflow-x: auto;
+  line-height: 1.6;
 }
 
-/* Underline effect (hover + active) using the theme's accent color */
-.md-tabs__link::after {
-  content: "";
-  position: absolute;
-  left: .25rem;
-  right: .25rem;
-  bottom: -0.35rem;           /* sits at the bottom of the header bar */
-  height: 3px;
-  background: transparent;
-  border-radius: 2px;
-  transition: background .18s ease;
+/* Monokai colors for dark mode - these match VS Code */
+[data-md-color-scheme="slate"] .hljs-keyword,
+[data-md-color-scheme="slate"] .hljs-selector-tag,
+[data-md-color-scheme="slate"] .hljs-literal,
+[data-md-color-scheme="slate"] .hljs-section,
+[data-md-color-scheme="slate"] .hljs-link {
+  color: #F92672 !important;
+  /* Keywords - pink */
 }
 
-/* Hover: soft underline */
-.md-tabs__link:hover::after {
-  background: color-mix(in srgb, var(--md-accent-fg-color) 35%, transparent);
+[data-md-color-scheme="slate"] .hljs-string {
+  color: #E6DB74 !important;
+  /* Strings - yellow */
 }
 
-/* Active tab: green color for clear selection - more specific selectors */
-.md-tabs__link.md-tabs__link--active,
-.md-tabs__link[aria-selected="true"],
-.md-tabs__item--active .md-tabs__link {
-  color: var(--kitan-heading-green) !important;
-  opacity: 1 !important;
-  background: color-mix(in srgb, var(--kitan-heading-green) 12%, transparent) !important;
-  border-radius: 6px 6px 0 0;
-  font-weight: 700 !important;
+[data-md-color-scheme="slate"] .hljs-title,
+[data-md-color-scheme="slate"] .hljs-name,
+[data-md-color-scheme="slate"] .hljs-type,
+[data-md-color-scheme="slate"] .hljs-attribute,
+[data-md-color-scheme="slate"] .hljs-symbol,
+[data-md-color-scheme="slate"] .hljs-bullet,
+[data-md-color-scheme="slate"] .hljs-addition {
+  color: #A6E22E !important;
+  /* Functions/classes - green */
 }
 
-.md-tabs__link.md-tabs__link--active::after,
-.md-tabs__link[aria-selected="true"]::after,
-.md-tabs__item--active .md-tabs__link::after {
-  background: var(--kitan-heading-green) !important;
+[data-md-color-scheme="slate"] .hljs-built_in,
+[data-md-color-scheme="slate"] .hljs-builtin-name {
+  color: #66D9EF !important;
+  /* Builtins - cyan */
 }
 
-/* Force active tab color with maximum specificity */
-.md-header .md-tabs .md-tabs__list .md-tabs__item .md-tabs__link.md-tabs__link--active {
-  color: #8be564 !important; /* Force bright green for dark mode */
+[data-md-color-scheme="slate"] .hljs-number {
+  color: #AE81FF !important;
+  /* Numbers - purple */
 }
 
-[data-md-color-scheme="default"] .md-header .md-tabs .md-tabs__list .md-tabs__item .md-tabs__link.md-tabs__link--active {
-  color: #3fb950 !important; /* Force green for light mode */
+[data-md-color-scheme="slate"] .hljs-comment {
+  color: #88846f !important;
+  /* Comments - your custom gray */
 }
 
-/* Optional: subtle bottom divider under the header for structure */
-.md-header {
-  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--md-default-fg-color) 15%, transparent);
+[data-md-color-scheme="slate"] .hljs-variable,
+[data-md-color-scheme="slate"] .hljs-template-variable {
+  color: #FD971F !important;
+  /* Variables - orange */
 }
 
-/* ---------- Heading colors (content area) ---------- */
-[data-md-color-scheme="default"] {
-  --kitan-heading-green: #3fb950; /* pleasant green for light mode */
-}
-[data-md-color-scheme="slate"] {
-  --kitan-heading-green: #8be564; /* brighter green for dark mode */
+[data-md-color-scheme="slate"] .hljs-meta {
+  color: #AE81FF !important;
+  /* Meta - purple */
 }
 
-/* Apply to headings inside the article */
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4 {
-  color: var(--kitan-heading-green);
+[data-md-color-scheme="slate"] .hljs-params {
+  color: #FD971F !important;
+  /* Parameters - orange */
 }
 
-/* Keep anchor/link icon (🔗) in sync with heading color */
-.md-typeset h1 .headerlink,
-.md-typeset h2 .headerlink,
-.md-typeset h3 .headerlink,
-.md-typeset h4 .headerlink {
-  color: color-mix(in srgb, var(--kitan-heading-green) 85%, transparent);
+/* Bash-specific: make commands stand out */
+[data-md-color-scheme="slate"] .language-bash .hljs-built_in {
+  color: #D4A06C !important;
+  /* uv, pip, docker - tan like VS Code */
+  font-weight: 500;
 }
 
-/* Slightly larger spacing so green sections scan easily */
-.md-typeset h2 { margin-top: 2.2rem; }
-.md-typeset h3 { margin-top: 1.6rem; }
-
-/* Sidebar: highlight the "Japanese Phrases" section label when present */
-.md-nav__item--section:has(a[href*="japanese-phrases/"]) > .md-nav__link {
-  color: var(--kitan-heading-green);
-  font-weight: 600;
-}
-.md-nav__item--section:has(a[href*="japanese-phrases/"]) > .md-nav__link::before {
-  content: "🌸"; margin-right: .35rem;
+[data-md-color-scheme="slate"] .language-bash .hljs-literal {
+  color: #AE81FF !important;
+  /* true/false - purple */
 }

@@ -1,1721 +1,0 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      
-      <link rel="icon" href="../../../../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
-    
-    
-      
-        <title>إنشاء بنية مخصصة - Ohayou</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.84d31ad4.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../../../../../assets/extra.css">
-    
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Ohayou" class="md-header__button md-logo" aria-label="Ohayou" data-md-component="logo">
-      
-  <img src="../../../../../../assets/logo.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Ohayou
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              إنشاء بنية مخصصة
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../ohayou/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Ohayou
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  vLLM
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../llm/speculative_decoding/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  LLM
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  VLM
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../md_format_helpers/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  MD format helpers
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../docker/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Docker
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../linux/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Linux
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../moe/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Mixture of Experts
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../slurm/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Slurm
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../japanese-phrases/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Japanese Phrases
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../../hackathon/index.md" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Hack
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Ohayou" class="md-nav__button md-logo" aria-label="Ohayou" data-md-component="logo">
-      
-  <img src="../../../../../../assets/logo.png" alt="logo">
-
-    </a>
-    Ohayou
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../ohayou/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ohayou
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    vLLM
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            vLLM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../vllm/open_ai_vllm_example_a_v_t/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Single Request
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../vllm/bash_vllm_serve/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bash online serve
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../vllm/benchmarks/performance_eval/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Benchmarks
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    LLM
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            LLM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../llm/speculative_decoding/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Speculative Decoding
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    VLM
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            VLM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../vlm/qwen3_vl_4B_object_detection/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Qwen3VL_adema_grounding
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../vlm/qwen3_vla_4B_audio_training_aspandiyar/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Qwen3VLA_aspandiyar_thinking
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../md_format_helpers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    MD format helpers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../docker/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Docker
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../linux/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../moe/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Mixture of Experts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../slurm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Slurm
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../japanese-phrases/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Japanese Phrases
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
-            <span class="md-nav__icon md-icon"></span>
-            Japanese Phrases
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../japanese-phrases/daily-life/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Daily Life
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_2">
-            <span class="md-nav__icon md-icon"></span>
-            Daily Life
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../japanese-phrases/daily-life/shopping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Shopping
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../japanese-phrases/greetings/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Greetings
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_3">
-            <span class="md-nav__icon md-icon"></span>
-            Greetings
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../japanese-phrases/greetings/casual/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Casual
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../japanese-phrases/emotions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Emotions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../japanese-phrases/anime-manga/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Anime/Manga
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../hackathon/index.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Hack
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      التكوين
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      النموذج
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="النموذج">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      رؤوس النموذج
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      مجزئ النصوص
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      معالج الصور
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      العمود الفقري
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      مستخرج الميزات
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      المعالج
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="_1">إنشاء بنية مخصصة</h1>
-<p>تحدد فئة <a href="model_doc/auto"><code>AutoClass</code></a> تلقائيًا بنية النموذج وتقوم بتنزيل تكوين وأوزان مسبقين للنموذج. بشكل عام، نوصي باستخدام  <code>AutoClass</code> لإنتاج كود غير مرتبط بنسخة معينة. ولكن يمكن للمستخدمين الذين يريدون مزيدًا من التحكم في معلمات النموذج المحددة إنشاء نموذج مخصص من 🤗 Transformers من مجرد بضع فئات أساسية. قد يكون هذا مفيدًا بشكل خاص لأي شخص مهتم بدراسة نموذج 🤗 Transformers أو تدريبه أو إجراء تجارب عليه. في هذا الدليل، سنغوص بشكل أعمق في إنشاء نموذج مخصص بدون <code>AutoClass</code>. تعرف على كيفية:</p>
-<ul>
-<li>تحميل تكوين النموذج وتخصيصه.</li>
-<li>إنشاء بنية نموذج.</li>
-<li>إنشاء مجزء لغوى سريع وبطيء للنص.</li>
-<li>إنشاء معالج صور لمهام الرؤية.</li>
-<li>إنشاء مستخرج ميزات لمهام الصوت.</li>
-<li>إنشاء معالج للمهام متعددة الوسائط.</li>
-</ul>
-<h2 id="_2">التكوين</h2>
-<p>يشير مصطلح <a href="main_classes/configuration">التكوين</a> إلى الخصائص المحددة للنموذج. لكل تكوين نموذج خصائصه الخاصة؛ على سبيل المثال، تشترك جميع نماذج NLP في الخصائص  <code>hidden_size</code> و<code>num_attention_heads</code> و<code>num_hidden_layers</code> و<code>vocab_size</code> المشتركة. تحدد هذه الخصائص عدد رؤوس الانتباه أو الطبقات المخفية لبناء نموذج بها.</p>
-<p>اطلع على <a href="model_doc/distilbert">DistilBERT</a> من خلال [<code>DistilBertConfig</code>] لمعاينة خصائصه:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertConfig</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="n">DistilBertConfig</span><span class="p">()</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">DistilBertConfig</span> <span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="s2">&quot;activation&quot;</span><span class="p">:</span> <span class="s2">&quot;gelu&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="s2">&quot;attention_dropout&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="s2">&quot;dim&quot;</span><span class="p">:</span> <span class="mi">768</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="s2">&quot;dropout&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="s2">&quot;hidden_dim&quot;</span><span class="p">:</span> <span class="mi">3072</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="s2">&quot;initializer_range&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  <span class="s2">&quot;max_position_embeddings&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="s2">&quot;model_type&quot;</span><span class="p">:</span> <span class="s2">&quot;distilbert&quot;</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="s2">&quot;n_heads&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  <span class="s2">&quot;n_layers&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  <span class="s2">&quot;pad_token_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  <span class="s2">&quot;qa_dropout&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  <span class="s2">&quot;seq_classif_dropout&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  <span class="s2">&quot;sinusoidal_pos_embds&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  <span class="s2">&quot;transformers_version&quot;</span><span class="p">:</span> <span class="s2">&quot;4.16.2&quot;</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  <span class="s2">&quot;vocab_size&quot;</span><span class="p">:</span> <span class="mi">30522</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>يعرض [<code>DistilBertConfig</code>] جميع الخصائص الافتراضية المستخدمة لبناء نموذج [<code>DistilBertModel</code>] أساسي. جميع الخصائص قابلة للتعديل، مما ييتيح مجالاً للتجريب. على سبيل المثال، يمكنك تعديل نموذج افتراضي لـ:</p>
-<ul>
-<li>تجربة دالة تنشيط مختلفة باستخدام معامل <code>activation</code>.</li>
-<li>استخدام معدل إسقاط أعلى الاحتمالات الانتباه مع معامل  <code>attention_dropout</code>.</li>
-</ul>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_config</span> <span class="o">=</span> <span class="n">DistilBertConfig</span><span class="p">(</span><span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">,</span> <span class="n">attention_dropout</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_config</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">DistilBertConfig</span> <span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="s2">&quot;activation&quot;</span><span class="p">:</span> <span class="s2">&quot;relu&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="s2">&quot;attention_dropout&quot;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span>
-</span></code></pre></div>
-<p>يمكن تعديل خصائص النموذج المدرب مسبقًا في دالة [<code>~PreTrainedConfig.from_pretrained</code>] :</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_config</span> <span class="o">=</span> <span class="n">DistilBertConfig</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">,</span> <span class="n">attention_dropout</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-</span></code></pre></div>
-<p>بمجرد أن تصبح راضيًا عن تكوين نموذجك، يمكنك حفظه باستخدام [<code>~PreTrainedConfig.save_pretrained</code>]. يتم تخزين ملف التكوين الخاص بك على أنه ملف JSON في دليل الحفظ المحدد:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_config</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="n">save_directory</span><span class="o">=</span><span class="s2">&quot;./your_model_save_path&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>لإعادة استخدام ملف التكوين، قم بتحميله باستخدام [<code>~PreTrainedConfig.from_pretrained</code>]:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_config</span> <span class="o">=</span> <span class="n">DistilBertConfig</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./your_model_save_path/config.json&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p><Tip>
-يمكنك أيضًا حفظ ملف التكوين كقاموس أو حتى كفرق بين خصائص التكوين المُعدّلة والخصائص التكوين الافتراضية! راجع وثائق <a href="main_classes/configuration">التكوين</a> لمزيد من التفاصيل.
-</Tip></p>
-<h2 id="_3">النموذج</h2>
-<p>الخطوة التالية هي إنشاء <a href="main_classes/models">نموذج</a>. النموذج - ويُشار إليه أحيانًا باسم البنية - يُحدد وظيفة كل طبقة والعمليات الحسابية المُنفذة. تُستخدم خصائص مثل <code>num_hidden_layers</code> من التكوين لتحديد هذه البنية. تشترك جميع النماذج في  فئة أساسية واحدة هي [<code>PreTrainedModel</code>] وبعض الوظائف المُشتركة مثل غيير حجم مُدخلات الكلمات وتقليص رؤوس آلية الانتباه الذاتي. بالإضافة إلى ذلك، فإن جميع النماذج هي  فئات فرعية إما من <a href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html"><code>torch.nn.Module</code></a>، <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Model"><code>tf.keras.Model</code></a> أو <a href="https://flax.readthedocs.io/en/latest/api_reference/flax.linen/module.html"><code>flax.linen.Module</code></a> . هذا يعني النماذج متوافقة مع كل استخدام لإطار العمل الخاص بها.</p>
-<p>قم بتحميل خصائص التكوين المخصصة الخاصة بك في النموذج:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertModel</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_config</span> <span class="o">=</span> <span class="n">DistilBertConfig</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./your_model_save_path/config.json&quot;</span><span class="p">)</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertModel</span><span class="p">(</span><span class="n">my_config</span><span class="p">)</span>
-</span></code></pre></div>
-<p>هذا ينشئ نموذجًا بقيم عشوائية بدلاً من الأوزان  المُدربة مسبقًا. لن يكون هذا النموذج مفيدًا حتى يتم تدريبه.  تُعد عملية التدريب مكلفة وتستغرق وقتًا طويلاً. من الأفضل بشكل عام استخدام نموذج مُدرب مسبقًا للحصول على نتائج أفضل بشكل أسرع، مع استخدام جزء بسيط فقط من الموارد المطلوبة للتدريب.</p>
-<p>قم بإنشاء نموذج مُدرب مسبقًا باستخدام [<code>~PreTrainedModel.from_pretrained</code>]:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>عند بتحميل الأوزان المُدربة مسبقًا، يتم تحميل تكوين النموذج الافتراضي تلقائيًا إذا كان النموذج من مكتبة 🤗 Transformers. ومع ذلك، يمكنك أيضًا استبدال - بعض أو كل - سإعدادات النموذج الافتراضية بإعداداتك الخاصة:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="err">،</span> <span class="n">config</span><span class="o">=</span><span class="n">my_config</span><span class="p">)</span>
-</span></code></pre></div>
-<h3 id="_4">رؤوس النموذج</h3>
-<p>في هذه المرحلة، لديك نموذج DistilBERT الأساسي الذي يخرج <em>حالات الكامنة</em>. تُمرَّر هذه الحالات الكامنة كمدخلات لرأس النموذج لإنتاج  المخرجات النهائية. توفر مكتبة 🤗 Transformers رأس نموذج مختلف لكل مهمة طالما أن النموذج يدعم المهمة (أي لا يمكنك استخدام DistilBERT لمهمة تسلسل إلى تسلسل مثل الترجمة).</p>
-<p>على سبيل المثال، [<code>DistilBertForSequenceClassification</code>] هو نموذج DistilBERT الأساس  مزودًا برأس تصنيف تسلسلي.  يُشكّل رأس التصنيف التسلسلي طبقة خطية فوق المخرجات المجمعة.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertForSequenceClassification</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>أعد استخدام هذا نقطة التحقق هذه لمهمة أخرى بسهولة، وذلك بتغيير رأس النموذج.ففي مهمة الإجابة على الأسئلة، ستستخدم رأس النموذج [<code>DistilBertForQuestionAnswering</code>]. رأس الإجابة على الأسئلة مشابه لرأس التصنيف التسلسلي باستثناء أنه طبقة خطية فوق مخرجات الحالات الكامنة.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertForQuestionAnswering</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertForQuestionAnswering</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="_5">مجزئ النصوص</h2>
-<p>الفئة الأساسية الأخيرة التي تحتاجها قبل استخدام نموذج للبيانات النصية هي <a href="main_classes/tokenizer">مجزئ النصوص</a> لتحويل النص الخام إلى تنسورات  (tensors). هناك نوعان من المحولات الرموز التي يمكنك استخدامها مع 🤗 Transformers:</p>
-<ul>
-<li>[<code>PreTrainedTokenizer</code>]: تنفيذ Python لمجزئ النصوص.</li>
-<li>[<code>PreTrainedTokenizerFast</code>]: مجزئ النصوص من مكتبة <a href="https://huggingface.co/docs/tokenizers/python/latest/">🤗 Tokenizer</a> المُبنية على لغة Rust.  هذا النوع من المجزئات أسرع بكثير، خاصةً عند معالجة دفعات النصوص، وذلك بفضل تصميمه بلغة Rust.  كما يوفر مجزئ النصوص السريع طرقًا إضافية مثل <em>مخطط الإزاحة</em> الذي يُطابق الرموز بكلماتها أو أحرفها الأصلية.</li>
-</ul>
-<p>يدعم كلا النوعين من المجزئات طرقًا شائعة مثل الترميز وفك الترميز، وإضافة رموز جديدة، وإدارة الرموز الخاصة.</p>
-<p><Tip warning={true}></p>
-<p>لا يدعم كل نموذج  مجزئ النصوص سريع. الق نظرة على هذا <a href="index#supported-frameworks">جدول</a> للتحقق مما إذا كان النموذج يحتوي على دعم  مجزئ النصوص سريع.</p>
-<p></Tip></p>
-<p>إذا دربت مجزئ النصوص خاص بك، فيمكنك إنشاء واحد من <em>قاموسك</em>:```</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertTokenizer</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_tokenizer</span> <span class="o">=</span> <span class="n">DistilBertTokenizer</span><span class="p">(</span><span class="n">vocab_file</span><span class="o">=</span><span class="s2">&quot;my_vocab_file.txt&quot;</span><span class="err">،</span> <span class="n">do_lower_case</span><span class="o">=</span><span class="kc">False</span><span class="err">،</span> <span class="n">padding_side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>من المهم أن تتذكر أن قاموس مجزئ النصوص المُخصص سيكون مختلفًا عن قاموس مجزئ النصوص نموذج مُدرّب مسبقًا. يجب عليك استخدام قاموس نموذج مُدرّب مسبقًا إذا كنت تستخدم نموذجًا مُدرّبًا مسبقًا، وإلا فلن تكون المدخلات ذات معنى. قم بإنشاء مجزئ النصوص باستخدام قاموس نموذج مُدرّب مسبقًا باستخدام فئة [<code>DistilBertTokenizer</code>]:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertTokenizer</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">slow_tokenizer</span> <span class="o">=</span> <span class="n">DistilBertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>قم بإنشاء مجزئ نصوص سريع باستخدام فئة [<code>DistilBertTokenizerFast</code>]:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistilBertTokenizerFast</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fast_tokenizer</span> <span class="o">=</span> <span class="n">DistilBertTokenizerFast</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;distilbert/distilbert-base-uncased&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p><Tip>
-افتراضيًا، سيحاول [<code>AutoTokenizer</code>] تحميل مجزئ نصوص سريع. يمكنك تعطيل هذا السلوك عن طريق تعيين <code>use_fast=False</code> في <code>from_pretrained</code>.
-</Tip></p>
-<h2 id="_6">معالج الصور</h2>
-<p>يعالج معالج الصور بيانات الرؤية. وهو يرث من الفئة الأساسية [<code>~image_processing_utils.ImageProcessingMixin</code>].</p>
-<p>لبناء معالج صور خاص بالنموذج المستخدم، أنشئ مثلاً مُعالج  [<code>ViTImageProcessor</code>] افتراضيًا إذا كنت تستخدم <a href="model_doc/vit">ViT</a> لتصنيف الصور:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ViTImageProcessor</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">vit_extractor</span> <span class="o">=</span> <span class="n">ViTImageProcessor</span><span class="p">()</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">vit_extractor</span><span class="p">)</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">ViTImageProcessor</span> <span class="p">{</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  <span class="s2">&quot;do_normalize&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  <span class="s2">&quot;do_resize&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  <span class="s2">&quot;image_processor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ViTImageProcessor&quot;</span><span class="p">,</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>  <span class="s2">&quot;image_mean&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="mf">0.5</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>  <span class="p">],</span>
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>  <span class="s2">&quot;image_std&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="mf">0.5</span>
-</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>  <span class="p">],</span>
-</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>  <span class="s2">&quot;resample&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">224</span>
-</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><Tip></p>
-<p>إذا كنت لا تبحث عن أي تخصيص، فما عليك سوى استخدام طريقة <code>from_pretrained</code> لتحميل معلمات معالج الصور الافتراضية للنموذج.</p>
-<p></Tip></p>
-<p>عدل أيًا من معلمات [<code>ViTImageProcessor</code>] لإنشاء معالج الصور المخصص الخاص بك:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ViTImageProcessor</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">my_vit_extractor</span> <span class="o">=</span> <span class="n">ViTImageProcessor</span><span class="p">(</span><span class="n">resample</span><span class="o">=</span><span class="s2">&quot;PIL.Image.BOX&quot;</span><span class="p">,</span> <span class="n">do_normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">image_mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_vit_extractor</span><span class="p">)</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">ViTImageProcessor</span> <span class="p">{</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  <span class="s2">&quot;do_normalize&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>  <span class="s2">&quot;do_resize&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a> <span class="s2">&quot;image_processor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ViTImageProcessor&quot;</span><span class="p">,</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  <span class="s2">&quot;image_mean&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="mf">0.3</span><span class="p">,</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="mf">0.3</span><span class="p">,</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="mf">0.3</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  <span class="p">],</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  <span class="s2">&quot;image_std&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    <span class="mf">0.5</span><span class="p">,</span>
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    <span class="mf">0.5</span>
-</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>  <span class="p">],</span>
-</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>  <span class="s2">&quot;resample&quot;</span><span class="p">:</span> <span class="s2">&quot;PIL.Image.BOX&quot;</span><span class="p">,</span>
-</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">224</span>
-</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="_7">العمود الفقري</h2>
-<div style="text-align: center">
-  <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/Backbone.png">
-</div>
-
-<p>تتكون نماذج رؤية الحاسب من جزء أساسي، وجزء وسيط، وجزء معالجة نهائي. يستخرج الجزء الأساسي الميزات من صورة الإدخال، ويجمع الجزء الوسيط هذه الميزات المستخرجة ويعززها،  ويُستخدم الجزء  النهائي للمهمة الرئيسية (مثل اكتشاف الأجسام). ابدأ عبتهيئة الجزء الأساسي في تكوين النموذج وحدد ما إذا كنت تريد تحميل أوزان مدربة مسبقًا أو أوزانًا عشوائية. بعد ذلك، يمكنك تمرير تكوين النموذج إلى جزء المعالجة النهائي.</p>
-<p>على سبيل المثال، لتحميل <a href="../model_doc/resnet">ResNet</a> backbone في نموذج <a href="../model_doc/maskformer">MaskFormer</a> مع رأس تجزئة مثيل:</p>
-<p><hfoptions id="backbone">
-<hfoption id="pretrained weights"></p>
-<p>قم بتعيين <code>use_pretrained_backbone=True</code> لتحميل الأوزان المسبقة التدريب لـ ResNet للعمود الفقري.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s2">&quot;microsoft/resnet-50&quot;</span><span class="p">,</span> <span class="n">use_pretrained_backbone</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># تكوين الجزء الأساسي والجزء الوسيط</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="c1"># جزء المعالجة النهائي</span>
-</span></code></pre></div>
-<p></hfoption>
-<hfoption id="random weights"></p>
-<p>قم بتعيين <code>use_pretrained_backbone=False</code> لتهيئة جزء ResNet الأساسي بشكل عشوائي.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s2">&quot;microsoft/resnet-50&quot;</span><span class="p">,</span> <span class="n">use_pretrained_backbone</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># تكوين الجزء الأساسي والجزء الوسيط</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="c1"># جزء المعالجة النهائي</span>
-</span></code></pre></div>
-<p>يمكنك أيضًا تحميل تكوين الجزء الأساسي بشكل منفصل، ثم تمريره إلى تكوين النموذج.```</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">,</span> <span class="n">ResNetConfig</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">backbone_config</span> <span class="o">=</span> <span class="n">ResNetConfig</span><span class="p">()</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone_config</span><span class="o">=</span><span class="n">backbone_config</span><span class="p">)</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</span></code></pre></div>
-<p></hfoption>
-<hfoption id="timm backbone"></p>
-<p>يتم تحميل نماذج <a href="https://hf.co/docs/timm/index">timm</a> داخل نموذج باستخدام <code>use_timm_backbone=True</code> أو باستخدام [<code>TimmBackbone</code>] و [<code>TimmBackboneConfig</code>].</p>
-<p>استخدم <code>use_timm_backbone=True</code> و <code>use_pretrained_backbone=True</code> لتحميل أوزان timm المُدرّبة مسبقًا للجزء الأساسي.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s2">&quot;resnet50&quot;</span><span class="p">,</span> <span class="n">use_pretrained_backbone</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_timm_backbone</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># تكوين الجزء الأساسي والجزء الوسيط</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="c1"># جزء المعالجة النهائي</span>
-</span></code></pre></div>
-<p>قم بتعيين <code>use_timm_backbone=True</code> و <code>use_pretrained_backbone=False</code> لتحميل عمود فقري timm مبدئي عشوائي.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s2">&quot;resnet50&quot;</span><span class="p">,</span> <span class="n">use_pretrained_backbone</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_timm_backbone</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># تكوين الجزء الأساسي والجزء الوسيط</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="c1"># جزء المعالجة النهائي</span>
-</span></code></pre></div>
-<p>يمكنك أيضًا تحميل تكوين الجزء الأساسي واستخدامه لإنشاء <code>TimmBackbone</code> أو تمريره إلى تكوين النموذج. سيتم تحميلأوزان الجزء الأساسي لـ Timm المُدرّبة مسبقًا افتراضيًا. عيّن <code>use_pretrained_backbone=False</code> لتحميل الأوزان المبدئية العشوائية.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">TimmBackboneConfig</span><span class="p">,</span> <span class="n">TimmBackbone</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">backbone_config</span> <span class="o">=</span> <span class="n">TimmBackboneConfig</span><span class="p">(</span><span class="s2">&quot;resnet50&quot;</span><span class="p">,</span> <span class="n">use_pretrained_backbone</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1"># قم بإنشاء مثيل من العمود الفقري</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">backbone</span> <span class="o">=</span> <span class="n">TimmBackbone</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">backbone_config</span><span class="p">)</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="c1"># قم بإنشاء نموذج باستخدام عمود فقري timm</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaskFormerConfig</span><span class="p">,</span> <span class="n">MaskFormerForInstanceSegmentation</span>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">config</span> <span class="o">=</span> <span class="n">MaskFormerConfig</span><span class="p">(</span><span class="n">backbone_config</span><span class="o">=</span><span class="n">backbone_config</span><span class="p">)</span>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="n">model</span> <span class="o">=</span> <span class="n">MaskFormerForInstanceSegmentation</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="_8">مستخرج الميزات</h2>
-<p>يقوم مُستخرج الميزات بمعالجة المدخلات الصوتية. يرث من فئة الأساس [<code>~feature_extraction_utils.FeatureExtractionMixin</code>]، وقد يرث أيضًا من فئة [<code>SequenceFeatureExtractor</code>] لمعالجة المدخلات الصوتية.</p>
-<p>للاستخدام، قم بإنشاء مستخرج ميزات مرتبط بالنموذج الذي تستخدمه. على سبيل المثال، قم بإنشاء مستخرج ميزات Wav2Vec2 الافتراضي إذا كنت تستخدم <a href="model_doc/wav2vec2">Wav2Vec2</a> لتصنيف الصوت:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Wav2Vec2FeatureExtractor</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w2v2_extractor</span> <span class="o">=</span> <span class="n">Wav2Vec2FeatureExtractor</span><span class="p">()</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">w2v2_extractor</span><span class="p">)</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="n">Wav2Vec2FeatureExtractor</span> <span class="p">{</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>  <span class="s2">&quot;do_normalize&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  <span class="s2">&quot;feature_extractor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Wav2Vec2FeatureExtractor&quot;</span><span class="p">,</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>  <span class="s2">&quot;feature_size&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  <span class="s2">&quot;padding_side&quot;</span><span class="p">:</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>  <span class="s2">&quot;padding_value&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>  <span class="s2">&quot;return_attention_mask&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>  <span class="s2">&quot;sampling_rate&quot;</span><span class="p">:</span> <span class="mi">16000</span>
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><Tip>
-إذا لم تكن بحاجة لأي تخصيص، فاستخدم فقط طريقة <code>from_pretrained</code> لتحميل معلمات مستخرج الميزات الافتراضية للنموذج. 
-</Tip></p>
-<p>قم بتعديل أي من معلمات [<code>Wav2Vec2FeatureExtractor</code>] لإنشاء مستخرج ميزات مخصص:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Wav2Vec2FeatureExtractor</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w2v2_extractor</span> <span class="o">=</span> <span class="n">Wav2Vec2FeatureExtractor</span><span class="p">(</span><span class="n">sampling_rate</span><span class="o">=</span><span class="mi">8000</span><span class="err">،</span> <span class="n">do_normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">w2v2_extractor</span><span class="p">)</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="n">Wav2Vec2FeatureExtractor</span> <span class="p">{</span>
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>  <span class="s2">&quot;do_normalize&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>  <span class="s2">&quot;feature_extractor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Wav2Vec2FeatureExtractor&quot;</span><span class="err">،</span>
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>  <span class="s2">&quot;feature_size&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="err">،</span>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>  <span class="s2">&quot;padding_side&quot;</span><span class="p">:</span> <span class="s2">&quot;right&quot;</span><span class="err">،</span>
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>  <span class="s2">&quot;padding_value&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="err">،</span>
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>  <span class="s2">&quot;return_attention_mask&quot;</span><span class="p">:</span> <span class="n">false</span><span class="err">،</span>
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>  <span class="s2">&quot;sampling_rate&quot;</span><span class="p">:</span> <span class="mi">8000</span>
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="_9">المعالج</h2>
-<p>بالنسبة للنماذج التي تدعم مهام الوسائط المتعددة، توفر مكتبة 🤗 Transformers فئة معالج تجمع بفاعلية فئات المعالجة مثل مستخرج الميزات ومقسّم الرموز في كائن واحد. على سبيل المثال، دعنا نستخدم [<code>Wav2Vec2Processor</code>] لمهمة التعرف الآلي على الكلام (ASR). تقوم مهمة ASR بتحويل الصوت إلى نص، لذلك ستحتاج إلى مستخرج ميزات ومقسّم رموز.</p>
-<p>قم بإنشاء مستخرج ميزات لمعالجة المدخلات الصوتية:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Wav2Vec2FeatureExtractor</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">feature_extractor</span> <span class="o">=</span> <span class="n">Wav2Vec2FeatureExtractor</span><span class="p">(</span><span class="n">padding_value</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">do_normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></code></pre></div>
-<p>قم بإنشاء مقسّم رموز لمعالجة المدخلات النصية:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Wav2Vec2CTCTokenizer</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">Wav2Vec2CTCTokenizer</span><span class="p">(</span><span class="n">vocab_file</span><span class="o">=</span><span class="s2">&quot;my_vocab_file.txt&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>قم بدمج مستخرج الميزات ومقسّم الرموز في [<code>Wav2Vec2Processor</code>]:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Wav2Vec2Processor</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">processor</span> <span class="o">=</span> <span class="n">Wav2Vec2Processor</span><span class="p">(</span><span class="n">feature_extractor</span><span class="o">=</span><span class="n">feature_extractor</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">)</span>
-</span></code></pre></div>
-<p>باستخدام فئتين أساسيتين - التكوين والنموذج - بالإضافة إلى فئة معالجة مسبق (مقسّم رموز أو معالج صورة أو مستخرج ميزات أو معالج)، يمكنك إنشاء أي من النماذج التي تدعمها مكتبة 🤗 Transformers. يمكن تكوين كل من هذه الفئات الأساسية، مما يسمح لك باستخدام السمات المطلوبة. يمكنك بسهولة تهيئة نموذج للتدريب أو تعديل نموذج مدرب مسبقاً لإجراء ضبط دقيق.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.tabs.link", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="../../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
-      
-    
-  </body>
-</html>
